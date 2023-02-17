@@ -12,6 +12,24 @@ extension Modify.DynamicMemberWrap where T: UIScrollView {
         return value
     }
 
+    @discardableResult
+    public func setContentOffset(_ contentOffset: CGPoint, animated: Bool) -> T {
+        value.setContentOffset(contentOffset, animated: animated)
+        return value
+    }
+
+    @discardableResult
+    public func scrollRectToVisible(_ rect: CGRect, animated: Bool) -> T {
+        value.scrollRectToVisible(rect, animated: animated)
+        return value
+    }
+
+    @discardableResult
+    public func flashScrollIndicators() -> T {
+        value.flashScrollIndicators()
+        return value
+    }
+
     @available(iOS 3.0, *)
     @discardableResult
     public func setZoomScale(_ scale: CGFloat, animated: Bool) -> T {
@@ -24,6 +42,5 @@ extension Modify.DynamicMemberWrap where T: UIScrollView {
     public func zoom(to rect: CGRect, animated: Bool) -> T {
         value.zoom(to: rect, animated: animated)
         return value
-        
     }
 }

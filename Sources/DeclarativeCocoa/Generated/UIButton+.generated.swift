@@ -19,10 +19,47 @@ extension Modify.DynamicMemberWrap where T: UIButton {
         return value
     }
 
+    @discardableResult
+    public func setTitle(_ title: String?, for state: UIControl.State) -> T {
+        value.setTitle(title, for: state)
+        return value
+    }
+
+    @discardableResult
+    public func setTitleColor(_ color: UIColor?, for state: UIControl.State) -> T {
+        value.setTitleColor(color, for: state)
+        return value
+    }
+
+    @discardableResult
+    public func setTitleShadowColor(_ color: UIColor?, for state: UIControl.State) -> T {
+        value.setTitleShadowColor(color, for: state)
+        return value
+    }
+
+    @discardableResult
+    public func setImage(_ image: UIImage?, for state: UIControl.State) -> T {
+        value.setImage(image, for: state)
+        return value
+    }
+
+    @discardableResult
+    public func setBackgroundImage(_ image: UIImage?, for state: UIControl.State) -> T {
+        value.setBackgroundImage(image, for: state)
+        return value
+    }
+
     @available(iOS 13.0, *)
     @discardableResult
     public func setPreferredSymbolConfiguration(_ configuration: UIImage.SymbolConfiguration?, forImageIn state: UIControl.State) -> T {
         value.setPreferredSymbolConfiguration(configuration, forImageIn: state)
+        return value
+    }
+
+    @available(iOS 6.0, *)
+    @discardableResult
+    public func setAttributedTitle(_ title: NSAttributedString?, for state: UIControl.State) -> T {
+        value.setAttributedTitle(title, for: state)
         return value
     }
 }

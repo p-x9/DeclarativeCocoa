@@ -6,6 +6,18 @@ import UIKit
 
 extension Modify.DynamicMemberWrap where T: UIControl {
     @discardableResult
+    public func endTracking(_ touch: UITouch?, with event: UIEvent?) -> T {
+        value.endTracking(touch, with: event)
+        return value
+    }
+
+    @discardableResult
+    public func cancelTracking(with event: UIEvent?) -> T {
+        value.cancelTracking(with: event)
+        return value
+    }
+
+    @discardableResult
     public func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) -> T {
         value.addTarget(target, action: action, for: controlEvents)
         return value
@@ -50,7 +62,7 @@ extension Modify.DynamicMemberWrap where T: UIControl {
         value.sendAction(action)
         return value
     }
-    
+
     @discardableResult
     public func sendActions(for controlEvents: UIControl.Event) -> T {
         value.sendActions(for: controlEvents)

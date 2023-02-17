@@ -42,6 +42,18 @@ extension Modify.DynamicMemberWrap where T: UICollectionView {
         return value
     }
 
+    @discardableResult
+    public func reloadData() -> T {
+        value.reloadData()
+        return value
+    }
+
+    @discardableResult
+    public func setCollectionViewLayout(_ layout: UICollectionViewLayout, animated: Bool) -> T {
+        value.setCollectionViewLayout(layout, animated: animated)
+        return value
+    }
+
     @available(iOS 7.0, *)
     @discardableResult
     public func setCollectionViewLayout(_ layout: UICollectionViewLayout, animated: Bool, completion: ((Bool) -> Void)? = nil) -> T {
@@ -124,6 +136,12 @@ extension Modify.DynamicMemberWrap where T: UICollectionView {
         return value
     }
 
+    @discardableResult
+    public func performBatchUpdates(_ updates: (() -> Void)?, completion: ((Bool) -> Void)? = nil) -> T {
+        value.performBatchUpdates(updates, completion: completion)
+        return value
+    }
+
     @available(iOS 9.0, *)
     @discardableResult
     public func updateInteractiveMovementTargetPosition(_ targetPosition: CGPoint) -> T {
@@ -141,7 +159,7 @@ extension Modify.DynamicMemberWrap where T: UICollectionView {
     @available(iOS 9.0, *)
     @discardableResult
     public func cancelInteractiveMovement() -> T {
-        value.cancelInteractiveTransition()
+        value.cancelInteractiveMovement()
         return value
     }
 }

@@ -13,6 +13,24 @@ extension Modify.DynamicMemberWrap where T: UITableViewCell {
     }
 
     @discardableResult
+    public func prepareForReuse() -> T {
+        value.prepareForReuse()
+        return value
+    }
+
+    @discardableResult
+    public func setSelected(_ selected: Bool, animated: Bool) -> T {
+        value.setSelected(selected, animated: animated)
+        return value
+    }
+
+    @discardableResult
+    public func setHighlighted(_ highlighted: Bool, animated: Bool) -> T {
+        value.setHighlighted(highlighted, animated: animated)
+        return value
+    }
+
+    @discardableResult
     public func setEditing(_ editing: Bool, animated: Bool) -> T {
         value.setEditing(editing, animated: animated)
         return value
