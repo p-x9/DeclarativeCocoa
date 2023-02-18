@@ -6,11 +6,10 @@
 //  
 //
 
-import UIKit
 import Modify
 
-extension Modify.DynamicMemberWrap where T: UIView {
-    public func callAsFunction(@ViewBuilder<UIView> _ builder: () -> [UIView?]) -> Self {
+extension Modify.DynamicMemberWrap where T: CocoaView {
+    public func callAsFunction(@ViewBuilder _ builder: () -> [CocoaView?]) -> Self {
         let views = builder()
         views
             .compactMap { $0 }
@@ -20,7 +19,7 @@ extension Modify.DynamicMemberWrap where T: UIView {
     }
 
     @_disfavoredOverload
-    public func callAsFunction(@ViewBuilder<UIView> _ builder: () -> [UIView?]) -> T {
+    public func callAsFunction(@ViewBuilder _ builder: () -> [CocoaView?]) -> T {
         let views = builder()
         views
             .compactMap { $0 }
@@ -30,8 +29,8 @@ extension Modify.DynamicMemberWrap where T: UIView {
     }
 }
 
-extension Modify.DynamicMemberWrap where T: UIStackView {
-    public func callAsFunction(@ViewBuilder<UIView> _ builder: () -> [UIView?]) -> Self {
+extension Modify.DynamicMemberWrap where T: CocoaStackView {
+    public func callAsFunction(@ViewBuilder _ builder: () -> [CocoaView?]) -> Self {
         let views = builder()
         views
             .compactMap { $0 }
@@ -41,7 +40,7 @@ extension Modify.DynamicMemberWrap where T: UIStackView {
     }
 
     @_disfavoredOverload
-    public func callAsFunction(@ViewBuilder<UIView> _ builder: () -> [UIView?]) -> T {
+    public func callAsFunction(@ViewBuilder _ builder: () -> [CocoaView?]) -> T {
         let views = builder()
         views
             .compactMap { $0 }

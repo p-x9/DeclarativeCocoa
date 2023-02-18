@@ -7,3 +7,9 @@
 //
 
 @_exported import Modify
+
+#if canImport(UIKit)
+@_exported import UIKit
+#elseif canImport(Cocoa)
+@_exported import Cocoa
+#endif

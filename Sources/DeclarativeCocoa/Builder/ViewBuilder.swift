@@ -6,10 +6,10 @@
 //  
 //
 
-import UIKit
 
 @resultBuilder
-public struct ViewBuilder<Expression: UIView> {
+public struct ViewBuilder {
+    public typealias Expression = CocoaView
     public typealias Component = [Expression]
 
     public static func buildBlock(_ components: Component...) -> Component {
