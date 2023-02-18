@@ -6,24 +6,28 @@ import UIKit
 
 extension Modify.DynamicMemberWrap where T: UICollectionViewCell {
     @discardableResult
+    @_disfavoredOverload
     public func prepareForReuse() -> T {
         value.prepareForReuse()
         return value
     }
 
     @discardableResult
+    @_disfavoredOverload
     public func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) -> T {
         value.apply(layoutAttributes)
         return value
     }
 
     @discardableResult
+    @_disfavoredOverload
     public func willTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> T {
         value.willTransition(from: oldLayout, to: newLayout)
         return value
     }
 
     @discardableResult
+    @_disfavoredOverload
     public func didTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> T {
         value.didTransition(from: oldLayout, to: newLayout)
         return value
@@ -31,6 +35,7 @@ extension Modify.DynamicMemberWrap where T: UICollectionViewCell {
 
     @available(iOS 14.0, *)
     @discardableResult
+    @_disfavoredOverload
     public func setNeedsUpdateConfiguration() -> T {
         value.setNeedsUpdateConfiguration()
         return value
@@ -38,6 +43,7 @@ extension Modify.DynamicMemberWrap where T: UICollectionViewCell {
 
     @available(iOS 11.0, *)
     @discardableResult
+    @_disfavoredOverload
     public func dragStateDidChange(_ dragState: UICollectionViewCell.DragState) -> T {
         value.dragStateDidChange(dragState)
         return value

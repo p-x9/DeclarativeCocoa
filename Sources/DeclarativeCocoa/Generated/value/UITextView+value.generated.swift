@@ -6,6 +6,7 @@ import UIKit
 
 extension Modify.DynamicMemberWrap where T: UITextView {
     @discardableResult
+    @_disfavoredOverload
     public func scrollRangeToVisible(_ range: NSRange) -> T {
         value.scrollRangeToVisible(range)
         return value

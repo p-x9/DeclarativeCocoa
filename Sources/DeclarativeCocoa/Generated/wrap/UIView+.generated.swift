@@ -6,282 +6,282 @@ import UIKit
 
 extension Modify.DynamicMemberWrap where T: UIView {
     @discardableResult
-    public func sizeToFit() -> T {
+    public func sizeToFit() -> Self {
         value.sizeToFit()
-        return value
+        return self
     }
 
     @discardableResult
-    public func removeFromSuperview() -> T {
+    public func removeFromSuperview() -> Self {
         value.removeFromSuperview()
-        return value
+        return self
     }
 
     @discardableResult
-    public func insertSubview(_ view: UIView, at index: Int) -> T {
+    public func insertSubview(_ view: UIView, at index: Int) -> Self {
         value.insertSubview(view, at: index)
-        return value
+        return self
     }
 
     @discardableResult
-    public func exchangeSubview(at index1: Int, withSubviewAt index2: Int) -> T {
+    public func exchangeSubview(at index1: Int, withSubviewAt index2: Int) -> Self {
         value.exchangeSubview(at: index1, withSubviewAt: index2)
-        return value
+        return self
     }
 
     @discardableResult
-    public func addSubview(_ view: UIView) -> T {
+    public func addSubview(_ view: UIView) -> Self {
         view.addSubview(view)
-        return value
+        return self
     }
 
     @discardableResult
-    public func insertSubview(_ view: UIView, belowSubview siblingSubview: UIView) -> T {
+    public func insertSubview(_ view: UIView, belowSubview siblingSubview: UIView) -> Self {
         view.insertSubview(view, belowSubview: siblingSubview)
-        return value
+        return self
     }
 
     @discardableResult
-    public func insertSubview(_ view: UIView, aboveSubview siblingSubview: UIView) -> T {
+    public func insertSubview(_ view: UIView, aboveSubview siblingSubview: UIView) -> Self {
         view.insertSubview(view, aboveSubview: siblingSubview)
-        return value
+        return self
     }
 
     @discardableResult
-    public func bringSubviewToFront(_ view: UIView) -> T {
+    public func bringSubviewToFront(_ view: UIView) -> Self {
         value.bringSubviewToFront(view)
-        return value
+        return self
     }
 
     @discardableResult
-    public func sendSubviewToBack(_ view: UIView) -> T {
+    public func sendSubviewToBack(_ view: UIView) -> Self {
         value.sendSubviewToBack(view)
-        return value
+        return self
     }
 
     @discardableResult
-    public func didAddSubview(_ subview: UIView) -> T {
+    public func didAddSubview(_ subview: UIView) -> Self {
         value.didAddSubview(subview)
-        return value
+        return self
     }
 
     @discardableResult
-    public func willRemoveSubview(_ subview: UIView) -> T {
+    public func willRemoveSubview(_ subview: UIView) -> Self {
         value.willRemoveSubview(subview)
-        return value
+        return self
     }
 
     @discardableResult
-    public func willMove(toSuperview newSuperview: UIView?) -> T {
+    public func willMove(toSuperview newSuperview: UIView?) -> Self {
         value.willMove(toSuperview: newSuperview)
-        return value
+        return self
     }
 
     @discardableResult
-    public func didMoveToSuperview() -> T {
+    public func didMoveToSuperview() -> Self {
         value.didMoveToSuperview()
-        return value
+        return self
     }
 
     @discardableResult
-    public func willMove(toWindow newWindow: UIWindow?) -> T {
+    public func willMove(toWindow newWindow: UIWindow?) -> Self {
         value.willMove(toWindow: newWindow)
-        return value
+        return self
     }
 
     @discardableResult
-    public func didMoveToWindow() -> T {
+    public func didMoveToWindow() -> Self {
         value.didMoveToWindow()
-        return value
+        return self
     }
 
     @discardableResult
-    public func setNeedsLayout() -> T {
+    public func setNeedsLayout() -> Self {
         value.setNeedsLayout()
-        return value
+        return self
     }
 
     @discardableResult
-    public func layoutIfNeeded() -> T {
+    public func layoutIfNeeded() -> Self {
         value.layoutIfNeeded()
-        return value
+        return self
     }
 
     @discardableResult
-    public func layoutSubviews() -> T {
+    public func layoutSubviews() -> Self {
         value.layoutSubviews()
-        return value
+        return self
     }
 
     @available(iOS 8.0, *)
     @discardableResult
-    public func layoutMarginsDidChange() -> T {
+    public func layoutMarginsDidChange() -> Self {
         value.layoutMarginsDidChange()
-        return value
+        return self
     }
 
     @available(iOS 11.0, *)
     @discardableResult
-    public func safeAreaInsetsDidChange() -> T {
+    public func safeAreaInsetsDidChange() -> Self {
         value.safeAreaInsetsDidChange()
-        return value
+        return self
     }
 
     @discardableResult
-    public func draw(_ rect: CGRect) -> T {
+    public func draw(_ rect: CGRect) -> Self {
         value.draw(rect)
-        return value
+        return self
     }
 
     @discardableResult
-    public func setNeedsDisplay() -> T {
+    public func setNeedsDisplay() -> Self {
         value.setNeedsDisplay()
-        return value
+        return self
     }
 
     @discardableResult
-    public func setNeedsDisplay(_ rect: CGRect) -> T {
+    public func setNeedsDisplay(_ rect: CGRect) -> Self {
         value.setNeedsDisplay(rect)
-        return value
+        return self
     }
 
     @available(iOS 7.0, *)
     @discardableResult
-    public func tintColorDidChange() -> T {
+    public func tintColorDidChange() -> Self {
         value.tintColorDidChange()
-        return value
+        return self
     }
 
     @available(iOS 3.2, *)
     @discardableResult
-    public func addGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> T {
+    public func addGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> Self {
         value.addGestureRecognizer(gestureRecognizer)
-        return value
+        return self
     }
 
     @available(iOS 3.2, *)
     @discardableResult
-    public func removeGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> T {
+    public func removeGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> Self {
         value.removeGestureRecognizer(gestureRecognizer)
-        return value
+        return self
     }
 
     @available(iOS 7.0, *)
     @discardableResult
-    public func addMotionEffect(_ effect: UIMotionEffect) -> T {
+    public func addMotionEffect(_ effect: UIMotionEffect) -> Self {
         value.addMotionEffect(effect)
-        return value
+        return self
     }
 
     @available(iOS 7.0, *)
     @discardableResult
-    public func removeMotionEffect(_ effect: UIMotionEffect) -> T {
+    public func removeMotionEffect(_ effect: UIMotionEffect) -> Self {
         value.removeMotionEffect(effect)
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func addConstraint(_ constraint: NSLayoutConstraint) -> T {
+    public func addConstraint(_ constraint: NSLayoutConstraint) -> Self {
         value.addConstraint(constraint)
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func addConstraints(_ constraints: [NSLayoutConstraint]) -> T {
+    public func addConstraints(_ constraints: [NSLayoutConstraint]) -> Self {
         value.addConstraints(constraints)
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func removeConstraint(_ constraint: NSLayoutConstraint) -> T {
+    public func removeConstraint(_ constraint: NSLayoutConstraint) -> Self {
         value.removeConstraint(constraint)
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func removeConstraints(_ constraints: [NSLayoutConstraint]) -> T {
+    public func removeConstraints(_ constraints: [NSLayoutConstraint]) -> Self {
         value.removeConstraints(constraints)
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func updateConstraintsIfNeeded() -> T {
+    public func updateConstraintsIfNeeded() -> Self {
         value.updateConstraintsIfNeeded()
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func updateConstraints() -> T {
+    public func updateConstraints() -> Self {
         value.updateConstraints()
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func setNeedsUpdateConstraints() -> T {
+    public func setNeedsUpdateConstraints() -> Self {
         value.setNeedsUpdateConstraints()
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func invalidateIntrinsicContentSize() -> T {
+    public func invalidateIntrinsicContentSize() -> Self {
         value.invalidateIntrinsicContentSize()
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func setContentHuggingPriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> T {
+    public func setContentHuggingPriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> Self {
         value.setContentHuggingPriority(priority, for: axis)
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func setContentCompressionResistancePriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> T {
+    public func setContentCompressionResistancePriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> Self {
         value.setContentCompressionResistancePriority(priority, for: axis)
-        return value
+        return self
     }
 
     @available(iOS 9.0, *)
     @discardableResult
-    public func addLayoutGuide(_ layoutGuide: UILayoutGuide) -> T {
+    public func addLayoutGuide(_ layoutGuide: UILayoutGuide) -> Self {
         value.addLayoutGuide(layoutGuide)
-        return value
+        return self
     }
 
     @available(iOS 9.0, *)
     @discardableResult
-    public func removeLayoutGuide(_ layoutGuide: UILayoutGuide) -> T {
+    public func removeLayoutGuide(_ layoutGuide: UILayoutGuide) -> Self {
         value.removeLayoutGuide(layoutGuide)
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func exerciseAmbiguityInLayout() -> T {
+    public func exerciseAmbiguityInLayout() -> Self {
         value.exerciseAmbiguityInLayout()
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func encodeRestorableState(with coder: NSCoder) -> T {
+    public func encodeRestorableState(with coder: NSCoder) -> Self {
         value.encodeRestorableState(with: coder)
-        return value
+        return self
     }
 
     @available(iOS 6.0, *)
     @discardableResult
-    public func decodeRestorableState(with coder: NSCoder) -> T {
+    public func decodeRestorableState(with coder: NSCoder) -> Self {
         value.decodeRestorableState(with: coder)
-        return value
+        return self
     }
 }

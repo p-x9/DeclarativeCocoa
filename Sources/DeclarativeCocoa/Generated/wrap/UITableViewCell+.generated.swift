@@ -7,53 +7,53 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UITableViewCell {
     @available(iOS 14.0, *)
     @discardableResult
-    public func setNeedsUpdateConfiguration() -> T {
+    public func setNeedsUpdateConfiguration() -> Self {
         value.setNeedsUpdateConfiguration()
-        return value
+        return self
     }
 
     @discardableResult
-    public func prepareForReuse() -> T {
+    public func prepareForReuse() -> Self {
         value.prepareForReuse()
-        return value
+        return self
     }
 
     @discardableResult
-    public func setSelected(_ selected: Bool, animated: Bool) -> T {
+    public func setSelected(_ selected: Bool, animated: Bool) -> Self {
         value.setSelected(selected, animated: animated)
-        return value
+        return self
     }
 
     @discardableResult
-    public func setHighlighted(_ highlighted: Bool, animated: Bool) -> T {
+    public func setHighlighted(_ highlighted: Bool, animated: Bool) -> Self {
         value.setHighlighted(highlighted, animated: animated)
-        return value
+        return self
     }
 
     @discardableResult
-    public func setEditing(_ editing: Bool, animated: Bool) -> T {
+    public func setEditing(_ editing: Bool, animated: Bool) -> Self {
         value.setEditing(editing, animated: animated)
-        return value
+        return self
     }
 
     @available(iOS 3.0, *)
     @discardableResult
-    public func willTransition(to state: UITableViewCell.StateMask) -> T {
+    public func willTransition(to state: UITableViewCell.StateMask) -> Self {
         value.willTransition(to: state)
-        return value
+        return self
     }
 
     @available(iOS 3.0, *)
     @discardableResult
-    public func didTransition(to state: UITableViewCell.StateMask) -> T {
+    public func didTransition(to state: UITableViewCell.StateMask) -> Self {
         value.didTransition(to: state)
-        return value
+        return self
     }
 
     @available(iOS 11.0, *)
     @discardableResult
-    public func dragStateDidChange(_ dragState: UITableViewCell.DragState) -> T {
+    public func dragStateDidChange(_ dragState: UITableViewCell.DragState) -> Self {
         value.dragStateDidChange(dragState)
-        return value
+        return self
     }
 }

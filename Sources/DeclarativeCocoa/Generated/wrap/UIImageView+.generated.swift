@@ -6,14 +6,14 @@ import UIKit
 
 extension Modify.DynamicMemberWrap where T: UIImageView {
     @discardableResult
-    public func startAnimating() -> T {
+    public func startAnimating() -> Self {
         value.startAnimating()
-        return value
+        return self
     }
 
     @discardableResult
-    public func stopAnimating() -> T {
+    public func stopAnimating() -> Self {
         value.stopAnimating()
-        return value
+        return self
     }
 }

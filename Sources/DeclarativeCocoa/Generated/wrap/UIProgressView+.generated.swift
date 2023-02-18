@@ -7,8 +7,8 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UIProgressView {
     @available(iOS 5.0, *)
     @discardableResult
-    public func setProgress(_ progress: Float, animated: Bool) -> T {
+    public func setProgress(_ progress: Float, animated: Bool) -> Self {
         value.setProgress(progress, animated: animated)
-        return value
+        return self
     }
 }
