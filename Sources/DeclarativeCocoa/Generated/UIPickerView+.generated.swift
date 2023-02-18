@@ -16,4 +16,10 @@ extension Modify.DynamicMemberWrap where T: UIPickerView {
         value.reloadComponent(component)
         return value
     }
+
+    @discardableResult
+    public func selectRow(_ row: Int, inComponent component: Int, animated: Bool) -> T {
+        value.selectRow(row, inComponent: component, animated: animated)
+        return value
+    }
 }
