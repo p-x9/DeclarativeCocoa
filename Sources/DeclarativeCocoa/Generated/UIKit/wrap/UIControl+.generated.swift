@@ -70,6 +70,13 @@ extension Modify.DynamicMemberWrap where T: UIControl {
         return self
     }
 
+    @available(iOS 14.0, tvOS 14.0, *)
+    @discardableResult
+    @MainActor public func enumerateEventHandlers(_ iterator: (UIAction?, (Any?, Selector)?, UIControl.Event, inout Bool) -> Void) -> Self {
+        value.enumerateEventHandlers(iterator)
+        return self
+    }
+
     @available(iOS 14.0, *)
     @discardableResult
     public func contextMenuInteraction(_ interaction: UIContextMenuInteraction, willDisplayMenuFor configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionAnimating?) -> Self {

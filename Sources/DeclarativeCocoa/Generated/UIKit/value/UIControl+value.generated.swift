@@ -80,6 +80,14 @@ extension Modify.DynamicMemberWrap where T: UIControl {
         return value
     }
 
+    @available(iOS 14.0, tvOS 14.0, *)
+    @discardableResult
+    @_disfavoredOverload
+    @MainActor public func enumerateEventHandlers(_ iterator: (UIAction?, (Any?, Selector)?, UIControl.Event, inout Bool) -> Void) -> T {
+        value.enumerateEventHandlers(iterator)
+        return value
+    }
+
     @available(iOS 14.0, *)
     @discardableResult
     @_disfavoredOverload

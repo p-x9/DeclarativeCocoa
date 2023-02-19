@@ -43,6 +43,13 @@ extension Modify.DynamicMemberWrap where T: UICollectionViewCell {
         value.dragStateDidChange(dragState)
         return self
     }
+
+    @available(iOS 14.0, tvOS 14.0, *)
+    @discardableResult
+    @MainActor dynamic public func updateConfiguration(using state: UICellConfigurationState) -> Self {
+        value.updateConfiguration(using: state)
+        return self
+    }
 }
 
 #endif
