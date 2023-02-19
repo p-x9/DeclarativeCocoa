@@ -37,21 +37,21 @@ extension Modify.DynamicMemberWrap where T: UIView {
     @discardableResult
     @_disfavoredOverload
     public func addSubview(_ view: UIView) -> T {
-        view.addSubview(view)
+        value.addSubview(view)
         return value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertSubview(_ view: UIView, belowSubview siblingSubview: UIView) -> T {
-        view.insertSubview(view, belowSubview: siblingSubview)
+        value.insertSubview(view, belowSubview: siblingSubview)
         return value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertSubview(_ view: UIView, aboveSubview siblingSubview: UIView) -> T {
-        view.insertSubview(view, aboveSubview: siblingSubview)
+        value.insertSubview(view, aboveSubview: siblingSubview)
         return value
     }
 

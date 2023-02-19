@@ -14,7 +14,7 @@ extension Modify.DynamicMemberWrap where T: NSTextField {
 
     @discardableResult
     public func textDidBeginEditing(_ notification: Notification) -> Self {
-        value.textDidEndEditing(notification)
+        value.textDidBeginEditing(notification)
         return self
     }
 

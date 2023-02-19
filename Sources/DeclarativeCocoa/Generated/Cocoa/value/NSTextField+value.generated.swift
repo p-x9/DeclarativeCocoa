@@ -16,7 +16,7 @@ extension Modify.DynamicMemberWrap where T: NSTextField {
     @discardableResult
     @_disfavoredOverload
     public func textDidBeginEditing(_ notification: Notification) -> T {
-        value.textDidEndEditing(notification)
+        value.textDidBeginEditing(notification)
         return value
     }
 

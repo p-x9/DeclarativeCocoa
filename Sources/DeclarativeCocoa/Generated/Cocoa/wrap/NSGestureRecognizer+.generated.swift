@@ -126,7 +126,7 @@ extension Modify.DynamicMemberWrap where T: NSGestureRecognizer {
     @available(macOS 10.12.2, *)
     @discardableResult
     public func touchesEnded(with event: NSEvent) -> Self {
-
+        value.touchesEnded(with: event)
         return self
     }
 

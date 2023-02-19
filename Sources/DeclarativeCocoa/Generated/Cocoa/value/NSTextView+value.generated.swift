@@ -80,7 +80,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     @discardableResult
     @_disfavoredOverload
     public func turnOffLigatures(_ sender: Any?) -> T {
-        value.turnOffKerning(sender)
+        value.turnOffLigatures(sender)
         return value
     }
 
@@ -112,9 +112,9 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
         return value
     }
 
+    @available(macOS, introduced: 10.0, deprecated: 10.11, message: "Use the traditional shaped characters encoded in the Unicode standard. Access the characters via the character palette.")
     @discardableResult
     @_disfavoredOverload
-    @available(macOS, introduced: 10.0, deprecated: 10.11, message: "Use the traditional shaped characters encoded in the Unicode standard. Access the characters via the character palette.")
     public func toggleTraditionalCharacterShape(_ sender: Any?) -> T {
         value.toggleTraditionalCharacterShape(sender)
         return value
@@ -179,7 +179,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     @discardableResult
     @_disfavoredOverload
     public func orderFrontListPanel(_ sender: Any?) -> T {
-        value.orderFrontLinkPanel(sender)
+        value.orderFrontListPanel(sender)
         return value
     }
 
@@ -373,7 +373,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     @_disfavoredOverload
     public func setSpellingState(_ value: Int, range charRange: NSRange) -> T {
         self.value.setSpellingState(value, range: charRange)
-        return self.value
+        return value
     }
 
     @discardableResult
@@ -463,7 +463,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     @discardableResult
     @_disfavoredOverload
     public func toggleAutomaticSpellingCorrection(_ sender: Any?) -> T {
-        value.toggleContinuousSpellChecking(sender)
+        value.toggleAutomaticSpellingCorrection(sender)
         return value
     }
 
