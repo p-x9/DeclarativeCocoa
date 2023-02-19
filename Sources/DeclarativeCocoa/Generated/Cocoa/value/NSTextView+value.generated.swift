@@ -373,7 +373,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     @_disfavoredOverload
     public func setSpellingState(_ value: Int, range charRange: NSRange) -> T {
         self.value.setSpellingState(value, range: charRange)
-        return value
+        return self.value
     }
 
     @discardableResult
