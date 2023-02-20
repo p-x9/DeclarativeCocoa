@@ -6,7 +6,7 @@
 import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSSearchField {
-   
+
 }
 
 #endif

@@ -467,12 +467,14 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
         return self
     }
 
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
     @discardableResult
     public func disableFlushing() -> Self {
         value.disableFlushing()
         return self
     }
 
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
     @discardableResult
     public func enableFlushing() -> Self {
         value.enableFlushing()

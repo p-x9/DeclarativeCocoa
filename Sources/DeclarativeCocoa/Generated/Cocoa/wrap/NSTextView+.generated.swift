@@ -69,7 +69,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
 
     @discardableResult
     public func turnOffLigatures(_ sender: Any?) -> Self {
-        value.turnOffKerning(sender)
+        value.turnOffLigatures(sender)
         return self
     }
 
@@ -97,8 +97,8 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
         return self
     }
 
-    @discardableResult
     @available(macOS, introduced: 10.0, deprecated: 10.11, message: "Use the traditional shaped characters encoded in the Unicode standard. Access the characters via the character palette.")
+    @discardableResult
     public func toggleTraditionalCharacterShape(_ sender: Any?) -> Self {
         value.toggleTraditionalCharacterShape(sender)
         return self
@@ -154,7 +154,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
 
     @discardableResult
     public func orderFrontListPanel(_ sender: Any?) -> Self {
-        value.orderFrontLinkPanel(sender)
+        value.orderFrontListPanel(sender)
         return self
     }
 
@@ -399,7 +399,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     @available(macOS 10.6, *)
     @discardableResult
     public func toggleAutomaticSpellingCorrection(_ sender: Any?) -> Self {
-        value.toggleContinuousSpellChecking(sender)
+        value.toggleAutomaticSpellingCorrection(sender)
         return self
     }
 

@@ -118,5 +118,4 @@ extension Modify.DynamicMemberWrap where T: UISegmentedControl {
     }
 }
 
-
 #endif

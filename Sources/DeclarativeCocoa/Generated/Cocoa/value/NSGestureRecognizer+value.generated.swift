@@ -146,7 +146,7 @@ extension Modify.DynamicMemberWrap where T: NSGestureRecognizer {
     @discardableResult
     @_disfavoredOverload
     public func touchesEnded(with event: NSEvent) -> T {
-
+        value.touchesEnded(with: event)
         return value
     }
 
