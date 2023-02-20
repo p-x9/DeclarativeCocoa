@@ -8,282 +8,282 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UIView {
     @discardableResult
     public func sizeToFit() -> Self {
-        value.sizeToFit()
-        return self
+        self.value.sizeToFit()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func removeFromSuperview() -> Self {
-        value.removeFromSuperview()
-        return self
+        self.value.removeFromSuperview()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func insertSubview(_ view: UIView, at index: Int) -> Self {
-        value.insertSubview(view, at: index)
-        return self
+        self.value.insertSubview(view, at: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func exchangeSubview(at index1: Int, withSubviewAt index2: Int) -> Self {
-        value.exchangeSubview(at: index1, withSubviewAt: index2)
-        return self
+        self.value.exchangeSubview(at: index1, withSubviewAt: index2)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func addSubview(_ view: UIView) -> Self {
-        value.addSubview(view)
-        return self
+        self.value.addSubview(view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func insertSubview(_ view: UIView, belowSubview siblingSubview: UIView) -> Self {
-        value.insertSubview(view, belowSubview: siblingSubview)
-        return self
+        self.value.insertSubview(view, belowSubview: siblingSubview)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func insertSubview(_ view: UIView, aboveSubview siblingSubview: UIView) -> Self {
-        value.insertSubview(view, aboveSubview: siblingSubview)
-        return self
+        self.value.insertSubview(view, aboveSubview: siblingSubview)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func bringSubviewToFront(_ view: UIView) -> Self {
-        value.bringSubviewToFront(view)
-        return self
+        self.value.bringSubviewToFront(view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func sendSubviewToBack(_ view: UIView) -> Self {
-        value.sendSubviewToBack(view)
-        return self
+        self.value.sendSubviewToBack(view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func didAddSubview(_ subview: UIView) -> Self {
-        value.didAddSubview(subview)
-        return self
+        self.value.didAddSubview(subview)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func willRemoveSubview(_ subview: UIView) -> Self {
-        value.willRemoveSubview(subview)
-        return self
+        self.value.willRemoveSubview(subview)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func willMove(toSuperview newSuperview: UIView?) -> Self {
-        value.willMove(toSuperview: newSuperview)
-        return self
+        self.value.willMove(toSuperview: newSuperview)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func didMoveToSuperview() -> Self {
-        value.didMoveToSuperview()
-        return self
+        self.value.didMoveToSuperview()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func willMove(toWindow newWindow: UIWindow?) -> Self {
-        value.willMove(toWindow: newWindow)
-        return self
+        self.value.willMove(toWindow: newWindow)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func didMoveToWindow() -> Self {
-        value.didMoveToWindow()
-        return self
+        self.value.didMoveToWindow()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setNeedsLayout() -> Self {
-        value.setNeedsLayout()
-        return self
+        self.value.setNeedsLayout()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func layoutIfNeeded() -> Self {
-        value.layoutIfNeeded()
-        return self
+        self.value.layoutIfNeeded()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func layoutSubviews() -> Self {
-        value.layoutSubviews()
-        return self
+        self.value.layoutSubviews()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 8.0, *)
     @discardableResult
     public func layoutMarginsDidChange() -> Self {
-        value.layoutMarginsDidChange()
-        return self
+        self.value.layoutMarginsDidChange()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 11.0, *)
     @discardableResult
     public func safeAreaInsetsDidChange() -> Self {
-        value.safeAreaInsetsDidChange()
-        return self
+        self.value.safeAreaInsetsDidChange()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func draw(_ rect: CGRect) -> Self {
-        value.draw(rect)
-        return self
+        self.value.draw(rect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setNeedsDisplay() -> Self {
-        value.setNeedsDisplay()
-        return self
+        self.value.setNeedsDisplay()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setNeedsDisplay(_ rect: CGRect) -> Self {
-        value.setNeedsDisplay(rect)
-        return self
+        self.value.setNeedsDisplay(rect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     public func tintColorDidChange() -> Self {
-        value.tintColorDidChange()
-        return self
+        self.value.tintColorDidChange()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 3.2, *)
     @discardableResult
     public func addGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> Self {
-        value.addGestureRecognizer(gestureRecognizer)
-        return self
+        self.value.addGestureRecognizer(gestureRecognizer)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 3.2, *)
     @discardableResult
     public func removeGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> Self {
-        value.removeGestureRecognizer(gestureRecognizer)
-        return self
+        self.value.removeGestureRecognizer(gestureRecognizer)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     public func addMotionEffect(_ effect: UIMotionEffect) -> Self {
-        value.addMotionEffect(effect)
-        return self
+        self.value.addMotionEffect(effect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     public func removeMotionEffect(_ effect: UIMotionEffect) -> Self {
-        value.removeMotionEffect(effect)
-        return self
+        self.value.removeMotionEffect(effect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func addConstraint(_ constraint: NSLayoutConstraint) -> Self {
-        value.addConstraint(constraint)
-        return self
+        self.value.addConstraint(constraint)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func addConstraints(_ constraints: [NSLayoutConstraint]) -> Self {
-        value.addConstraints(constraints)
-        return self
+        self.value.addConstraints(constraints)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func removeConstraint(_ constraint: NSLayoutConstraint) -> Self {
-        value.removeConstraint(constraint)
-        return self
+        self.value.removeConstraint(constraint)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func removeConstraints(_ constraints: [NSLayoutConstraint]) -> Self {
-        value.removeConstraints(constraints)
-        return self
+        self.value.removeConstraints(constraints)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func updateConstraintsIfNeeded() -> Self {
-        value.updateConstraintsIfNeeded()
-        return self
+        self.value.updateConstraintsIfNeeded()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func updateConstraints() -> Self {
-        value.updateConstraints()
-        return self
+        self.value.updateConstraints()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func setNeedsUpdateConstraints() -> Self {
-        value.setNeedsUpdateConstraints()
-        return self
+        self.value.setNeedsUpdateConstraints()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func invalidateIntrinsicContentSize() -> Self {
-        value.invalidateIntrinsicContentSize()
-        return self
+        self.value.invalidateIntrinsicContentSize()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func setContentHuggingPriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> Self {
-        value.setContentHuggingPriority(priority, for: axis)
-        return self
+        self.value.setContentHuggingPriority(priority, for: axis)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func setContentCompressionResistancePriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> Self {
-        value.setContentCompressionResistancePriority(priority, for: axis)
-        return self
+        self.value.setContentCompressionResistancePriority(priority, for: axis)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     public func addLayoutGuide(_ layoutGuide: UILayoutGuide) -> Self {
-        value.addLayoutGuide(layoutGuide)
-        return self
+        self.value.addLayoutGuide(layoutGuide)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     public func removeLayoutGuide(_ layoutGuide: UILayoutGuide) -> Self {
-        value.removeLayoutGuide(layoutGuide)
-        return self
+        self.value.removeLayoutGuide(layoutGuide)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func exerciseAmbiguityInLayout() -> Self {
-        value.exerciseAmbiguityInLayout()
-        return self
+        self.value.exerciseAmbiguityInLayout()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func encodeRestorableState(with coder: NSCoder) -> Self {
-        value.encodeRestorableState(with: coder)
-        return self
+        self.value.encodeRestorableState(with: coder)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func decodeRestorableState(with coder: NSCoder) -> Self {
-        value.decodeRestorableState(with: coder)
-        return self
+        self.value.decodeRestorableState(with: coder)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

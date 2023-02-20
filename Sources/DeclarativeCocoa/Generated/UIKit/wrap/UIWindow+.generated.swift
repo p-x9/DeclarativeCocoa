@@ -8,32 +8,32 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UIWindow {
     @discardableResult
     public func becomeKey() -> Self {
-        value.becomeKey()
-        return self
+        self.value.becomeKey()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func resignKey() -> Self {
-        value.resignKey()
-        return self
+        self.value.resignKey()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func makeKey() -> Self {
-        value.makeKey()
-        return self
+        self.value.makeKey()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func makeKeyAndVisible() -> Self {
-        value.makeKeyAndVisible()
-        return self
+        self.value.makeKeyAndVisible()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func sendEvent(_ event: UIEvent) -> Self {
-        value.sendEvent(event)
-        return self
+        self.value.sendEvent(event)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

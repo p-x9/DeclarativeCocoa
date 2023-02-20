@@ -8,20 +8,20 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UIPickerView {
     @discardableResult
     public func reloadAllComponents() -> Self {
-        value.reloadAllComponents()
-        return self
+        self.value.reloadAllComponents()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func reloadComponent(_ component: Int) -> Self {
-        value.reloadComponent(component)
-        return self
+        self.value.reloadComponent(component)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectRow(_ row: Int, inComponent component: Int, animated: Bool) -> Self {
-        value.selectRow(row, inComponent: component, animated: animated)
-        return self
+        self.value.selectRow(row, inComponent: component, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

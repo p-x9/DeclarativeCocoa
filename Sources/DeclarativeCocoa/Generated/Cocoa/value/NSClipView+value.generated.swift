@@ -9,36 +9,36 @@ extension Modify.DynamicMemberWrap where T: NSClipView {
     @discardableResult
     @_disfavoredOverload
     public func viewFrameChanged(_ notification: Notification) -> T {
-        value.viewFrameChanged(notification)
-        return value
+        self.value.viewFrameChanged(notification)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func viewBoundsChanged(_ notification: Notification) -> T {
-        value.viewBoundsChanged(notification)
-        return value
+        self.value.viewBoundsChanged(notification)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func scroll(to newOrigin: NSPoint) -> T {
-        value.scroll(to: newOrigin)
-        return value
+        self.value.scroll(to: newOrigin)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func reflectScrolledClipView(_ clipView: NSClipView) -> T {
-        value.reflectScrolledClipView(clipView)
-        return value
+        self.value.reflectScrolledClipView(clipView)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func scroll(_ clipView: NSClipView, to point: NSPoint) -> T {
-        value.scroll(clipView, to: point)
-        return value
+        self.value.scroll(clipView, to: point)
+        return self.value
     }
 }
 

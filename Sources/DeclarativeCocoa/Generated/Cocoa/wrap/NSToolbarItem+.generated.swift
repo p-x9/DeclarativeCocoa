@@ -8,8 +8,8 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSToolbarItem {
     @discardableResult
     public func validate() -> Self {
-        value.validate()
-        return self
+        self.value.validate()
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

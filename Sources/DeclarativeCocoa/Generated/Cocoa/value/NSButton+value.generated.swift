@@ -9,44 +9,44 @@ extension Modify.DynamicMemberWrap where T: NSButton {
     @discardableResult
     @_disfavoredOverload
     public func setButtonType(_ type: NSButton.ButtonType) -> T {
-        value.setButtonType(type)
-        return value
+        self.value.setButtonType(type)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setPeriodicDelay(_ delay: Float, interval: Float) -> T {
-        value.setPeriodicDelay(delay, interval: interval)
-        return value
+        self.value.setPeriodicDelay(delay, interval: interval)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func getPeriodicDelay(_ delay: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>) -> T {
-        value.getPeriodicDelay(delay, interval: interval)
-        return value
+        self.value.getPeriodicDelay(delay, interval: interval)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setNextState() -> T {
-        value.setNextState()
-        return value
+        self.value.setNextState()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func highlight(_ flag: Bool) -> T {
-        value.highlight(flag)
-        return value
+        self.value.highlight(flag)
+        return self.value
     }
 
     @available(macOS 10.13, *)
     @discardableResult
     @_disfavoredOverload
     public func compress(withPrioritizedCompressionOptions prioritizedOptions: [NSUserInterfaceCompressionOptions]) -> T {
-        value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
-        return value
+        self.value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
+        return self.value
     }
 }
 

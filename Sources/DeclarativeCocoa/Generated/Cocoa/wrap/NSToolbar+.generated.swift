@@ -8,32 +8,32 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSToolbar {
     @discardableResult
     public func insertItem(withItemIdentifier itemIdentifier: NSToolbarItem.Identifier, at index: Int) -> Self {
-        value.insertItem(withItemIdentifier: itemIdentifier, at: index)
-        return self
+        self.value.insertItem(withItemIdentifier: itemIdentifier, at: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func removeItem(at index: Int) -> Self {
-        value.removeItem(at: index)
-        return self
+        self.value.removeItem(at: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func runCustomizationPalette(_ sender: Any?) -> Self {
-        value.runCustomizationPalette(sender)
-        return self
+        self.value.runCustomizationPalette(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setConfiguration(_ configDict: [String : Any]) -> Self {
-        value.setConfiguration(configDict)
-        return self
+        self.value.setConfiguration(configDict)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func validateVisibleItems() -> Self {
-        value.validateVisibleItems()
-        return self
+        self.value.validateVisibleItems()
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

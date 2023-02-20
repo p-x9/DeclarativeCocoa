@@ -9,8 +9,8 @@ extension Modify.DynamicMemberWrap where T: UILabel {
     @discardableResult
     @_disfavoredOverload
     public func drawText(in rect: CGRect) -> T {
-        value.drawText(in: rect)
-        return value
+        self.value.drawText(in: rect)
+        return self.value
     }
 }
 

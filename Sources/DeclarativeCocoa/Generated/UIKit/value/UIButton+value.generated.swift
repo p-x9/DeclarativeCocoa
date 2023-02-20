@@ -10,67 +10,67 @@ extension Modify.DynamicMemberWrap where T: UIButton {
     @discardableResult
     @_disfavoredOverload
     public func setNeedsUpdateConfiguration() -> T {
-        value.setNeedsUpdateConfiguration()
-        return value
+        self.value.setNeedsUpdateConfiguration()
+        return self.value
     }
 
     @available(iOS 15.0, *)
     @discardableResult
     @_disfavoredOverload
     public func updateConfiguration() -> T {
-        value.updateConfiguration()
-        return value
+        self.value.updateConfiguration()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setTitle(_ title: String?, for state: UIControl.State) -> T {
-        value.setTitle(title, for: state)
-        return value
+        self.value.setTitle(title, for: state)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setTitleColor(_ color: UIColor?, for state: UIControl.State) -> T {
-        value.setTitleColor(color, for: state)
-        return value
+        self.value.setTitleColor(color, for: state)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setTitleShadowColor(_ color: UIColor?, for state: UIControl.State) -> T {
-        value.setTitleShadowColor(color, for: state)
-        return value
+        self.value.setTitleShadowColor(color, for: state)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setImage(_ image: UIImage?, for state: UIControl.State) -> T {
-        value.setImage(image, for: state)
-        return value
+        self.value.setImage(image, for: state)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setBackgroundImage(_ image: UIImage?, for state: UIControl.State) -> T {
-        value.setBackgroundImage(image, for: state)
-        return value
+        self.value.setBackgroundImage(image, for: state)
+        return self.value
     }
 
     @available(iOS 13.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setPreferredSymbolConfiguration(_ configuration: UIImage.SymbolConfiguration?, forImageIn state: UIControl.State) -> T {
-        value.setPreferredSymbolConfiguration(configuration, forImageIn: state)
-        return value
+        self.value.setPreferredSymbolConfiguration(configuration, forImageIn: state)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setAttributedTitle(_ title: NSAttributedString?, for state: UIControl.State) -> T {
-        value.setAttributedTitle(title, for: state)
-        return value
+        self.value.setAttributedTitle(title, for: state)
+        return self.value
     }
 }
 

@@ -9,36 +9,36 @@ extension Modify.DynamicMemberWrap where T: NSToolbar {
     @discardableResult
     @_disfavoredOverload
     public func insertItem(withItemIdentifier itemIdentifier: NSToolbarItem.Identifier, at index: Int) -> T {
-        value.insertItem(withItemIdentifier: itemIdentifier, at: index)
-        return value
+        self.value.insertItem(withItemIdentifier: itemIdentifier, at: index)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeItem(at index: Int) -> T {
-        value.removeItem(at: index)
-        return value
+        self.value.removeItem(at: index)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func runCustomizationPalette(_ sender: Any?) -> T {
-        value.runCustomizationPalette(sender)
-        return value
+        self.value.runCustomizationPalette(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setConfiguration(_ configDict: [String : Any]) -> T {
-        value.setConfiguration(configDict)
-        return value
+        self.value.setConfiguration(configDict)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func validateVisibleItems() -> T {
-        value.validateVisibleItems()
-        return value
+        self.value.validateVisibleItems()
+        return self.value
     }
 }
 

@@ -9,74 +9,74 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
     @discardableResult
     @_disfavoredOverload
     public func expandItem(_ item: Any?, expandChildren: Bool) -> T {
-        value.expandItem(item, expandChildren: expandChildren)
-        return value
+        self.value.expandItem(item, expandChildren: expandChildren)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func expandItem(_ item: Any?) -> T {
-        value.expandItem(item)
-        return value
+        self.value.expandItem(item)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func collapseItem(_ item: Any?, collapseChildren: Bool) -> T {
-        value.collapseItem(item, collapseChildren: collapseChildren)
-        return value
+        self.value.collapseItem(item, collapseChildren: collapseChildren)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func collapseItem(_ item: Any?) -> T {
-        value.collapseItem(item)
-        return value
+        self.value.collapseItem(item)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func reloadItem(_ item: Any?, reloadChildren: Bool) -> T {
-        value.reloadItem(item, reloadChildren: reloadChildren)
-        return value
+        self.value.reloadItem(item, reloadChildren: reloadChildren)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func reloadItem(_ item: Any?) -> T {
-        value.reloadItem(item)
-        return value
+        self.value.reloadItem(item)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setDropItem(_ item: Any?, dropChildIndex index: Int) -> T {
-        value.setDropItem(item, dropChildIndex: index)
-        return value
+        self.value.setDropItem(item, dropChildIndex: index)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func insertItems(at indexes: IndexSet, inParent parent: Any?, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> T {
-        value.insertItems(at: indexes, inParent: parent, withAnimation: animationOptions)
-        return value
+        self.value.insertItems(at: indexes, inParent: parent, withAnimation: animationOptions)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func removeItems(at indexes: IndexSet, inParent parent: Any?, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> T {
-        value.removeItems(at: indexes, inParent: parent, withAnimation: animationOptions)
-        return value
+        self.value.removeItems(at: indexes, inParent: parent, withAnimation: animationOptions)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func moveItem(at fromIndex: Int, inParent oldParent: Any?, to toIndex: Int, inParent newParent: Any?) -> T {
-        value.moveItem(at: fromIndex, inParent: oldParent, to: toIndex, inParent: newParent)
-        return value
+        self.value.moveItem(at: fromIndex, inParent: oldParent, to: toIndex, inParent: newParent)
+        return self.value
     }
 }
 

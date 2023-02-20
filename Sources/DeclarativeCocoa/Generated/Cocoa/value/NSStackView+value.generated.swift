@@ -9,81 +9,81 @@ extension Modify.DynamicMemberWrap where T: NSStackView {
     @discardableResult
     @_disfavoredOverload
     public func setCustomSpacing(_ spacing: CGFloat, after view: NSView) -> T {
-        value.setCustomSpacing(spacing, after: view)
-        return value
+        self.value.setCustomSpacing(spacing, after: view)
+        return self.value
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
     public func addArrangedSubview(_ view: NSView) -> T {
-        value.addArrangedSubview(view)
-        return value
+        self.value.addArrangedSubview(view)
+        return self.value
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
     public func insertArrangedSubview(_ view: NSView, at index: Int) -> T {
-        value.insertArrangedSubview(view, at: index)
-        return value
+        self.value.insertArrangedSubview(view, at: index)
+        return self.value
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
     public func removeArrangedSubview(_ view: NSView) -> T {
-        value.removeArrangedSubview(view)
-        return value
+        self.value.removeArrangedSubview(view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setVisibilityPriority(_ priority: NSStackView.VisibilityPriority, for view: NSView) -> T {
-        value.setVisibilityPriority(priority, for: view)
-        return value
+        self.value.setVisibilityPriority(priority, for: view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setClippingResistancePriority(_ clippingResistancePriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> T {
-        value.setClippingResistancePriority(clippingResistancePriority, for: orientation)
-        return value
+        self.value.setClippingResistancePriority(clippingResistancePriority, for: orientation)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setHuggingPriority(_ huggingPriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> T {
-        value.setHuggingPriority(huggingPriority, for: orientation)
-        return value
+        self.value.setHuggingPriority(huggingPriority, for: orientation)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addView(_ view: NSView, in gravity: NSStackView.Gravity) -> T {
-        value.addView(view, in: gravity)
-        return value
+        self.value.addView(view, in: gravity)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertView(_ view: NSView, at index: Int, in gravity: NSStackView.Gravity) -> T {
-        value.insertView(view, at: index, in: gravity)
-        return value
+        self.value.insertView(view, at: index, in: gravity)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeView(_ view: NSView) -> T {
-        value.removeView(view)
-        return value
+        self.value.removeView(view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setViews(_ views: [NSView], in gravity: NSStackView.Gravity) -> T {
-        value.setViews(views, in: gravity)
-        return value
+        self.value.setViews(views, in: gravity)
+        return self.value
     }
 }
 

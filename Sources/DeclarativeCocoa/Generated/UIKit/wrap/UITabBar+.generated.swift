@@ -8,14 +8,14 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UITabBar {
     @discardableResult
     public func setItems(_ items: [UITabBarItem]?, animated: Bool) -> Self {
-        value.setItems(items, animated: animated)
-        return self
+        self.value.setItems(items, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func beginCustomizingItems(_ items: [UITabBarItem]) -> Self {
-        value.beginCustomizingItems(items)
-        return self
+        self.value.beginCustomizingItems(items)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

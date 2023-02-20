@@ -9,648 +9,648 @@ extension Modify.DynamicMemberWrap where T: NSView {
     @discardableResult
     @_disfavoredOverload
     public func getRectsBeingDrawn(_ rects: UnsafeMutablePointer<UnsafePointer<NSRect>?>?, count: UnsafeMutablePointer<Int>?) -> T {
-        value.getRectsBeingDrawn(rects, count: count)
-        return value
+        self.value.getRectsBeingDrawn(rects, count: count)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func viewDidHide() -> T {
-        value.viewDidHide()
-        return value
+        self.value.viewDidHide()
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func viewDidUnhide() -> T {
-        value.viewDidUnhide()
-        return value
+        self.value.viewDidUnhide()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addSubview(_ view: NSView) -> T {
-        value.addSubview(view)
-        return value
+        self.value.addSubview(view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addSubview(_ view: NSView, positioned place: NSWindow.OrderingMode, relativeTo otherView: NSView?) -> T {
-        value.addSubview(view, positioned: place, relativeTo: otherView)
-        return value
+        self.value.addSubview(view, positioned: place, relativeTo: otherView)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func sortSubviews(_ compare: @convention(c) (NSView, NSView, UnsafeMutableRawPointer?) -> ComparisonResult, context: UnsafeMutableRawPointer?) -> T {
-        value.sortSubviews(compare, context: context)
-        return value
+        self.value.sortSubviews(compare, context: context)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func viewWillMove(toWindow newWindow: NSWindow?) -> T {
-        value.viewWillMove(toWindow: newWindow)
-        return value
+        self.value.viewWillMove(toWindow: newWindow)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func viewDidMoveToWindow() -> T {
-        value.viewDidMoveToWindow()
-        return value
+        self.value.viewDidMoveToWindow()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func viewWillMove(toSuperview newSuperview: NSView?) -> T {
-        value.viewWillMove(toSuperview: newSuperview)
-        return value
+        self.value.viewWillMove(toSuperview: newSuperview)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func viewDidMoveToSuperview() -> T {
-        value.viewDidMoveToSuperview()
-        return value
+        self.value.viewDidMoveToSuperview()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func didAddSubview(_ subview: NSView) -> T {
-        value.didAddSubview(subview)
-        return value
+        self.value.didAddSubview(subview)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func willRemoveSubview(_ subview: NSView) -> T {
-        value.willRemoveSubview(subview)
-        return value
+        self.value.willRemoveSubview(subview)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeFromSuperview() -> T {
-        value.removeFromSuperview()
-        return value
+        self.value.removeFromSuperview()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func replaceSubview(_ oldView: NSView, with newView: NSView) -> T {
-        value.replaceSubview(oldView, with: newView)
-        return value
+        self.value.replaceSubview(oldView, with: newView)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeFromSuperviewWithoutNeedingDisplay() -> T {
-        value.removeFromSuperviewWithoutNeedingDisplay()
-        return value
+        self.value.removeFromSuperviewWithoutNeedingDisplay()
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func viewDidChangeBackingProperties() -> T {
-        value.viewDidChangeBackingProperties()
-        return value
+        self.value.viewDidChangeBackingProperties()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func resizeSubviews(withOldSize oldSize: NSSize) -> T {
-        value.resizeSubviews(withOldSize: oldSize)
-        return value
+        self.value.resizeSubviews(withOldSize: oldSize)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func resize(withOldSuperviewSize oldSize: NSSize) -> T {
-        value.resize(withOldSuperviewSize: oldSize)
-        return value
+        self.value.resize(withOldSuperviewSize: oldSize)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setFrameOrigin(_ newOrigin: NSPoint) -> T {
-        value.setFrameOrigin(newOrigin)
-        return value
+        self.value.setFrameOrigin(newOrigin)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setFrameSize(_ newSize: NSSize) -> T {
-        value.setFrameSize(newSize)
-        return value
+        self.value.setFrameSize(newSize)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setBoundsOrigin(_ newOrigin: NSPoint) -> T {
-        value.setBoundsOrigin(newOrigin)
-        return value
+        self.value.setBoundsOrigin(newOrigin)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setBoundsSize(_ newSize: NSSize) -> T {
-        value.setBoundsSize(newSize)
-        return value
+        self.value.setBoundsSize(newSize)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func translateOrigin(to translation: NSPoint) -> T {
-        value.translateOrigin(to: translation)
-        return value
+        self.value.translateOrigin(to: translation)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func scaleUnitSquare(to newUnitSize: NSSize) -> T {
-        value.scaleUnitSquare(to: newUnitSize)
-        return value
+        self.value.scaleUnitSquare(to: newUnitSize)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func rotate(byDegrees angle: CGFloat) -> T {
-        value.rotate(byDegrees: angle)
-        return value
+        self.value.rotate(byDegrees: angle)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setNeedsDisplay(_ invalidRect: NSRect) -> T {
-        value.setNeedsDisplay(invalidRect)
-        return value
+        self.value.setNeedsDisplay(invalidRect)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "To draw, subclass NSView and implement -drawRect:; AppKit's automatic deferred display mechanism will call -drawRect: as necessary to display the view.")
     @discardableResult
     @_disfavoredOverload
     public func lockFocus() -> T {
-        value.lockFocus()
-        return value
+        self.value.lockFocus()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "To draw, subclass NSView and implement -drawRect:; AppKit's automatic deferred display mechanism will call -drawRect: as necessary to display the view.")
     @discardableResult
     @_disfavoredOverload
     public func unlockFocus() -> T {
-        value.unlockFocus()
-        return value
+        self.value.unlockFocus()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func display() -> T {
-        value.display()
-        return value
+        self.value.display()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func displayIfNeeded() -> T {
-        value.displayIfNeeded()
-        return value
+        self.value.displayIfNeeded()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func displayIfNeededIgnoringOpacity() -> T {
-        value.displayIfNeededIgnoringOpacity()
-        return value
+        self.value.displayIfNeededIgnoringOpacity()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func display(_ rect: NSRect) -> T {
-        value.display(rect)
-        return value
+        self.value.display(rect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func displayIfNeeded(_ rect: NSRect) -> T {
-        value.displayIfNeeded(rect)
-        return value
+        self.value.displayIfNeeded(rect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func displayIgnoringOpacity(_ rect: NSRect) -> T {
-        value.displayIgnoringOpacity(rect)
-        return value
+        self.value.displayIgnoringOpacity(rect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func displayIfNeededIgnoringOpacity(_ rect: NSRect) -> T {
-        value.displayIfNeededIgnoringOpacity(rect)
-        return value
+        self.value.displayIfNeededIgnoringOpacity(rect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func draw(_ dirtyRect: NSRect) -> T {
-        value.draw(dirtyRect)
-        return value
+        self.value.draw(dirtyRect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func displayIgnoringOpacity(_ rect: NSRect, in context: NSGraphicsContext) -> T {
-        value.displayIgnoringOpacity(rect, in: context)
-        return value
+        self.value.displayIgnoringOpacity(rect, in: context)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func cacheDisplay(in rect: NSRect, to bitmapImageRep: NSBitmapImageRep) -> T {
-        value.cacheDisplay(in: rect, to: bitmapImageRep)
-        return value
+        self.value.cacheDisplay(in: rect, to: bitmapImageRep)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func viewWillDraw() -> T {
-        value.viewWillDraw()
-        return value
+        self.value.viewWillDraw()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func scroll(_ point: NSPoint) -> T {
-        value.scroll(point)
-        return value
+        self.value.scroll(point)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use NSScrollView to achieve scrolling views.")
     @discardableResult
     @_disfavoredOverload
     public func scroll(_ rect: NSRect, by delta: NSSize) -> T {
-        value.scroll(rect, by: delta)
-        return value
+        self.value.scroll(rect, by: delta)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func translateRectsNeedingDisplay(in clipRect: NSRect, by delta: NSSize) -> T {
-        value.translateRectsNeedingDisplay(in: clipRect, by: delta)
-        return value
+        self.value.translateRectsNeedingDisplay(in: clipRect, by: delta)
+        return self.value
     }
 
     @available(macOS 10.8, *)
     @discardableResult
     @_disfavoredOverload
     public func updateLayer() -> T {
-        value.updateLayer()
-        return value
+        self.value.updateLayer()
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func layoutSubtreeIfNeeded() -> T {
-        value.layoutSubtreeIfNeeded()
-        return value
+        self.value.layoutSubtreeIfNeeded()
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func layout() -> T {
-        value.layout()
-        return value
+        self.value.layout()
+        return self.value
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
     public func willOpenMenu(_ menu: NSMenu, with event: NSEvent) -> T {
-        value.willOpenMenu(menu, with: event)
-        return value
+        self.value.willOpenMenu(menu, with: event)
+        return self.value
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
     public func didCloseMenu(_ menu: NSMenu, with event: NSEvent?) -> T {
-        value.didCloseMenu(menu, with: event)
-        return value
+        self.value.didCloseMenu(menu, with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeToolTip(_ tag: NSView.ToolTipTag) -> T {
-        value.removeToolTip(tag)
-        return value
+        self.value.removeToolTip(tag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeAllToolTips() -> T {
-        value.removeAllToolTips()
-        return value
+        self.value.removeAllToolTips()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func viewWillStartLiveResize() -> T {
-        value.viewWillStartLiveResize()
-        return value
+        self.value.viewWillStartLiveResize()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func viewDidEndLiveResize() -> T {
-        value.viewDidEndLiveResize()
-        return value
+        self.value.viewDidEndLiveResize()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func getRectsExposedDuringLiveResize(_ exposedRects: UnsafeMutablePointer<NSRect>, count: UnsafeMutablePointer<Int>) -> T {
-        value.getRectsExposedDuringLiveResize(exposedRects, count: count)
-        return value
+        self.value.getRectsExposedDuringLiveResize(exposedRects, count: count)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func prepareForReuse() -> T {
-        value.prepareForReuse()
-        return value
+        self.value.prepareForReuse()
+        return self.value
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     @_disfavoredOverload
     public func prepareContent(in rect: NSRect) -> T {
-        value.prepareContent(in: rect)
-        return value
+        self.value.prepareContent(in: rect)
+        return self.value
     }
 
     @available(macOS 10.14, *)
     @discardableResult
     @_disfavoredOverload
     public func viewDidChangeEffectiveAppearance() -> T {
-        value.viewDidChangeEffectiveAppearance()
-        return value
+        self.value.viewDidChangeEffectiveAppearance()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setKeyboardFocusRingNeedsDisplay(_ rect: NSRect) -> T {
-        value.setKeyboardFocusRingNeedsDisplay(rect)
-        return value
+        self.value.setKeyboardFocusRingNeedsDisplay(rect)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func drawFocusRingMask() -> T {
-        value.drawFocusRingMask()
-        return value
+        self.value.drawFocusRingMask()
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func noteFocusRingMaskChanged() -> T {
-        value.noteFocusRingMaskChanged()
-        return value
+        self.value.noteFocusRingMaskChanged()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func writeEPS(inside rect: NSRect, to pasteboard: NSPasteboard) -> T {
-        value.writeEPS(inside: rect, to: pasteboard)
-        return value
+        self.value.writeEPS(inside: rect, to: pasteboard)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func writePDF(inside rect: NSRect, to pasteboard: NSPasteboard) -> T {
-        value.writePDF(inside: rect, to: pasteboard)
-        return value
+        self.value.writePDF(inside: rect, to: pasteboard)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func printView(_ sender: Any?) -> T {
-        value.printView(sender)
-        return value
+        self.value.printView(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func adjustPageWidthNew(_ newRight: UnsafeMutablePointer<CGFloat>, left oldLeft: CGFloat, right oldRight: CGFloat, limit rightLimit: CGFloat) -> T {
-        value.adjustPageWidthNew(newRight, left: oldLeft, right: oldRight, limit: rightLimit)
-        return value
+        self.value.adjustPageWidthNew(newRight, left: oldLeft, right: oldRight, limit: rightLimit)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func adjustPageHeightNew(_ newBottom: UnsafeMutablePointer<CGFloat>, top oldTop: CGFloat, bottom oldBottom: CGFloat, limit bottomLimit: CGFloat) -> T {
-        value.adjustPageHeightNew(newBottom, top: oldTop, bottom: oldBottom, limit: bottomLimit)
-        return value
+        self.value.adjustPageHeightNew(newBottom, top: oldTop, bottom: oldBottom, limit: bottomLimit)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawPageBorder(with borderSize: NSSize) -> T {
-        value.drawPageBorder(with: borderSize)
-        return value
+        self.value.drawPageBorder(with: borderSize)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "This is never invoked and the NSView implementation does nothing")
     @discardableResult
     @_disfavoredOverload
     public func drawSheetBorder(with borderSize: NSSize) -> T {
-        value.drawSheetBorder(with: borderSize)
-        return value
+        self.value.drawSheetBorder(with: borderSize)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func beginDocument() -> T {
-        value.beginDocument()
-        return value
+        self.value.beginDocument()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func endDocument() -> T {
-        value.endDocument()
-        return value
+        self.value.endDocument()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func beginPage(in rect: NSRect, atPlacement location: NSPoint) -> T {
-        value.beginPage(in: rect, atPlacement: location)
-        return value
+        self.value.beginPage(in: rect, atPlacement: location)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func endPage() -> T {
-        value.endPage()
-        return value
+        self.value.endPage()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func registerForDraggedTypes(_ newTypes: [NSPasteboard.PasteboardType]) -> T {
-        value.registerForDraggedTypes(newTypes)
-        return value
+        self.value.registerForDraggedTypes(newTypes)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func unregisterDraggedTypes() -> T {
-        value.unregisterDraggedTypes()
-        return value
+        self.value.unregisterDraggedTypes()
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func exitFullScreenMode(options: [NSView.FullScreenModeOptionKey : Any]? = nil) -> T {
-        value.exitFullScreenMode(options: options)
-        return value
+        self.value.exitFullScreenMode(options: options)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func showDefinition(for attrString: NSAttributedString?, at textBaselineOrigin: NSPoint) -> T {
-        value.showDefinition(for: attrString, at: textBaselineOrigin)
-        return value
+        self.value.showDefinition(for: attrString, at: textBaselineOrigin)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func showDefinition(for attrString: NSAttributedString?, range targetRange: NSRange, options: [NSView.DefinitionOptionKey : Any]? = nil, baselineOriginProvider originProvider: ((NSRange) -> NSPoint)? = nil) -> T {
-        value.showDefinition(for: attrString, range: targetRange, options: options, baselineOriginProvider: originProvider)
-        return value
+        self.value.showDefinition(for: attrString, range: targetRange, options: options, baselineOriginProvider: originProvider)
+        return self.value
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
     public func addGestureRecognizer(_ gestureRecognizer: NSGestureRecognizer) -> T {
-        value.addGestureRecognizer(gestureRecognizer)
-        return value
+        self.value.addGestureRecognizer(gestureRecognizer)
+        return self.value
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
     public func removeGestureRecognizer(_ gestureRecognizer: NSGestureRecognizer) -> T {
-        value.removeGestureRecognizer(gestureRecognizer)
-        return value
+        self.value.removeGestureRecognizer(gestureRecognizer)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func addTrackingArea(_ trackingArea: NSTrackingArea) -> T {
-        value.addTrackingArea(trackingArea)
-        return value
+        self.value.addTrackingArea(trackingArea)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func removeTrackingArea(_ trackingArea: NSTrackingArea) -> T {
-        value.removeTrackingArea(trackingArea)
-        return value
+        self.value.removeTrackingArea(trackingArea)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func updateTrackingAreas() -> T {
-        value.updateTrackingAreas()
-        return value
+        self.value.updateTrackingAreas()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addCursorRect(_ rect: NSRect, cursor object: NSCursor) -> T {
-        value.addCursorRect(rect, cursor: object)
-        return value
+        self.value.addCursorRect(rect, cursor: object)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeCursorRect(_ rect: NSRect, cursor object: NSCursor) -> T {
-        value.removeCursorRect(rect, cursor: object)
-        return value
+        self.value.removeCursorRect(rect, cursor: object)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func discardCursorRects() -> T {
-        value.discardCursorRects()
-        return value
+        self.value.discardCursorRects()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func resetCursorRects() -> T {
-        value.resetCursorRects()
-        return value
+        self.value.resetCursorRects()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeTrackingRect(_ tag: NSView.TrackingRectTag) -> T {
-        value.removeTrackingRect(tag)
-        return value
+        self.value.removeTrackingRect(tag)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.10)
     @discardableResult
     @_disfavoredOverload
     public func allocateGState() -> T {
-        value.allocateGState()
-        return value
+        self.value.allocateGState()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.10)
     @discardableResult
     @_disfavoredOverload
     public func releaseGState() -> T {
-        value.releaseGState()
-        return value
+        self.value.releaseGState()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.10)
     @discardableResult
     @_disfavoredOverload
     public func setUpGState() -> T {
-        value.setUpGState()
-        return value
+        self.value.setUpGState()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.10)
     @discardableResult
     @_disfavoredOverload
     public func renewGState() -> T {
-        value.renewGState()
-        return value
+        self.value.renewGState()
+        return self.value
     }
 }
 

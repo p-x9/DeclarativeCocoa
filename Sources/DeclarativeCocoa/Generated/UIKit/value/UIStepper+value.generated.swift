@@ -10,32 +10,32 @@ extension Modify.DynamicMemberWrap where T: UIStepper {
     @discardableResult
     @_disfavoredOverload
     public func setBackgroundImage(_ image: UIImage?, for state: UIControl.State) -> T {
-        value.setBackgroundImage(image, for: state)
-        return value
+        self.value.setBackgroundImage(image, for: state)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setDividerImage(_ image: UIImage?, forLeftSegmentState leftState: UIControl.State, rightSegmentState rightState: UIControl.State) -> T {
-        value.setDividerImage(image, forLeftSegmentState: leftState, rightSegmentState: rightState)
-        return value
+        self.value.setDividerImage(image, forLeftSegmentState: leftState, rightSegmentState: rightState)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setIncrementImage(_ image: UIImage?, for state: UIControl.State) -> T {
-        value.setIncrementImage(image, for: state)
-        return value
+        self.value.setIncrementImage(image, for: state)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setDecrementImage(_ image: UIImage?, for state: UIControl.State) -> T {
-        value.setDecrementImage(image, for: state)
-        return value
+        self.value.setDecrementImage(image, for: state)
+        return self.value
     }
 }
 

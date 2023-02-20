@@ -8,80 +8,80 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSSegmentedControl {
     @discardableResult
     public func setWidth(_ width: CGFloat, forSegment segment: Int) -> Self {
-        value.setWidth(width, forSegment: segment)
-        return self
+        self.value.setWidth(width, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setImage(_ image: NSImage?, forSegment segment: Int) -> Self {
-        value.setImage(image, forSegment: segment)
-        return self
+        self.value.setImage(image, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     public func setImageScaling(_ scaling: NSImageScaling, forSegment segment: Int) -> Self {
-        value.setImageScaling(scaling, forSegment: segment)
-        return self
+        self.value.setImageScaling(scaling, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setLabel(_ label: String, forSegment segment: Int) -> Self {
-        value.setLabel(label, forSegment: segment)
-        return self
+        self.value.setLabel(label, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setMenu(_ menu: NSMenu?, forSegment segment: Int) -> Self {
-        value.setMenu(menu, forSegment: segment)
-        return self
+        self.value.setMenu(menu, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setSelected(_ selected: Bool, forSegment segment: Int) -> Self {
-        value.setSelected(selected, forSegment: segment)
-        return self
+        self.value.setSelected(selected, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setEnabled(_ enabled: Bool, forSegment segment: Int) -> Self {
-        value.setEnabled(enabled, forSegment: segment)
-        return self
+        self.value.setEnabled(enabled, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
     public func setToolTip(_ toolTip: String?, forSegment segment: Int) -> Self {
-        value.setToolTip(toolTip, forSegment: segment)
-        return self
+        self.value.setToolTip(toolTip, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
     public func setTag(_ tag: Int, forSegment segment: Int) -> Self {
-        value.setTag(tag, forSegment: segment)
-        return self
+        self.value.setTag(tag, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
     public func setShowsMenuIndicator(_ showsMenuIndicator: Bool, forSegment segment: Int) -> Self {
-        value.setShowsMenuIndicator(showsMenuIndicator, forSegment: segment)
-        return self
+        self.value.setShowsMenuIndicator(showsMenuIndicator, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
     public func setAlignment(_ alignment: NSTextAlignment, forSegment segment: Int) -> Self {
-        value.setAlignment(alignment, forSegment: segment)
-        return self
+        self.value.setAlignment(alignment, forSegment: segment)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
     public func compress(withPrioritizedCompressionOptions prioritizedOptions: [NSUserInterfaceCompressionOptions]) -> Self {
-        value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
-        return self
+        self.value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

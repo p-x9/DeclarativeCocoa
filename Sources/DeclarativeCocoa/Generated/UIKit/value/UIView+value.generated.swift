@@ -9,324 +9,324 @@ extension Modify.DynamicMemberWrap where T: UIView {
     @discardableResult
     @_disfavoredOverload
     public func sizeToFit() -> T {
-        value.sizeToFit()
-        return value
+        self.value.sizeToFit()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeFromSuperview() -> T {
-        value.removeFromSuperview()
-        return value
+        self.value.removeFromSuperview()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertSubview(_ view: UIView, at index: Int) -> T {
-        value.insertSubview(view, at: index)
-        return value
+        self.value.insertSubview(view, at: index)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func exchangeSubview(at index1: Int, withSubviewAt index2: Int) -> T {
-        value.exchangeSubview(at: index1, withSubviewAt: index2)
-        return value
+        self.value.exchangeSubview(at: index1, withSubviewAt: index2)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addSubview(_ view: UIView) -> T {
-        value.addSubview(view)
-        return value
+        self.value.addSubview(view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertSubview(_ view: UIView, belowSubview siblingSubview: UIView) -> T {
-        value.insertSubview(view, belowSubview: siblingSubview)
-        return value
+        self.value.insertSubview(view, belowSubview: siblingSubview)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertSubview(_ view: UIView, aboveSubview siblingSubview: UIView) -> T {
-        value.insertSubview(view, aboveSubview: siblingSubview)
-        return value
+        self.value.insertSubview(view, aboveSubview: siblingSubview)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func bringSubviewToFront(_ view: UIView) -> T {
-        value.bringSubviewToFront(view)
-        return value
+        self.value.bringSubviewToFront(view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func sendSubviewToBack(_ view: UIView) -> T {
-        value.sendSubviewToBack(view)
-        return value
+        self.value.sendSubviewToBack(view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func didAddSubview(_ subview: UIView) -> T {
-        value.didAddSubview(subview)
-        return value
+        self.value.didAddSubview(subview)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func willRemoveSubview(_ subview: UIView) -> T {
-        value.willRemoveSubview(subview)
-        return value
+        self.value.willRemoveSubview(subview)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func willMove(toSuperview newSuperview: UIView?) -> T {
-        value.willMove(toSuperview: newSuperview)
-        return value
+        self.value.willMove(toSuperview: newSuperview)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func didMoveToSuperview() -> T {
-        value.didMoveToSuperview()
-        return value
+        self.value.didMoveToSuperview()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func willMove(toWindow newWindow: UIWindow?) -> T {
-        value.willMove(toWindow: newWindow)
-        return value
+        self.value.willMove(toWindow: newWindow)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func didMoveToWindow() -> T {
-        value.didMoveToWindow()
-        return value
+        self.value.didMoveToWindow()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setNeedsLayout() -> T {
-        value.setNeedsLayout()
-        return value
+        self.value.setNeedsLayout()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func layoutIfNeeded() -> T {
-        value.layoutIfNeeded()
-        return value
+        self.value.layoutIfNeeded()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func layoutSubviews() -> T {
-        value.layoutSubviews()
-        return value
+        self.value.layoutSubviews()
+        return self.value
     }
 
     @available(iOS 8.0, *)
     @discardableResult
     @_disfavoredOverload
     public func layoutMarginsDidChange() -> T {
-        value.layoutMarginsDidChange()
-        return value
+        self.value.layoutMarginsDidChange()
+        return self.value
     }
 
     @available(iOS 11.0, *)
     @discardableResult
     @_disfavoredOverload
     public func safeAreaInsetsDidChange() -> T {
-        value.safeAreaInsetsDidChange()
-        return value
+        self.value.safeAreaInsetsDidChange()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func draw(_ rect: CGRect) -> T {
-        value.draw(rect)
-        return value
+        self.value.draw(rect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setNeedsDisplay() -> T {
-        value.setNeedsDisplay()
-        return value
+        self.value.setNeedsDisplay()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setNeedsDisplay(_ rect: CGRect) -> T {
-        value.setNeedsDisplay(rect)
-        return value
+        self.value.setNeedsDisplay(rect)
+        return self.value
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     @_disfavoredOverload
     public func tintColorDidChange() -> T {
-        value.tintColorDidChange()
-        return value
+        self.value.tintColorDidChange()
+        return self.value
     }
 
     @available(iOS 3.2, *)
     @discardableResult
     @_disfavoredOverload
     public func addGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> T {
-        value.addGestureRecognizer(gestureRecognizer)
-        return value
+        self.value.addGestureRecognizer(gestureRecognizer)
+        return self.value
     }
 
     @available(iOS 3.2, *)
     @discardableResult
     @_disfavoredOverload
     public func removeGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> T {
-        value.removeGestureRecognizer(gestureRecognizer)
-        return value
+        self.value.removeGestureRecognizer(gestureRecognizer)
+        return self.value
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     @_disfavoredOverload
     public func addMotionEffect(_ effect: UIMotionEffect) -> T {
-        value.addMotionEffect(effect)
-        return value
+        self.value.addMotionEffect(effect)
+        return self.value
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     @_disfavoredOverload
     public func removeMotionEffect(_ effect: UIMotionEffect) -> T {
-        value.removeMotionEffect(effect)
-        return value
+        self.value.removeMotionEffect(effect)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func addConstraint(_ constraint: NSLayoutConstraint) -> T {
-        value.addConstraint(constraint)
-        return value
+        self.value.addConstraint(constraint)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func addConstraints(_ constraints: [NSLayoutConstraint]) -> T {
-        value.addConstraints(constraints)
-        return value
+        self.value.addConstraints(constraints)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func removeConstraint(_ constraint: NSLayoutConstraint) -> T {
-        value.removeConstraint(constraint)
-        return value
+        self.value.removeConstraint(constraint)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func removeConstraints(_ constraints: [NSLayoutConstraint]) -> T {
-        value.removeConstraints(constraints)
-        return value
+        self.value.removeConstraints(constraints)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func updateConstraintsIfNeeded() -> T {
-        value.updateConstraintsIfNeeded()
-        return value
+        self.value.updateConstraintsIfNeeded()
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func updateConstraints() -> T {
-        value.updateConstraints()
-        return value
+        self.value.updateConstraints()
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setNeedsUpdateConstraints() -> T {
-        value.setNeedsUpdateConstraints()
-        return value
+        self.value.setNeedsUpdateConstraints()
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func invalidateIntrinsicContentSize() -> T {
-        value.invalidateIntrinsicContentSize()
-        return value
+        self.value.invalidateIntrinsicContentSize()
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setContentHuggingPriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> T {
-        value.setContentHuggingPriority(priority, for: axis)
-        return value
+        self.value.setContentHuggingPriority(priority, for: axis)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setContentCompressionResistancePriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> T {
-        value.setContentCompressionResistancePriority(priority, for: axis)
-        return value
+        self.value.setContentCompressionResistancePriority(priority, for: axis)
+        return self.value
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     @_disfavoredOverload
     public func addLayoutGuide(_ layoutGuide: UILayoutGuide) -> T {
-        value.addLayoutGuide(layoutGuide)
-        return value
+        self.value.addLayoutGuide(layoutGuide)
+        return self.value
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     @_disfavoredOverload
     public func removeLayoutGuide(_ layoutGuide: UILayoutGuide) -> T {
-        value.removeLayoutGuide(layoutGuide)
-        return value
+        self.value.removeLayoutGuide(layoutGuide)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func exerciseAmbiguityInLayout() -> T {
-        value.exerciseAmbiguityInLayout()
-        return value
+        self.value.exerciseAmbiguityInLayout()
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func encodeRestorableState(with coder: NSCoder) -> T {
-        value.encodeRestorableState(with: coder)
-        return value
+        self.value.encodeRestorableState(with: coder)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func decodeRestorableState(with coder: NSCoder) -> T {
-        value.decodeRestorableState(with: coder)
-        return value
+        self.value.decodeRestorableState(with: coder)
+        return self.value
     }
 }
 

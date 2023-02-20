@@ -6,162 +6,161 @@
 import UIKit
 
 extension Modify.DynamicMemberWrap where T: UICollectionView {
-
     @discardableResult
     public func register(_ cellClass: AnyClass?, forCellWithReuseIdentifier identifier: String) -> Self {
-        value.register(cellClass, forCellWithReuseIdentifier: identifier)
-        return self
+        self.value.register(cellClass, forCellWithReuseIdentifier: identifier)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func register(_ nib: UINib?, forCellWithReuseIdentifier identifier: String) -> Self {
-        value.register(nib, forCellWithReuseIdentifier: identifier)
-        return self
+        self.value.register(nib, forCellWithReuseIdentifier: identifier)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func register(_ viewClass: AnyClass?, forSupplementaryViewOfKind elementKind: String, withReuseIdentifier identifier: String) -> Self {
-        value.register(viewClass, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: identifier)
-        return self
+        self.value.register(viewClass, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: identifier)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func register(_ nib: UINib?, forSupplementaryViewOfKind kind: String, withReuseIdentifier identifier: String) -> Self {
-        value.register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: identifier)
-        return self
+        self.value.register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: identifier)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectItem(at indexPath: IndexPath?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition) -> Self {
-        value.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
-        return self
+        self.value.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func deselectItem(at indexPath: IndexPath, animated: Bool) -> Self {
-        value.deselectItem(at: indexPath, animated: animated)
-        return self
+        self.value.deselectItem(at: indexPath, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func reloadData() -> Self {
-        value.reloadData()
-        return self
+        self.value.reloadData()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setCollectionViewLayout(_ layout: UICollectionViewLayout, animated: Bool) -> Self {
-        value.setCollectionViewLayout(layout, animated: animated)
-        return self
+        self.value.setCollectionViewLayout(layout, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     public func setCollectionViewLayout(_ layout: UICollectionViewLayout, animated: Bool, completion: ((Bool) -> Void)? = nil) -> Self {
-        value.setCollectionViewLayout(layout, animated: animated, completion: completion)
-        return self
+        self.value.setCollectionViewLayout(layout, animated: animated, completion: completion)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     public func finishInteractiveTransition() -> Self {
-        value.finishInteractiveTransition()
-        return self
+        self.value.finishInteractiveTransition()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     public func cancelInteractiveTransition() -> Self {
-        value.cancelInteractiveTransition()
-        return self
+        self.value.cancelInteractiveTransition()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func scrollToItem(at indexPath: IndexPath, at scrollPosition: UICollectionView.ScrollPosition, animated: Bool) -> Self {
-        value.scrollToItem(at: indexPath, at: scrollPosition, animated: animated)
-        return self
+        self.value.scrollToItem(at: indexPath, at: scrollPosition, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func insertSections(_ sections: IndexSet) -> Self {
-        value.insertSections(sections)
-        return self
+        self.value.insertSections(sections)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func deleteSections(_ sections: IndexSet) -> Self {
-        value.deleteSections(sections)
-        return self
+        self.value.deleteSections(sections)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func moveSection(_ section: Int, toSection newSection: Int) -> Self {
-        value.moveSection(section, toSection: newSection)
-        return self
+        self.value.moveSection(section, toSection: newSection)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func reloadSections(_ sections: IndexSet) -> Self {
-        value.reloadSections(sections)
-        return self
+        self.value.reloadSections(sections)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func insertItems(at indexPaths: [IndexPath]) -> Self {
-        value.insertItems(at: indexPaths)
-        return self
+        self.value.insertItems(at: indexPaths)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func deleteItems(at indexPaths: [IndexPath]) -> Self {
-        value.deleteItems(at: indexPaths)
-        return self
+        self.value.deleteItems(at: indexPaths)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func moveItem(at indexPath: IndexPath, to newIndexPath: IndexPath) -> Self {
-        value.moveItem(at: indexPath, to: newIndexPath)
-        return self
+        self.value.moveItem(at: indexPath, to: newIndexPath)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func reloadItems(at indexPaths: [IndexPath]) -> Self {
-        value.reloadItems(at: indexPaths)
-        return self
+        self.value.reloadItems(at: indexPaths)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 15.0, *)
     @discardableResult
     public func reconfigureItems(at indexPaths: [IndexPath]) -> Self {
-        value.reconfigureItems(at: indexPaths)
-        return self
+        self.value.reconfigureItems(at: indexPaths)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func performBatchUpdates(_ updates: (() -> Void)?, completion: ((Bool) -> Void)? = nil) -> Self {
-        value.performBatchUpdates(updates, completion: completion)
-        return self
+        self.value.performBatchUpdates(updates, completion: completion)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     public func updateInteractiveMovementTargetPosition(_ targetPosition: CGPoint) -> Self {
-        value.updateInteractiveMovementTargetPosition(targetPosition)
-        return self
+        self.value.updateInteractiveMovementTargetPosition(targetPosition)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     public func endInteractiveMovement() -> Self {
-        value.endInteractiveMovement()
-        return self
+        self.value.endInteractiveMovement()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     public func cancelInteractiveMovement() -> Self {
-        value.cancelInteractiveMovement()
-        return self
+        self.value.cancelInteractiveMovement()
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

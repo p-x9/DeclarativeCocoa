@@ -9,40 +9,40 @@ extension Modify.DynamicMemberWrap where T: UIScrollView {
     @available(iOS 11.0, *)
     @discardableResult
     public func adjustedContentInsetDidChange() -> Self {
-        value.adjustedContentInsetDidChange()
-        return self
+        self.value.adjustedContentInsetDidChange()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setContentOffset(_ contentOffset: CGPoint, animated: Bool) -> Self {
-        value.setContentOffset(contentOffset, animated: animated)
-        return self
+        self.value.setContentOffset(contentOffset, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func scrollRectToVisible(_ rect: CGRect, animated: Bool) -> Self {
-        value.scrollRectToVisible(rect, animated: animated)
-        return self
+        self.value.scrollRectToVisible(rect, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func flashScrollIndicators() -> Self {
-        value.flashScrollIndicators()
-        return self
+        self.value.flashScrollIndicators()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 3.0, *)
     @discardableResult
     public func setZoomScale(_ scale: CGFloat, animated: Bool) -> Self {
-        value.setZoomScale(scale, animated: animated)
-        return self
+        self.value.setZoomScale(scale, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 3.0, *)
     @discardableResult
     public func zoom(to rect: CGRect, animated: Bool) -> Self {
-        value.zoom(to: rect, animated: animated)
-        return self
+        self.value.zoom(to: rect, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

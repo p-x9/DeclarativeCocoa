@@ -8,47 +8,47 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UICollectionViewCell {
     @discardableResult
     public func prepareForReuse() -> Self {
-        value.prepareForReuse()
-        return self
+        self.value.prepareForReuse()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) -> Self {
-        value.apply(layoutAttributes)
-        return self
+        self.value.apply(layoutAttributes)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func willTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> Self {
-        value.willTransition(from: oldLayout, to: newLayout)
-        return self
+        self.value.willTransition(from: oldLayout, to: newLayout)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func didTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> Self {
-        value.didTransition(from: oldLayout, to: newLayout)
-        return self
+        self.value.didTransition(from: oldLayout, to: newLayout)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 14.0, *)
     @discardableResult
     public func setNeedsUpdateConfiguration() -> Self {
-        value.setNeedsUpdateConfiguration()
-        return self
+        self.value.setNeedsUpdateConfiguration()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 11.0, *)
     @discardableResult
     public func dragStateDidChange(_ dragState: UICollectionViewCell.DragState) -> Self {
-        value.dragStateDidChange(dragState)
-        return self
+        self.value.dragStateDidChange(dragState)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 14.0, tvOS 14.0, *)
     @discardableResult
     @MainActor dynamic public func updateConfiguration(using state: UICellConfigurationState) -> Self {
-        value.updateConfiguration(using: state)
-        return self
+        self.value.updateConfiguration(using: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

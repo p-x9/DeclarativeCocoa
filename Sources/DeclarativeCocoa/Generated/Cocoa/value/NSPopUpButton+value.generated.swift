@@ -9,78 +9,78 @@ extension Modify.DynamicMemberWrap where T: NSPopUpButton {
     @discardableResult
     @_disfavoredOverload
     public func addItem(withTitle title: String) -> T {
-        value.addItem(withTitle: title)
-        return value
+        self.value.addItem(withTitle: title)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addItems(withTitles itemTitles: [String]) -> T {
-        value.addItems(withTitles: itemTitles)
-        return value
+        self.value.addItems(withTitles: itemTitles)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertItem(withTitle title: String, at index: Int) -> T {
-        value.insertItem(withTitle: title, at: index)
-        return value
+        self.value.insertItem(withTitle: title, at: index)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeItem(withTitle title: String) -> T {
-        value.removeItem(withTitle: title)
-        return value
+        self.value.removeItem(withTitle: title)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeItem(at index: Int) -> T {
-        value.removeItem(at: index)
-        return value
+        self.value.removeItem(at: index)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeAllItems() -> T {
-        value.removeAllItems()
-        return value
+        self.value.removeAllItems()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func select(_ item: NSMenuItem?) -> T {
-        value.select(item)
-        return value
+        self.value.select(item)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectItem(at index: Int) -> T {
-        value.selectItem(at: index)
-        return value
+        self.value.selectItem(at: index)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectItem(withTitle title: String) -> T {
-        value.selectItem(withTitle: title)
-        return value
+        self.value.selectItem(withTitle: title)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setTitle(_ string: String) -> T {
-        value.setTitle(string)
-        return value
+        self.value.setTitle(string)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func synchronizeTitleAndSelectedItem() -> T {
-        value.synchronizeTitleAndSelectedItem()
-        return value
+        self.value.synchronizeTitleAndSelectedItem()
+        return self.value
     }
 }
 

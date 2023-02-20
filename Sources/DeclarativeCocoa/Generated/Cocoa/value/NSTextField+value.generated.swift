@@ -9,29 +9,29 @@ extension Modify.DynamicMemberWrap where T: NSTextField {
     @discardableResult
     @_disfavoredOverload
     public func selectText(_ sender: Any?) -> T {
-        value.selectText(sender)
-        return value
+        self.value.selectText(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func textDidBeginEditing(_ notification: Notification) -> T {
-        value.textDidBeginEditing(notification)
-        return value
+        self.value.textDidBeginEditing(notification)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func textDidEndEditing(_ notification: Notification) -> T {
-        value.textDidEndEditing(notification)
-        return value
+        self.value.textDidEndEditing(notification)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func textDidChange(_ notification: Notification) -> T {
-        value.textDidChange(notification)
-        return value
+        self.value.textDidChange(notification)
+        return self.value
     }
 }
 

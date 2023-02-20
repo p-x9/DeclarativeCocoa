@@ -9,22 +9,22 @@ extension Modify.DynamicMemberWrap where T: UIPickerView {
     @discardableResult
     @_disfavoredOverload
     public func reloadAllComponents() -> T {
-        value.reloadAllComponents()
-        return value
+        self.value.reloadAllComponents()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func reloadComponent(_ component: Int) -> T {
-        value.reloadComponent(component)
-        return value
+        self.value.reloadComponent(component)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectRow(_ row: Int, inComponent component: Int, animated: Bool) -> T {
-        value.selectRow(row, inComponent: component, animated: animated)
-        return value
+        self.value.selectRow(row, inComponent: component, animated: animated)
+        return self.value
     }
 }
 

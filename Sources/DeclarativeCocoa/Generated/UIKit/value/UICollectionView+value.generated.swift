@@ -6,187 +6,186 @@
 import UIKit
 
 extension Modify.DynamicMemberWrap where T: UICollectionView {
-
     @discardableResult
     @_disfavoredOverload
     public func register(_ cellClass: AnyClass?, forCellWithReuseIdentifier identifier: String) -> T {
-        value.register(cellClass, forCellWithReuseIdentifier: identifier)
-        return value
+        self.value.register(cellClass, forCellWithReuseIdentifier: identifier)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func register(_ nib: UINib?, forCellWithReuseIdentifier identifier: String) -> T {
-        value.register(nib, forCellWithReuseIdentifier: identifier)
-        return value
+        self.value.register(nib, forCellWithReuseIdentifier: identifier)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func register(_ viewClass: AnyClass?, forSupplementaryViewOfKind elementKind: String, withReuseIdentifier identifier: String) -> T {
-        value.register(viewClass, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: identifier)
-        return value
+        self.value.register(viewClass, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: identifier)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func register(_ nib: UINib?, forSupplementaryViewOfKind kind: String, withReuseIdentifier identifier: String) -> T {
-        value.register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: identifier)
-        return value
+        self.value.register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: identifier)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectItem(at indexPath: IndexPath?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition) -> T {
-        value.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
-        return value
+        self.value.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func deselectItem(at indexPath: IndexPath, animated: Bool) -> T {
-        value.deselectItem(at: indexPath, animated: animated)
-        return value
+        self.value.deselectItem(at: indexPath, animated: animated)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func reloadData() -> T {
-        value.reloadData()
-        return value
+        self.value.reloadData()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setCollectionViewLayout(_ layout: UICollectionViewLayout, animated: Bool) -> T {
-        value.setCollectionViewLayout(layout, animated: animated)
-        return value
+        self.value.setCollectionViewLayout(layout, animated: animated)
+        return self.value
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setCollectionViewLayout(_ layout: UICollectionViewLayout, animated: Bool, completion: ((Bool) -> Void)? = nil) -> T {
-        value.setCollectionViewLayout(layout, animated: animated, completion: completion)
-        return value
+        self.value.setCollectionViewLayout(layout, animated: animated, completion: completion)
+        return self.value
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     @_disfavoredOverload
     public func finishInteractiveTransition() -> T {
-        value.finishInteractiveTransition()
-        return value
+        self.value.finishInteractiveTransition()
+        return self.value
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     @_disfavoredOverload
     public func cancelInteractiveTransition() -> T {
-        value.cancelInteractiveTransition()
-        return value
+        self.value.cancelInteractiveTransition()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func scrollToItem(at indexPath: IndexPath, at scrollPosition: UICollectionView.ScrollPosition, animated: Bool) -> T {
-        value.scrollToItem(at: indexPath, at: scrollPosition, animated: animated)
-        return value
+        self.value.scrollToItem(at: indexPath, at: scrollPosition, animated: animated)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertSections(_ sections: IndexSet) -> T {
-        value.insertSections(sections)
-        return value
+        self.value.insertSections(sections)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func deleteSections(_ sections: IndexSet) -> T {
-        value.deleteSections(sections)
-        return value
+        self.value.deleteSections(sections)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func moveSection(_ section: Int, toSection newSection: Int) -> T {
-        value.moveSection(section, toSection: newSection)
-        return value
+        self.value.moveSection(section, toSection: newSection)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func reloadSections(_ sections: IndexSet) -> T {
-        value.reloadSections(sections)
-        return value
+        self.value.reloadSections(sections)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertItems(at indexPaths: [IndexPath]) -> T {
-        value.insertItems(at: indexPaths)
-        return value
+        self.value.insertItems(at: indexPaths)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func deleteItems(at indexPaths: [IndexPath]) -> T {
-        value.deleteItems(at: indexPaths)
-        return value
+        self.value.deleteItems(at: indexPaths)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func moveItem(at indexPath: IndexPath, to newIndexPath: IndexPath) -> T {
-        value.moveItem(at: indexPath, to: newIndexPath)
-        return value
+        self.value.moveItem(at: indexPath, to: newIndexPath)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func reloadItems(at indexPaths: [IndexPath]) -> T {
-        value.reloadItems(at: indexPaths)
-        return value
+        self.value.reloadItems(at: indexPaths)
+        return self.value
     }
 
     @available(iOS 15.0, *)
     @discardableResult
     @_disfavoredOverload
     public func reconfigureItems(at indexPaths: [IndexPath]) -> T {
-        value.reconfigureItems(at: indexPaths)
-        return value
+        self.value.reconfigureItems(at: indexPaths)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func performBatchUpdates(_ updates: (() -> Void)?, completion: ((Bool) -> Void)? = nil) -> T {
-        value.performBatchUpdates(updates, completion: completion)
-        return value
+        self.value.performBatchUpdates(updates, completion: completion)
+        return self.value
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     @_disfavoredOverload
     public func updateInteractiveMovementTargetPosition(_ targetPosition: CGPoint) -> T {
-        value.updateInteractiveMovementTargetPosition(targetPosition)
-        return value
+        self.value.updateInteractiveMovementTargetPosition(targetPosition)
+        return self.value
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     @_disfavoredOverload
     public func endInteractiveMovement() -> T {
-        value.endInteractiveMovement()
-        return value
+        self.value.endInteractiveMovement()
+        return self.value
     }
 
     @available(iOS 9.0, *)
     @discardableResult
     @_disfavoredOverload
     public func cancelInteractiveMovement() -> T {
-        value.cancelInteractiveMovement()
-        return value
+        self.value.cancelInteractiveMovement()
+        return self.value
     }
 }
 

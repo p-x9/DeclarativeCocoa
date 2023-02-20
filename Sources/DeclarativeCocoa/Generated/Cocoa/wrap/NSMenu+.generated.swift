@@ -8,84 +8,84 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSMenu {
     @discardableResult
     public func insertItem(_ newItem: NSMenuItem, at index: Int) -> Self {
-        value.insertItem(newItem, at: index)
-        return self
+        self.value.insertItem(newItem, at: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func addItem(_ newItem: NSMenuItem) -> Self {
-        value.addItem(newItem)
-        return self
+        self.value.addItem(newItem)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func removeItem(at index: Int) -> Self {
-        value.removeItem(at: index)
-        return self
+        self.value.removeItem(at: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func removeItem(_ item: NSMenuItem) -> Self {
-        value.removeItem(item)
-        return self
+        self.value.removeItem(item)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setSubmenu(_ menu: NSMenu?, for item: NSMenuItem) -> Self {
-        value.setSubmenu(menu, for: item)
-        return self
+        self.value.setSubmenu(menu, for: item)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     public func removeAllItems() -> Self {
-        value.removeAllItems()
-        return self
+        self.value.removeAllItems()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func update() -> Self {
-        value.update()
-        return self
+        self.value.update()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func itemChanged(_ item: NSMenuItem) -> Self {
-        value.itemChanged(item)
-        return self
+        self.value.itemChanged(item)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func performActionForItem(at index: Int) -> Self {
-        value.performActionForItem(at: index)
-        return self
+        self.value.performActionForItem(at: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     public func cancelTracking() -> Self {
-        value.cancelTracking()
-        return self
+        self.value.cancelTracking()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     public func cancelTrackingWithoutAnimation() -> Self {
-        value.cancelTrackingWithoutAnimation()
-        return self
+        self.value.cancelTrackingWithoutAnimation()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func submenuAction(_ sender: Any?) -> Self {
-        value.submenuAction(sender)
-        return self
+        self.value.submenuAction(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.11)
     @discardableResult
     public func helpRequested(with eventPtr: NSEvent) -> Self {
-        value.helpRequested(with: eventPtr)
-        return self
+        self.value.helpRequested(with: eventPtr)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

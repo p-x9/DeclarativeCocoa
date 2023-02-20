@@ -8,8 +8,8 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UISwitch {
     @discardableResult
     public func setOn(_ on: Bool, animated: Bool) -> Self {
-        value.setOn(on, animated: animated)
-        return self
+        self.value.setOn(on, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

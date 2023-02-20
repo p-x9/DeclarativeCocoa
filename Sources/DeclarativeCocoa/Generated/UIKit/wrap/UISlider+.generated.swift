@@ -9,25 +9,25 @@ extension Modify.DynamicMemberWrap where T: UISlider {
     @discardableResult
     public func setValue(_ value: Float, animated: Bool) -> Self {
         self.value.setValue(value, animated: animated)
-        return self
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setThumbImage(_ image: UIImage?, for state: UIControl.State) -> Self {
-        value.setThumbImage(image, for: state)
-        return self
+        self.value.setThumbImage(image, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setMinimumTrackImage(_ image: UIImage?, for state: UIControl.State) -> Self {
-        value.setMinimumTrackImage(image, for: state)
-        return self
+        self.value.setMinimumTrackImage(image, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setMaximumTrackImage(_ image: UIImage?, for state: UIControl.State) -> Self {
-        value.setMaximumTrackImage(image, for: state)
-        return self
+        self.value.setMaximumTrackImage(image, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

@@ -9,8 +9,8 @@ extension Modify.DynamicMemberWrap where T: UIDatePicker {
     @discardableResult
     @_disfavoredOverload
     public func setDate(_ date: Date, animated: Bool) -> T {
-        value.setDate(date, animated: animated)
-        return value
+        self.value.setDate(date, animated: animated)
+        return self.value
     }
 }
 

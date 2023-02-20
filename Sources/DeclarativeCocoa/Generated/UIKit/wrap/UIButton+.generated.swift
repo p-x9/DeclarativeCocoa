@@ -9,59 +9,59 @@ extension Modify.DynamicMemberWrap where T: UIButton {
     @available(iOS 15.0, *)
     @discardableResult
     public func setNeedsUpdateConfiguration() -> Self {
-        value.setNeedsUpdateConfiguration()
-        return self
+        self.value.setNeedsUpdateConfiguration()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 15.0, *)
     @discardableResult
     public func updateConfiguration() -> Self {
-        value.updateConfiguration()
-        return self
+        self.value.updateConfiguration()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setTitle(_ title: String?, for state: UIControl.State) -> Self {
-        value.setTitle(title, for: state)
-        return self
+        self.value.setTitle(title, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setTitleColor(_ color: UIColor?, for state: UIControl.State) -> Self {
-        value.setTitleColor(color, for: state)
-        return self
+        self.value.setTitleColor(color, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setTitleShadowColor(_ color: UIColor?, for state: UIControl.State) -> Self {
-        value.setTitleShadowColor(color, for: state)
-        return self
+        self.value.setTitleShadowColor(color, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setImage(_ image: UIImage?, for state: UIControl.State) -> Self {
-        value.setImage(image, for: state)
-        return self
+        self.value.setImage(image, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setBackgroundImage(_ image: UIImage?, for state: UIControl.State) -> Self {
-        value.setBackgroundImage(image, for: state)
-        return self
+        self.value.setBackgroundImage(image, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 13.0, *)
     @discardableResult
     public func setPreferredSymbolConfiguration(_ configuration: UIImage.SymbolConfiguration?, forImageIn state: UIControl.State) -> Self {
-        value.setPreferredSymbolConfiguration(configuration, forImageIn: state)
-        return self
+        self.value.setPreferredSymbolConfiguration(configuration, forImageIn: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func setAttributedTitle(_ title: NSAttributedString?, for state: UIControl.State) -> Self {
-        value.setAttributedTitle(title, for: state)
-        return self
+        self.value.setAttributedTitle(title, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

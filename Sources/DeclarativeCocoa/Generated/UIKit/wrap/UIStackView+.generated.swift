@@ -8,27 +8,27 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UIStackView {
     @discardableResult
     public func addArrangedSubview(_ view: UIView) -> Self {
-        value.addArrangedSubview(view)
-        return self
+        self.value.addArrangedSubview(view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func removeArrangedSubview(_ view: UIView) -> Self {
-        value.removeArrangedSubview(view)
-        return self
+        self.value.removeArrangedSubview(view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func insertArrangedSubview(_ view: UIView, at stackIndex: Int) -> Self {
-        value.insertArrangedSubview(view, at: stackIndex)
-        return self
+        self.value.insertArrangedSubview(view, at: stackIndex)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 11.0, *)
     @discardableResult
     public func setCustomSpacing(_ spacing: CGFloat, after arrangedSubview: UIView) -> Self {
-        value.setCustomSpacing(spacing, after: arrangedSubview)
-        return self
+        self.value.setCustomSpacing(spacing, after: arrangedSubview)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

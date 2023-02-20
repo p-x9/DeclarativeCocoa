@@ -9,96 +9,96 @@ extension Modify.DynamicMemberWrap where T: NSMenu {
     @discardableResult
     @_disfavoredOverload
     public func insertItem(_ newItem: NSMenuItem, at index: Int) -> T {
-        value.insertItem(newItem, at: index)
-        return value
+        self.value.insertItem(newItem, at: index)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addItem(_ newItem: NSMenuItem) -> T {
-        value.addItem(newItem)
-        return value
+        self.value.addItem(newItem)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeItem(at index: Int) -> T {
-        value.removeItem(at: index)
-        return value
+        self.value.removeItem(at: index)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeItem(_ item: NSMenuItem) -> T {
-        value.removeItem(item)
-        return value
+        self.value.removeItem(item)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setSubmenu(_ menu: NSMenu?, for item: NSMenuItem) -> T {
-        value.setSubmenu(menu, for: item)
-        return value
+        self.value.setSubmenu(menu, for: item)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func removeAllItems() -> T {
-        value.removeAllItems()
-        return value
+        self.value.removeAllItems()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func update() -> T {
-        value.update()
-        return value
+        self.value.update()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func itemChanged(_ item: NSMenuItem) -> T {
-        value.itemChanged(item)
-        return value
+        self.value.itemChanged(item)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func performActionForItem(at index: Int) -> T {
-        value.performActionForItem(at: index)
-        return value
+        self.value.performActionForItem(at: index)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func cancelTracking() -> T {
-        value.cancelTracking()
-        return value
+        self.value.cancelTracking()
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func cancelTrackingWithoutAnimation() -> T {
-        value.cancelTrackingWithoutAnimation()
-        return value
+        self.value.cancelTrackingWithoutAnimation()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func submenuAction(_ sender: Any?) -> T {
-        value.submenuAction(sender)
-        return value
+        self.value.submenuAction(sender)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.11)
     @discardableResult
     @_disfavoredOverload
     public func helpRequested(with eventPtr: NSEvent) -> T {
-        value.helpRequested(with: eventPtr)
-        return value
+        self.value.helpRequested(with: eventPtr)
+        return self.value
     }
 }
 

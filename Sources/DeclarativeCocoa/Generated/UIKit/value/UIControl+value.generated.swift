@@ -9,99 +9,99 @@ extension Modify.DynamicMemberWrap where T: UIControl {
     @discardableResult
     @_disfavoredOverload
     public func endTracking(_ touch: UITouch?, with event: UIEvent?) -> T {
-        value.endTracking(touch, with: event)
-        return value
+        self.value.endTracking(touch, with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func cancelTracking(with event: UIEvent?) -> T {
-        value.cancelTracking(with: event)
-        return value
+        self.value.cancelTracking(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) -> T {
-        value.addTarget(target, action: action, for: controlEvents)
-        return value
+        self.value.addTarget(target, action: action, for: controlEvents)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeTarget(_ target: Any?, action: Selector?, for controlEvents: UIControl.Event) -> T {
-        value.removeTarget(target, action: action, for: controlEvents)
-        return value
+        self.value.removeTarget(target, action: action, for: controlEvents)
+        return self.value
     }
 
     @available(iOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     public func addAction(_ action: UIAction, for controlEvents: UIControl.Event) -> T {
-        value.addAction(action, for: controlEvents)
-        return value
+        self.value.addAction(action, for: controlEvents)
+        return self.value
     }
 
     @available(iOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     public func removeAction(_ action: UIAction, for controlEvents: UIControl.Event) -> T {
-        value.removeAction(action, for: controlEvents)
-        return value
+        self.value.removeAction(action, for: controlEvents)
+        return self.value
     }
 
     @available(iOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     public func removeAction(identifiedBy actionIdentifier: UIAction.Identifier, for controlEvents: UIControl.Event) -> T {
-        value.removeAction(identifiedBy: actionIdentifier, for: controlEvents)
-        return value
+        self.value.removeAction(identifiedBy: actionIdentifier, for: controlEvents)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func sendAction(_ action: Selector, to target: Any?, for event: UIEvent?) -> T {
-        value.sendAction(action, to: target, for: event)
-        return value
+        self.value.sendAction(action, to: target, for: event)
+        return self.value
     }
 
     @available(iOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     public func sendAction(_ action: UIAction) -> T {
-        value.sendAction(action)
-        return value
+        self.value.sendAction(action)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func sendActions(for controlEvents: UIControl.Event) -> T {
-        value.sendActions(for: controlEvents)
-        return value
+        self.value.sendActions(for: controlEvents)
+        return self.value
     }
 
     @available(iOS 14.0, tvOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     @MainActor public func enumerateEventHandlers(_ iterator: (UIAction?, (Any?, Selector)?, UIControl.Event, inout Bool) -> Void) -> T {
-        value.enumerateEventHandlers(iterator)
-        return value
+        self.value.enumerateEventHandlers(iterator)
+        return self.value
     }
 
     @available(iOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     public func contextMenuInteraction(_ interaction: UIContextMenuInteraction, willDisplayMenuFor configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionAnimating?) -> T {
-        value.contextMenuInteraction(interaction, willDisplayMenuFor: configuration, animator: animator)
-        return value
+        self.value.contextMenuInteraction(interaction, willDisplayMenuFor: configuration, animator: animator)
+        return self.value
     }
 
     @available(iOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     public func contextMenuInteraction(_ interaction: UIContextMenuInteraction, willEndFor configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionAnimating?) -> T {
-        value.contextMenuInteraction(interaction, willEndFor: configuration, animator: animator)
-        return value
+        self.value.contextMenuInteraction(interaction, willEndFor: configuration, animator: animator)
+        return self.value
     }
 }
 

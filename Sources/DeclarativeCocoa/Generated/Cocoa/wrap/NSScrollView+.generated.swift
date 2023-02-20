@@ -8,48 +8,48 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSScrollView {
     @discardableResult
     public func tile() -> Self {
-        value.tile()
-        return self
+        self.value.tile()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func reflectScrolledClipView(_ cView: NSClipView) -> Self {
-        value.reflectScrolledClipView(cView)
-        return self
+        self.value.reflectScrolledClipView(cView)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func scrollWheel(with event: NSEvent) -> Self {
-        value.scrollWheel(with: event)
-        return self
+        self.value.scrollWheel(with: event)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func flashScrollers() -> Self {
-        value.flashScrollers()
-        return self
+        self.value.flashScrollers()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.8, *)
     @discardableResult
     public func magnify(toFit rect: NSRect) -> Self {
-        value.magnify(toFit: rect)
-        return self
+        self.value.magnify(toFit: rect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.8, *)
     @discardableResult
     public func setMagnification(_ magnification: CGFloat, centeredAt point: NSPoint) -> Self {
-        value.setMagnification(magnification, centeredAt: point)
-        return self
+        self.value.setMagnification(magnification, centeredAt: point)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     public func addFloatingSubview(_ view: NSView, for axis: NSEvent.GestureAxis) -> Self {
-        value.addFloatingSubview(view, for: axis)
-        return self
+        self.value.addFloatingSubview(view, for: axis)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

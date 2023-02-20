@@ -9,65 +9,65 @@ extension Modify.DynamicMemberWrap where T: NSButtonCell {
     @discardableResult
     @_disfavoredOverload
     public func setButtonType(_ type: NSButton.ButtonType) -> T {
-        value.setButtonType(type)
-        return value
+        self.value.setButtonType(type)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setPeriodicDelay(_ delay: Float, interval: Float) -> T {
-        value.setPeriodicDelay(delay, interval: interval)
-        return value
+        self.value.setPeriodicDelay(delay, interval: interval)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func getPeriodicDelay(_ delay: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>) -> T {
-        value.getPeriodicDelay(delay, interval: interval)
-        return value
+        self.value.getPeriodicDelay(delay, interval: interval)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func performClick(_ sender: Any?) -> T {
-        value.performClick(sender)
-        return value
+        self.value.performClick(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func mouseEntered(with event: NSEvent) -> T {
-        value.mouseEntered(with: event)
-        return value
+        self.value.mouseEntered(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func mouseExited(with event: NSEvent) -> T {
-        value.mouseExited(with: event)
-        return value
+        self.value.mouseExited(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawBezel(withFrame frame: NSRect, in controlView: NSView) -> T {
-        value.drawBezel(withFrame: frame, in: controlView)
-        return value
+        self.value.drawBezel(withFrame: frame, in: controlView)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawImage(_ image: NSImage, withFrame frame: NSRect, in controlView: NSView) -> T {
-        value.drawImage(image, withFrame: frame, in: controlView)
-        return value
+        self.value.drawImage(image, withFrame: frame, in: controlView)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.15, message: "The keyEquivalentFont property is no longer used. Setting it has no effect.")
     @discardableResult
     @_disfavoredOverload
     public func setKeyEquivalentFont(_ fontName: String, size fontSize: CGFloat) -> T {
-        value.setKeyEquivalentFont(fontName, size: fontSize)
-        return value
+        self.value.setKeyEquivalentFont(fontName, size: fontSize)
+        return self.value
     }
 }
 

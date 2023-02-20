@@ -10,8 +10,8 @@ extension Modify.DynamicMemberWrap where T: UITabBarItem {
     @discardableResult
     @_disfavoredOverload
     public func setBadgeTextAttributes(_ textAttributes: [NSAttributedString.Key : Any]?, for state: UIControl.State) -> T {
-        value.setBadgeTextAttributes(textAttributes, for: state)
-        return value
+        self.value.setBadgeTextAttributes(textAttributes, for: state)
+        return self.value
     }
 }
 

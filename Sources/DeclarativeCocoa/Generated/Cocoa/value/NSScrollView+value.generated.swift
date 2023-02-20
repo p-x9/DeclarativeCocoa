@@ -9,54 +9,54 @@ extension Modify.DynamicMemberWrap where T: NSScrollView {
     @discardableResult
     @_disfavoredOverload
     public func tile() -> T {
-        value.tile()
-        return value
+        self.value.tile()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func reflectScrolledClipView(_ cView: NSClipView) -> T {
-        value.reflectScrolledClipView(cView)
-        return value
+        self.value.reflectScrolledClipView(cView)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func scrollWheel(with event: NSEvent) -> T {
-        value.scrollWheel(with: event)
-        return value
+        self.value.scrollWheel(with: event)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func flashScrollers() -> T {
-        value.flashScrollers()
-        return value
+        self.value.flashScrollers()
+        return self.value
     }
 
     @available(macOS 10.8, *)
     @discardableResult
     @_disfavoredOverload
     public func magnify(toFit rect: NSRect) -> T {
-        value.magnify(toFit: rect)
-        return value
+        self.value.magnify(toFit: rect)
+        return self.value
     }
 
     @available(macOS 10.8, *)
     @discardableResult
     @_disfavoredOverload
     public func setMagnification(_ magnification: CGFloat, centeredAt point: NSPoint) -> T {
-        value.setMagnification(magnification, centeredAt: point)
-        return value
+        self.value.setMagnification(magnification, centeredAt: point)
+        return self.value
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     @_disfavoredOverload
     public func addFloatingSubview(_ view: NSView, for axis: NSEvent.GestureAxis) -> T {
-        value.addFloatingSubview(view, for: axis)
-        return value
+        self.value.addFloatingSubview(view, for: axis)
+        return self.value
     }
 }
 

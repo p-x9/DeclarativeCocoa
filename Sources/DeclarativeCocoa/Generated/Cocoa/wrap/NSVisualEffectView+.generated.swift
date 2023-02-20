@@ -8,14 +8,14 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSVisualEffectView {
     @discardableResult
     public func viewDidMoveToWindow() -> Self {
-        value.viewDidMoveToWindow()
-        return self
+        self.value.viewDidMoveToWindow()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func viewWillMove(toWindow newWindow: NSWindow?) -> Self {
-        value.viewWillMove(toWindow: newWindow)
-        return self
+        self.value.viewWillMove(toWindow: newWindow)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

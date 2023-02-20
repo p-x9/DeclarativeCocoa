@@ -9,15 +9,15 @@ extension Modify.DynamicMemberWrap where T: UIRefreshControl {
     @available(iOS 6.0, *)
     @discardableResult
     public func beginRefreshing() -> Self {
-        value.beginRefreshing()
-        return self
+        self.value.beginRefreshing()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     public func endRefreshing() -> Self {
-        value.endRefreshing()
-        return self
+        self.value.endRefreshing()
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

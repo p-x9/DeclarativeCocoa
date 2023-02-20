@@ -8,39 +8,39 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSButton {
     @discardableResult
     public func setButtonType(_ type: NSButton.ButtonType) -> Self {
-        value.setButtonType(type)
-        return self
+        self.value.setButtonType(type)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setPeriodicDelay(_ delay: Float, interval: Float) -> Self {
-        value.setPeriodicDelay(delay, interval: interval)
-        return self
+        self.value.setPeriodicDelay(delay, interval: interval)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func getPeriodicDelay(_ delay: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>) -> Self {
-        value.getPeriodicDelay(delay, interval: interval)
-        return self
+        self.value.getPeriodicDelay(delay, interval: interval)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setNextState() -> Self {
-        value.setNextState()
-        return self
+        self.value.setNextState()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func highlight(_ flag: Bool) -> Self {
-        value.highlight(flag)
-        return self
+        self.value.highlight(flag)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
     public func compress(withPrioritizedCompressionOptions prioritizedOptions: [NSUserInterfaceCompressionOptions]) -> Self {
-        value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
-        return self
+        self.value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

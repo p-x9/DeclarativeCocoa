@@ -9,8 +9,8 @@ extension Modify.DynamicMemberWrap where T: UITabBarItem {
     @available(iOS 10.0, *)
     @discardableResult
     public func setBadgeTextAttributes(_ textAttributes: [NSAttributedString.Key : Any]?, for state: UIControl.State) -> Self {
-        value.setBadgeTextAttributes(textAttributes, for: state)
-        return self
+        self.value.setBadgeTextAttributes(textAttributes, for: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

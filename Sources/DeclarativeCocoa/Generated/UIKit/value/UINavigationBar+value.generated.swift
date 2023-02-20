@@ -9,39 +9,39 @@ extension Modify.DynamicMemberWrap where T: UINavigationBar {
     @discardableResult
     @_disfavoredOverload
     public func pushItem(_ item: UINavigationItem, animated: Bool) -> T {
-        value.pushItem(item, animated: animated)
-        return value
+        self.value.pushItem(item, animated: animated)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setItems(_ items: [UINavigationItem]?, animated: Bool) -> T {
-        value.setItems(items, animated: animated)
-        return value
+        self.value.setItems(items, animated: animated)
+        return self.value
     }
 
     @available(iOS 7.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setBackgroundImage(_ backgroundImage: UIImage?, for barPosition: UIBarPosition, barMetrics: UIBarMetrics) -> T {
-        value.setBackgroundImage(backgroundImage, for: barPosition, barMetrics: barMetrics)
-        return value
+        self.value.setBackgroundImage(backgroundImage, for: barPosition, barMetrics: barMetrics)
+        return self.value
     }
 
     @available(iOS 5.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setBackgroundImage(_ backgroundImage: UIImage?, for barMetrics: UIBarMetrics) -> T {
-        value.setBackgroundImage(backgroundImage, for: barMetrics)
-        return value
+        self.value.setBackgroundImage(backgroundImage, for: barMetrics)
+        return self.value
     }
 
     @available(iOS 5.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setTitleVerticalPositionAdjustment(_ adjustment: CGFloat, for barMetrics: UIBarMetrics) -> T {
-        value.setTitleVerticalPositionAdjustment(adjustment, for: barMetrics)
-        return value
+        self.value.setTitleVerticalPositionAdjustment(adjustment, for: barMetrics)
+        return self.value
     }
 }
 

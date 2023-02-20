@@ -8,26 +8,26 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UICollectionReusableView {
     @discardableResult
     public func prepareForReuse() -> Self {
-        value.prepareForReuse()
-        return self
+        self.value.prepareForReuse()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) -> Self {
-        value.apply(layoutAttributes)
-        return self
+        self.value.apply(layoutAttributes)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func willTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> Self {
-        value.willTransition(from: oldLayout, to: newLayout)
-        return self
+        self.value.willTransition(from: oldLayout, to: newLayout)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func didTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> Self {
-        value.didTransition(from: oldLayout, to: newLayout)
-        return self
+        self.value.didTransition(from: oldLayout, to: newLayout)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

@@ -8,26 +8,26 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSTextField {
     @discardableResult
     public func selectText(_ sender: Any?) -> Self {
-        value.selectText(sender)
-        return self
+        self.value.selectText(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func textDidBeginEditing(_ notification: Notification) -> Self {
-        value.textDidBeginEditing(notification)
-        return self
+        self.value.textDidBeginEditing(notification)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func textDidEndEditing(_ notification: Notification) -> Self {
-        value.textDidEndEditing(notification)
-        return self
+        self.value.textDidEndEditing(notification)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func textDidChange(_ notification: Notification) -> Self {
-        value.textDidChange(notification)
-        return self
+        self.value.textDidChange(notification)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

@@ -10,68 +10,68 @@ extension Modify.DynamicMemberWrap where T: UITableViewCell {
     @discardableResult
     @_disfavoredOverload
     public func setNeedsUpdateConfiguration() -> T {
-        value.setNeedsUpdateConfiguration()
-        return value
+        self.value.setNeedsUpdateConfiguration()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func prepareForReuse() -> T {
-        value.prepareForReuse()
-        return value
+        self.value.prepareForReuse()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setSelected(_ selected: Bool, animated: Bool) -> T {
-        value.setSelected(selected, animated: animated)
-        return value
+        self.value.setSelected(selected, animated: animated)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setHighlighted(_ highlighted: Bool, animated: Bool) -> T {
-        value.setHighlighted(highlighted, animated: animated)
-        return value
+        self.value.setHighlighted(highlighted, animated: animated)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setEditing(_ editing: Bool, animated: Bool) -> T {
-        value.setEditing(editing, animated: animated)
-        return value
+        self.value.setEditing(editing, animated: animated)
+        return self.value
     }
 
     @available(iOS 3.0, *)
     @discardableResult
     @_disfavoredOverload
     public func willTransition(to state: UITableViewCell.StateMask) -> T {
-        value.willTransition(to: state)
-        return value
+        self.value.willTransition(to: state)
+        return self.value
     }
 
     @available(iOS 3.0, *)
     @discardableResult
     @_disfavoredOverload
     public func didTransition(to state: UITableViewCell.StateMask) -> T {
-        value.didTransition(to: state)
-        return value
+        self.value.didTransition(to: state)
+        return self.value
     }
 
     @available(iOS 11.0, *)
     @discardableResult
     @_disfavoredOverload
     public func dragStateDidChange(_ dragState: UITableViewCell.DragState) -> T {
-        value.dragStateDidChange(dragState)
-        return value
+        self.value.dragStateDidChange(dragState)
+        return self.value
     }
 
     @available(iOS 14.0, tvOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     @MainActor dynamic public func updateConfiguration(using state: UICellConfigurationState) -> T {
-        value.updateConfiguration(using: state)
-        return value
+        self.value.updateConfiguration(using: state)
+        return self.value
     }
 }
 

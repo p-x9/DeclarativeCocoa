@@ -9,155 +9,155 @@ extension Modify.DynamicMemberWrap where T: NSControl {
     @discardableResult
     @_disfavoredOverload
     public func sizeToFit() -> T {
-        value.sizeToFit()
-        return value
+        self.value.sizeToFit()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func takeIntValueFrom(_ sender: Any?) -> T {
-        value.takeIntValueFrom(sender)
-        return value
+        self.value.takeIntValueFrom(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func takeFloatValueFrom(_ sender: Any?) -> T {
-        value.takeFloatValueFrom(sender)
-        return value
+        self.value.takeFloatValueFrom(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func takeDoubleValueFrom(_ sender: Any?) -> T {
-        value.takeDoubleValueFrom(sender)
-        return value
+        self.value.takeDoubleValueFrom(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func takeStringValueFrom(_ sender: Any?) -> T {
-        value.takeStringValueFrom(sender)
-        return value
+        self.value.takeStringValueFrom(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func takeObjectValueFrom(_ sender: Any?) -> T {
-        value.takeObjectValueFrom(sender)
-        return value
+        self.value.takeObjectValueFrom(sender)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func takeIntegerValueFrom(_ sender: Any?) -> T {
-        value.takeIntegerValueFrom(sender)
-        return value
+        self.value.takeIntegerValueFrom(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func mouseDown(with event: NSEvent) -> T {
-        value.mouseDown(with: event)
-        return value
+        self.value.mouseDown(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func performClick(_ sender: Any?) -> T {
-        value.performClick(sender)
-        return value
+        self.value.performClick(sender)
+        return self.value
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
     public func draw(withExpansionFrame contentFrame: NSRect, in view: NSView) -> T {
-        value.draw(withExpansionFrame: contentFrame, in: view)
-        return value
+        self.value.draw(withExpansionFrame: contentFrame, in: view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func validateEditing() -> T {
-        value.validateEditing()
-        return value
+        self.value.validateEditing()
+        return self.value
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
     public func edit(withFrame rect: NSRect, editor textObj: NSText, delegate: Any?, event: NSEvent) -> T {
-        value.edit(withFrame: rect, editor: textObj, delegate: delegate, event: event)
-        return value
+        self.value.edit(withFrame: rect, editor: textObj, delegate: delegate, event: event)
+        return self.value
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
     public func select(withFrame rect: NSRect, editor textObj: NSText, delegate: Any?, start selStart: Int, length selLength: Int) -> T {
-        value.select(withFrame: rect, editor: textObj, delegate: delegate, start: selStart, length: selLength)
-        return value
+        self.value.select(withFrame: rect, editor: textObj, delegate: delegate, start: selStart, length: selLength)
+        return self.value
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
     public func endEditing(_ textObj: NSText) -> T {
-        value.endEditing(textObj)
-        return value
+        self.value.endEditing(textObj)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Set the needsDisplay property to YES instead")
     @discardableResult
     @_disfavoredOverload
     public func setNeedsDisplay() -> T {
-        value.setNeedsDisplay()
-        return value
+        self.value.setNeedsDisplay()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Override -layout instead. This method should never be called")
     @discardableResult
     @_disfavoredOverload
     public func calcSize() -> T {
-        value.calcSize()
-        return value
+        self.value.calcSize()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func updateCell(_ cell: NSCell) -> T {
-        value.updateCell(cell)
-        return value
+        self.value.updateCell(cell)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func updateCellInside(_ cell: NSCell) -> T {
-        value.updateCellInside(cell)
-        return value
+        self.value.updateCellInside(cell)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawCellInside(_ cell: NSCell) -> T {
-        value.drawCellInside(cell)
-        return value
+        self.value.drawCellInside(cell)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawCell(_ cell: NSCell) -> T {
-        value.drawCell(cell)
-        return value
+        self.value.drawCell(cell)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectCell(_ cell: NSCell) -> T {
-        value.selectCell(cell)
-        return value
+        self.value.selectCell(cell)
+        return self.value
     }
 }
 

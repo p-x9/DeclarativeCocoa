@@ -9,8 +9,8 @@ extension Modify.DynamicMemberWrap where T: NSTableColumn {
     @discardableResult
     @_disfavoredOverload
     public func sizeToFit() -> T {
-        value.sizeToFit()
-        return value
+        self.value.sizeToFit()
+        return self.value
     }
 }
 

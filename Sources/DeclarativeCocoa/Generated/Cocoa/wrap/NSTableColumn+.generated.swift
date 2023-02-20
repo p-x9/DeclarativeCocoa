@@ -8,8 +8,8 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSTableColumn {
     @discardableResult
     public func sizeToFit() -> Self {
-        value.sizeToFit()
-        return self
+        self.value.sizeToFit()
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

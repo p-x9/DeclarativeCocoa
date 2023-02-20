@@ -9,29 +9,29 @@ extension Modify.DynamicMemberWrap where T: UICollectionReusableView {
     @discardableResult
     @_disfavoredOverload
     public func prepareForReuse() -> T {
-        value.prepareForReuse()
-        return value
+        self.value.prepareForReuse()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) -> T {
-        value.apply(layoutAttributes)
-        return value
+        self.value.apply(layoutAttributes)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func willTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> T {
-        value.willTransition(from: oldLayout, to: newLayout)
-        return value
+        self.value.willTransition(from: oldLayout, to: newLayout)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func didTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> T {
-        value.didTransition(from: oldLayout, to: newLayout)
-        return value
+        self.value.didTransition(from: oldLayout, to: newLayout)
+        return self.value
     }
 }
 

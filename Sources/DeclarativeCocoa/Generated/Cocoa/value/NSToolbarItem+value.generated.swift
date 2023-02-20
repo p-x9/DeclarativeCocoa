@@ -9,8 +9,8 @@ extension Modify.DynamicMemberWrap where T: NSToolbarItem {
     @discardableResult
     @_disfavoredOverload
     public func validate() -> T {
-        value.validate()
-        return value
+        self.value.validate()
+        return self.value
     }
 }
 

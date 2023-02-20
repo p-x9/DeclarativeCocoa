@@ -10,567 +10,567 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
     @discardableResult
     @_disfavoredOverload
     public func addTitlebarAccessoryViewController(_ childViewController: NSTitlebarAccessoryViewController) -> T {
-        value.addTitlebarAccessoryViewController(childViewController)
-        return value
+        self.value.addTitlebarAccessoryViewController(childViewController)
+        return self.value
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
     public func insertTitlebarAccessoryViewController(_ childViewController: NSTitlebarAccessoryViewController, at index: Int) -> T {
-        value.insertTitlebarAccessoryViewController(childViewController, at: index)
-        return value
+        self.value.insertTitlebarAccessoryViewController(childViewController, at: index)
+        return self.value
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
     public func removeTitlebarAccessoryViewController(at index: Int) -> T {
-        value.removeTitlebarAccessoryViewController(at: index)
-        return value
+        self.value.removeTitlebarAccessoryViewController(at: index)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setTitleWithRepresentedFilename(_ filename: String) -> T {
-        value.setTitleWithRepresentedFilename(filename)
-        return value
+        self.value.setTitleWithRepresentedFilename(filename)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func endEditing(for object: Any?) -> T {
-        value.endEditing(for: object)
-        return value
+        self.value.endEditing(for: object)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setFrame(_ frameRect: NSRect, display flag: Bool) -> T {
-        value.setFrame(frameRect, display: flag)
-        return value
+        self.value.setFrame(frameRect, display: flag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setContentSize(_ size: NSSize) -> T {
-        value.setContentSize(size)
-        return value
+        self.value.setContentSize(size)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setFrameOrigin(_ point: NSPoint) -> T {
-        value.setFrameOrigin(point)
-        return value
+        self.value.setFrameOrigin(point)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setFrameTopLeftPoint(_ point: NSPoint) -> T {
-        value.setFrameTopLeftPoint(point)
-        return value
+        self.value.setFrameTopLeftPoint(point)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setFrame(_ frameRect: NSRect, display displayFlag: Bool, animate animateFlag: Bool) -> T {
-        value.setFrame(frameRect, display: displayFlag, animate: animateFlag)
-        return value
+        self.value.setFrame(frameRect, display: displayFlag, animate: animateFlag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func displayIfNeeded() -> T {
-        value.displayIfNeeded()
-        return value
+        self.value.displayIfNeeded()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func display() -> T {
-        value.display()
-        return value
+        self.value.display()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func update() -> T {
-        value.update()
-        return value
+        self.value.update()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func close() -> T {
-        value.close()
-        return value
+        self.value.close()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func miniaturize(_ sender: Any?) -> T {
-        value.miniaturize(sender)
-        return value
+        self.value.miniaturize(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func deminiaturize(_ sender: Any?) -> T {
-        value.deminiaturize(sender)
-        return value
+        self.value.deminiaturize(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func zoom(_ sender: Any?) -> T {
-        value.zoom(sender)
-        return value
+        self.value.zoom(sender)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func setContentBorderThickness(_ thickness: CGFloat, for edge: NSRectEdge) -> T {
-        value.setContentBorderThickness(thickness, for: edge)
-        return value
+        self.value.setContentBorderThickness(thickness, for: edge)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func setAutorecalculatesContentBorderThickness(_ flag: Bool, for edge: NSRectEdge) -> T {
-        value.setAutorecalculatesContentBorderThickness(flag, for: edge)
-        return value
+        self.value.setAutorecalculatesContentBorderThickness(flag, for: edge)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func center() -> T {
-        value.center()
-        return value
+        self.value.center()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func makeKeyAndOrderFront(_ sender: Any?) -> T {
-        value.makeKeyAndOrderFront(sender)
-        return value
+        self.value.makeKeyAndOrderFront(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func orderFront(_ sender: Any?) -> T {
-        value.orderFront(sender)
-        return value
+        self.value.orderFront(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func orderBack(_ sender: Any?) -> T {
-        value.orderBack(sender)
-        return value
+        self.value.orderBack(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func orderOut(_ sender: Any?) -> T {
-        value.orderOut(sender)
-        return value
+        self.value.orderOut(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func order(_ place: NSWindow.OrderingMode, relativeTo otherWin: Int) -> T {
-        value.order(place, relativeTo: otherWin)
-        return value
+        self.value.order(place, relativeTo: otherWin)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func orderFrontRegardless() -> T {
-        value.orderFrontRegardless()
-        return value
+        self.value.orderFrontRegardless()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func makeKey() -> T {
-        value.makeKey()
-        return value
+        self.value.makeKey()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func makeMain() -> T {
-        value.makeMain()
-        return value
+        self.value.makeMain()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func becomeKey() -> T {
-        value.becomeKey()
-        return value
+        self.value.becomeKey()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func resignKey() -> T {
-        value.resignKey()
-        return value
+        self.value.resignKey()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func becomeMain() -> T {
-        value.becomeMain()
-        return value
+        self.value.becomeMain()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func resignMain() -> T {
-        value.resignMain()
-        return value
+        self.value.resignMain()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func performClose(_ sender: Any?) -> T {
-        value.performClose(sender)
-        return value
+        self.value.performClose(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func performMiniaturize(_ sender: Any?) -> T {
-        value.performMiniaturize(sender)
-        return value
+        self.value.performMiniaturize(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func performZoom(_ sender: Any?) -> T {
-        value.performZoom(sender)
-        return value
+        self.value.performZoom(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func printWindow(_ sender: Any?) -> T {
-        value.printWindow(sender)
-        return value
+        self.value.printWindow(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setDynamicDepthLimit(_ flag: Bool) -> T {
-        value.setDynamicDepthLimit(flag)
-        return value
+        self.value.setDynamicDepthLimit(flag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func invalidateShadow() -> T {
-        value.invalidateShadow()
-        return value
+        self.value.invalidateShadow()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func disableScreenUpdatesUntilFlush() -> T {
-        value.disableScreenUpdatesUntilFlush()
-        return value
+        self.value.disableScreenUpdatesUntilFlush()
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func toggleFullScreen(_ sender: Any?) -> T {
-        value.toggleFullScreen(sender)
-        return value
+        self.value.toggleFullScreen(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setFrame(from string: NSWindow.PersistableFrameDescriptor) -> T {
-        value.setFrame(from: string)
-        return value
+        self.value.setFrame(from: string)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func saveFrame(usingName name: NSWindow.FrameAutosaveName) -> T {
-        value.saveFrame(usingName: name)
-        return value
+        self.value.saveFrame(usingName: name)
+        return self.value
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     @_disfavoredOverload
     public func beginSheet(_ sheetWindow: NSWindow, completionHandler handler: ((NSApplication.ModalResponse) -> Void)? = nil) -> T {
-        value.beginSheet(sheetWindow, completionHandler: handler)
-        return value
+        self.value.beginSheet(sheetWindow, completionHandler: handler)
+        return self.value
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     @_disfavoredOverload
     public func beginCriticalSheet(_ sheetWindow: NSWindow, completionHandler handler: ((NSApplication.ModalResponse) -> Void)? = nil) -> T {
-        value.beginCriticalSheet(sheetWindow, completionHandler: handler)
-        return value
+        self.value.beginCriticalSheet(sheetWindow, completionHandler: handler)
+        return self.value
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     @_disfavoredOverload
     public func endSheet(_ sheetWindow: NSWindow) -> T {
-        value.endSheet(sheetWindow)
-        return value
+        self.value.endSheet(sheetWindow)
+        return self.value
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     @_disfavoredOverload
     public func endSheet(_ sheetWindow: NSWindow, returnCode: NSApplication.ModalResponse) -> T {
-        value.endSheet(sheetWindow, returnCode: returnCode)
-        return value
+        self.value.endSheet(sheetWindow, returnCode: returnCode)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addChildWindow(_ childWin: NSWindow, ordered place: NSWindow.OrderingMode) -> T {
-        value.addChildWindow(childWin, ordered: place)
-        return value
+        self.value.addChildWindow(childWin, ordered: place)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeChildWindow(_ childWin: NSWindow) -> T {
-        value.removeChildWindow(childWin)
-        return value
+        self.value.removeChildWindow(childWin)
+        return self.value
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
     public func performDrag(with event: NSEvent) -> T {
-        value.performDrag(with: event)
-        return value
+        self.value.performDrag(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectNextKeyView(_ sender: Any?) -> T {
-        value.selectNextKeyView(sender)
-        return value
+        self.value.selectNextKeyView(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectPreviousKeyView(_ sender: Any?) -> T {
-        value.selectPreviousKeyView(sender)
-        return value
+        self.value.selectPreviousKeyView(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectKeyView(following view: NSView) -> T {
-        value.selectKeyView(following: view)
-        return value
+        self.value.selectKeyView(following: view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectKeyView(preceding view: NSView) -> T {
-        value.selectKeyView(preceding: view)
-        return value
+        self.value.selectKeyView(preceding: view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func disableKeyEquivalentForDefaultButtonCell() -> T {
-        value.disableKeyEquivalentForDefaultButtonCell()
-        return value
+        self.value.disableKeyEquivalentForDefaultButtonCell()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func enableKeyEquivalentForDefaultButtonCell() -> T {
-        value.enableKeyEquivalentForDefaultButtonCell()
-        return value
+        self.value.enableKeyEquivalentForDefaultButtonCell()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func recalculateKeyViewLoop() -> T {
-        value.recalculateKeyViewLoop()
-        return value
+        self.value.recalculateKeyViewLoop()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func toggleToolbarShown(_ sender: Any?) -> T {
-        value.toggleToolbarShown(sender)
-        return value
+        self.value.toggleToolbarShown(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func runToolbarCustomizationPalette(_ sender: Any?) -> T {
-        value.runToolbarCustomizationPalette(sender)
-        return value
+        self.value.runToolbarCustomizationPalette(sender)
+        return self.value
     }
 
     @available(macOS 10.12, *)
     @discardableResult
     @_disfavoredOverload
     public func addTabbedWindow(_ window: NSWindow, ordered: NSWindow.OrderingMode) -> T {
-        value.addTabbedWindow(window, ordered: ordered)
-        return value
+        self.value.addTabbedWindow(window, ordered: ordered)
+        return self.value
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
     public func trackEvents(matching mask: NSEvent.EventTypeMask, timeout: TimeInterval, mode: RunLoop.Mode, handler trackingHandler: (NSEvent?, UnsafeMutablePointer<ObjCBool>) -> Void) -> T {
-        value.trackEvents(matching: mask, timeout: timeout, mode: mode, handler: trackingHandler)
-        return value
+        self.value.trackEvents(matching: mask, timeout: timeout, mode: mode, handler: trackingHandler)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func discardEvents(matching mask: NSEvent.EventTypeMask, before lastEvent: NSEvent?) -> T {
-        value.discardEvents(matching: mask, before: lastEvent)
-        return value
+        self.value.discardEvents(matching: mask, before: lastEvent)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func postEvent(_ event: NSEvent, atStart flag: Bool) -> T {
-        value.postEvent(event, atStart: flag)
-        return value
+        self.value.postEvent(event, atStart: flag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func sendEvent(_ event: NSEvent) -> T {
-        value.sendEvent(event)
-        return value
+        self.value.sendEvent(event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func disableCursorRects() -> T {
-        value.disableCursorRects()
-        return value
+        self.value.disableCursorRects()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func enableCursorRects() -> T {
-        value.enableCursorRects()
-        return value
+        self.value.enableCursorRects()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func discardCursorRects() -> T {
-        value.discardCursorRects()
-        return value
+        self.value.discardCursorRects()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func invalidateCursorRects(for view: NSView) -> T {
-        value.invalidateCursorRects(for: view)
-        return value
+        self.value.invalidateCursorRects(for: view)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func resetCursorRects() -> T {
-        value.resetCursorRects()
-        return value
+        self.value.resetCursorRects()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func registerForDraggedTypes(_ newTypes: [NSPasteboard.PasteboardType]) -> T {
-        value.registerForDraggedTypes(newTypes)
-        return value
+        self.value.registerForDraggedTypes(newTypes)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func unregisterDraggedTypes() -> T {
-        value.unregisterDraggedTypes()
-        return value
+        self.value.unregisterDraggedTypes()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
     @discardableResult
     @_disfavoredOverload
     public func cacheImage(in rect: NSRect) -> T {
-        value.cacheImage(in: rect)
-        return value
+        self.value.cacheImage(in: rect)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
     @discardableResult
     @_disfavoredOverload
     public func restoreCachedImage() -> T {
-        value.restoreCachedImage()
-        return value
+        self.value.restoreCachedImage()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
     @discardableResult
     @_disfavoredOverload
     public func discardCachedImage() -> T {
-        value.discardCachedImage()
-        return value
+        self.value.discardCachedImage()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.10, message: "This method does not do anything and should not be called.")
     @discardableResult
     @_disfavoredOverload
     public func useOptimizedDrawing(_ flag: Bool) -> T {
-        value.useOptimizedDrawing(flag)
-        return value
+        self.value.useOptimizedDrawing(flag)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
     @discardableResult
     @_disfavoredOverload
     public func disableFlushing() -> T {
-        value.disableFlushing()
-        return value
+        self.value.disableFlushing()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
     @discardableResult
     @_disfavoredOverload
     public func enableFlushing() -> T {
-        value.enableFlushing()
-        return value
+        self.value.enableFlushing()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Allow AppKit's automatic deferred display mechanism to take care of flushing any graphics contexts as needed.")
     @discardableResult
     @_disfavoredOverload
     public func flush() -> T {
-        value.flush()
-        return value
+        self.value.flush()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Allow AppKit's automatic deferred display mechanism to take care of flushing any graphics contexts as needed.")
     @discardableResult
     @_disfavoredOverload
     public func flushIfNeeded() -> T {
-        value.flushIfNeeded()
-        return value
+        self.value.flushIfNeeded()
+        return self.value
     }
 }
 

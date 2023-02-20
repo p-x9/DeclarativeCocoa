@@ -9,288 +9,288 @@ extension Modify.DynamicMemberWrap where T: NSTableView {
     @discardableResult
     @_disfavoredOverload
     public func noteHeightOfRows(withIndexesChanged indexSet: IndexSet) -> T {
-        value.noteHeightOfRows(withIndexesChanged: indexSet)
-        return value
+        self.value.noteHeightOfRows(withIndexesChanged: indexSet)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func addTableColumn(_ tableColumn: NSTableColumn) -> T {
-        value.addTableColumn(tableColumn)
-        return value
+        self.value.addTableColumn(tableColumn)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeTableColumn(_ tableColumn: NSTableColumn) -> T {
-        value.removeTableColumn(tableColumn)
-        return value
+        self.value.removeTableColumn(tableColumn)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func moveColumn(_ oldIndex: Int, toColumn newIndex: Int) -> T {
-        value.moveColumn(oldIndex, toColumn: newIndex)
-        return value
+        self.value.moveColumn(oldIndex, toColumn: newIndex)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func tile() -> T {
-        value.tile()
-        return value
+        self.value.tile()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func sizeToFit() -> T {
-        value.sizeToFit()
-        return value
+        self.value.sizeToFit()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func sizeLastColumnToFit() -> T {
-        value.sizeLastColumnToFit()
-        return value
+        self.value.sizeLastColumnToFit()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func scrollRowToVisible(_ row: Int) -> T {
-        value.scrollRowToVisible(row)
-        return value
+        self.value.scrollRowToVisible(row)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func scrollColumnToVisible(_ column: Int) -> T {
-        value.scrollColumnToVisible(column)
-        return value
+        self.value.scrollColumnToVisible(column)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func reloadData() -> T {
-        value.reloadData()
-        return value
+        self.value.reloadData()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func noteNumberOfRowsChanged() -> T {
-        value.noteNumberOfRowsChanged()
-        return value
+        self.value.noteNumberOfRowsChanged()
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func reloadData(forRowIndexes rowIndexes: IndexSet, columnIndexes: IndexSet) -> T {
-        value.reloadData(forRowIndexes: rowIndexes, columnIndexes: columnIndexes)
-        return value
+        self.value.reloadData(forRowIndexes: rowIndexes, columnIndexes: columnIndexes)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setIndicatorImage(_ image: NSImage?, in tableColumn: NSTableColumn) -> T {
-        value.setIndicatorImage(image, in: tableColumn)
-        return value
+        self.value.setIndicatorImage(image, in: tableColumn)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setDraggingSourceOperationMask(_ mask: NSDragOperation, forLocal isLocal: Bool) -> T {
-        value.setDraggingSourceOperationMask(mask, forLocal: isLocal)
-        return value
+        self.value.setDraggingSourceOperationMask(mask, forLocal: isLocal)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setDropRow(_ row: Int, dropOperation: NSTableView.DropOperation) -> T {
-        value.setDropRow(row, dropOperation: dropOperation)
-        return value
+        self.value.setDropRow(row, dropOperation: dropOperation)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectAll(_ sender: Any?) -> T {
-        value.selectAll(sender)
-        return value
+        self.value.selectAll(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func deselectAll(_ sender: Any?) -> T {
-        value.deselectAll(sender)
-        return value
+        self.value.deselectAll(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectColumnIndexes(_ indexes: IndexSet, byExtendingSelection extend: Bool) -> T {
-        value.selectColumnIndexes(indexes, byExtendingSelection: extend)
-        return value
+        self.value.selectColumnIndexes(indexes, byExtendingSelection: extend)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func selectRowIndexes(_ indexes: IndexSet, byExtendingSelection extend: Bool) -> T {
-        value.selectRowIndexes(indexes, byExtendingSelection: extend)
-        return value
+        self.value.selectRowIndexes(indexes, byExtendingSelection: extend)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func deselectColumn(_ column: Int) -> T {
-        value.deselectColumn(column)
-        return value
+        self.value.deselectColumn(column)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func deselectRow(_ row: Int) -> T {
-        value.deselectRow(row)
-        return value
+        self.value.deselectRow(row)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func editColumn(_ column: Int, row: Int, with event: NSEvent?, select: Bool) -> T {
-        value.editColumn(column, row: row, with: event, select: select)
-        return value
+        self.value.editColumn(column, row: row, with: event, select: select)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawRow(_ row: Int, clipRect: NSRect) -> T {
-        value.drawRow(row, clipRect: clipRect)
-        return value
+        self.value.drawRow(row, clipRect: clipRect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func highlightSelection(inClipRect clipRect: NSRect) -> T {
-        value.highlightSelection(inClipRect: clipRect)
-        return value
+        self.value.highlightSelection(inClipRect: clipRect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawGrid(inClipRect clipRect: NSRect) -> T {
-        value.drawGrid(inClipRect: clipRect)
-        return value
+        self.value.drawGrid(inClipRect: clipRect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawBackground(inClipRect clipRect: NSRect) -> T {
-        value.drawBackground(inClipRect: clipRect)
-        return value
+        self.value.drawBackground(inClipRect: clipRect)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func enumerateAvailableRowViews(_ handler: (NSTableRowView, Int) -> Void) -> T {
-        value.enumerateAvailableRowViews(handler)
-        return value
+        self.value.enumerateAvailableRowViews(handler)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func beginUpdates() -> T {
-        value.beginUpdates()
-        return value
+        self.value.beginUpdates()
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func endUpdates() -> T {
-        value.endUpdates()
-        return value
+        self.value.endUpdates()
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func insertRows(at indexes: IndexSet, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> T {
-        value.insertRows(at: indexes, withAnimation: animationOptions)
-        return value
+        self.value.insertRows(at: indexes, withAnimation: animationOptions)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func removeRows(at indexes: IndexSet, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> T {
-        value.removeRows(at: indexes, withAnimation: animationOptions)
-        return value
+        self.value.removeRows(at: indexes, withAnimation: animationOptions)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func moveRow(at oldIndex: Int, to newIndex: Int) -> T {
-        value.moveRow(at: oldIndex, to: newIndex)
-        return value
+        self.value.moveRow(at: oldIndex, to: newIndex)
+        return self.value
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
     public func hideRows(at indexes: IndexSet, withAnimation rowAnimation: NSTableView.AnimationOptions = []) -> T {
-        value.hideRows(at: indexes, withAnimation: rowAnimation)
-        return value
+        self.value.hideRows(at: indexes, withAnimation: rowAnimation)
+        return self.value
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
     public func unhideRows(at indexes: IndexSet, withAnimation rowAnimation: NSTableView.AnimationOptions = []) -> T {
-        value.unhideRows(at: indexes, withAnimation: rowAnimation)
-        return value
+        self.value.unhideRows(at: indexes, withAnimation: rowAnimation)
+        return self.value
     }
 
     @available(macOS 10.8, *)
     @discardableResult
     @_disfavoredOverload
     public func register(_ nib: NSNib?, forIdentifier identifier: NSUserInterfaceItemIdentifier) -> T {
-        value.register(nib, forIdentifier: identifier)
-        return value
+        self.value.register(nib, forIdentifier: identifier)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func didAdd(_ rowView: NSTableRowView, forRow row: Int) -> T {
-        value.didAdd(rowView, forRow: row)
-        return value
+        self.value.didAdd(rowView, forRow: row)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func didRemove(_ rowView: NSTableRowView, forRow row: Int) -> T {
-        value.didRemove(rowView, forRow: row)
-        return value
+        self.value.didRemove(rowView, forRow: row)
+        return self.value
     }
 
     @available(macOS, introduced: 10.6, deprecated: 10.10, message: "Use a View Based TableView; make a particular view the first responder with [window makeFirstResponder:view] to focus it.")
     @discardableResult
     @_disfavoredOverload
     public func setFocusedColumn(_ focusedColumn: Int) -> T {
-        value.setFocusedColumn(focusedColumn)
-        return value
+        self.value.setFocusedColumn(focusedColumn)
+        return self.value
     }
 
     @available(macOS, introduced: 10.6, deprecated: 10.10, message: "Use a View Based TableView; directly interact with a particular view as required and call -performClick: on it, if necessary")
     @discardableResult
     @_disfavoredOverload
     public func performClickOnCell(atColumn column: Int, row: Int) -> T {
-        value.performClickOnCell(atColumn: column, row: row)
-        return value
+        self.value.performClickOnCell(atColumn: column, row: row)
+        return self.value
     }
 }
 

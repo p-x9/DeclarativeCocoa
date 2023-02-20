@@ -8,65 +8,65 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSOutlineView {
     @discardableResult
     public func expandItem(_ item: Any?, expandChildren: Bool) -> Self {
-        value.expandItem(item, expandChildren: expandChildren)
-        return self
+        self.value.expandItem(item, expandChildren: expandChildren)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func expandItem(_ item: Any?) -> Self {
-        value.expandItem(item)
-        return self
+        self.value.expandItem(item)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func collapseItem(_ item: Any?, collapseChildren: Bool) -> Self {
-        value.collapseItem(item, collapseChildren: collapseChildren)
-        return self
+        self.value.collapseItem(item, collapseChildren: collapseChildren)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func collapseItem(_ item: Any?) -> Self {
-        value.collapseItem(item)
-        return self
+        self.value.collapseItem(item)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func reloadItem(_ item: Any?, reloadChildren: Bool) -> Self {
-        value.reloadItem(item, reloadChildren: reloadChildren)
-        return self
+        self.value.reloadItem(item, reloadChildren: reloadChildren)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func reloadItem(_ item: Any?) -> Self {
-        value.reloadItem(item)
-        return self
+        self.value.reloadItem(item)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setDropItem(_ item: Any?, dropChildIndex index: Int) -> Self {
-        value.setDropItem(item, dropChildIndex: index)
-        return self
+        self.value.setDropItem(item, dropChildIndex: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func insertItems(at indexes: IndexSet, inParent parent: Any?, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> Self {
-        value.insertItems(at: indexes, inParent: parent, withAnimation: animationOptions)
-        return self
+        self.value.insertItems(at: indexes, inParent: parent, withAnimation: animationOptions)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func removeItems(at indexes: IndexSet, inParent parent: Any?, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> Self {
-        value.removeItems(at: indexes, inParent: parent, withAnimation: animationOptions)
-        return self
+        self.value.removeItems(at: indexes, inParent: parent, withAnimation: animationOptions)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func moveItem(at fromIndex: Int, inParent oldParent: Any?, to toIndex: Int, inParent newParent: Any?) -> Self {
-        value.moveItem(at: fromIndex, inParent: oldParent, to: toIndex, inParent: newParent)
-        return self
+        self.value.moveItem(at: fromIndex, inParent: oldParent, to: toIndex, inParent: newParent)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

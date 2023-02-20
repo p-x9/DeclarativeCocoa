@@ -8,20 +8,20 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UIGestureRecognizer {
     @discardableResult
     public func addTarget(_ target: Any, action: Selector) -> Self {
-        value.addTarget(target, action: action)
-        return self
+        self.value.addTarget(target, action: action)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func removeTarget(_ target: Any?, action: Selector?) -> Self {
-        value.removeTarget(target, action: action)
-        return self
+        self.value.removeTarget(target, action: action)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func require(toFail otherGestureRecognizer: UIGestureRecognizer) -> Self {
-        value.require(toFail: otherGestureRecognizer)
-        return self
+        self.value.require(toFail: otherGestureRecognizer)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

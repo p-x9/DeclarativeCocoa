@@ -10,16 +10,16 @@ extension Modify.DynamicMemberWrap where T: UIRefreshControl {
     @discardableResult
     @_disfavoredOverload
     public func beginRefreshing() -> T {
-        value.beginRefreshing()
-        return value
+        self.value.beginRefreshing()
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func endRefreshing() -> T {
-        value.endRefreshing()
-        return value
+        self.value.endRefreshing()
+        return self.value
     }
 }
 

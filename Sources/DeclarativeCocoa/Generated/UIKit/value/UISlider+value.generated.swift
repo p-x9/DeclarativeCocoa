@@ -16,22 +16,22 @@ extension Modify.DynamicMemberWrap where T: UISlider {
     @discardableResult
     @_disfavoredOverload
     public func setThumbImage(_ image: UIImage?, for state: UIControl.State) -> T {
-        value.setThumbImage(image, for: state)
-        return value
+        self.value.setThumbImage(image, for: state)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setMinimumTrackImage(_ image: UIImage?, for state: UIControl.State) -> T {
-        value.setMinimumTrackImage(image, for: state)
-        return value
+        self.value.setMinimumTrackImage(image, for: state)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setMaximumTrackImage(_ image: UIImage?, for state: UIControl.State) -> T {
-        value.setMaximumTrackImage(image, for: state)
-        return value
+        self.value.setMaximumTrackImage(image, for: state)
+        return self.value
     }
 }
 

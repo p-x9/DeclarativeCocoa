@@ -9,29 +9,29 @@ extension Modify.DynamicMemberWrap where T: NSColorWell {
     @discardableResult
     @_disfavoredOverload
     public func deactivate() -> T {
-        value.deactivate()
-        return value
+        self.value.deactivate()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func activate(_ exclusive: Bool) -> T {
-        value.activate(exclusive)
-        return value
+        self.value.activate(exclusive)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawWell(inside insideRect: NSRect) -> T {
-        value.drawWell(inside: insideRect)
-        return value
+        self.value.drawWell(inside: insideRect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func takeColorFrom(_ sender: Any?) -> T {
-        value.takeColorFrom(sender)
-        return value
+        self.value.takeColorFrom(sender)
+        return self.value
     }
 }
 

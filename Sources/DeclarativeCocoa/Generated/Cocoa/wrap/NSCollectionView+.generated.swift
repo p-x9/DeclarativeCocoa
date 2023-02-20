@@ -9,127 +9,127 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     public func reloadData() -> Self {
-        value.reloadData()
-        return self
+        self.value.reloadData()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func selectItems(at indexPaths: Set<IndexPath>, scrollPosition: NSCollectionView.ScrollPosition) -> Self {
-        value.selectItems(at: indexPaths, scrollPosition: scrollPosition)
-        return self
+        self.value.selectItems(at: indexPaths, scrollPosition: scrollPosition)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func deselectItems(at indexPaths: Set<IndexPath>) -> Self {
-        value.deselectItems(at: indexPaths)
-        return self
+        self.value.deselectItems(at: indexPaths)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func register(_ itemClass: AnyClass?, forItemWithIdentifier identifier: NSUserInterfaceItemIdentifier) -> Self {
-        value.register(itemClass, forItemWithIdentifier: identifier)
-        return self
+        self.value.register(itemClass, forItemWithIdentifier: identifier)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func register(_ nib: NSNib?, forItemWithIdentifier identifier: NSUserInterfaceItemIdentifier) -> Self {
-        value.register(nib, forItemWithIdentifier: identifier)
-        return self
+        self.value.register(nib, forItemWithIdentifier: identifier)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func register(_ viewClass: AnyClass?, forSupplementaryViewOfKind kind: NSCollectionView.SupplementaryElementKind, withIdentifier identifier: NSUserInterfaceItemIdentifier) -> Self {
-        value.register(viewClass, forSupplementaryViewOfKind: kind, withIdentifier: identifier)
-        return self
+        self.value.register(viewClass, forSupplementaryViewOfKind: kind, withIdentifier: identifier)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func register(_ nib: NSNib?, forSupplementaryViewOfKind kind: NSCollectionView.SupplementaryElementKind, withIdentifier identifier: NSUserInterfaceItemIdentifier) -> Self {
-        value.register(nib, forSupplementaryViewOfKind: kind, withIdentifier: identifier)
-        return self
+        self.value.register(nib, forSupplementaryViewOfKind: kind, withIdentifier: identifier)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func insertSections(_ sections: IndexSet) -> Self {
-        value.insertSections(sections)
-        return self
+        self.value.insertSections(sections)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func deleteSections(_ sections: IndexSet) -> Self {
-        value.deleteSections(sections)
-        return self
+        self.value.deleteSections(sections)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func reloadSections(_ sections: IndexSet) -> Self {
-        value.reloadSections(sections)
-        return self
+        self.value.reloadSections(sections)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func moveSection(_ section: Int, toSection newSection: Int) -> Self {
-        value.moveSection(section, toSection: newSection)
-        return self
+        self.value.moveSection(section, toSection: newSection)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func insertItems(at indexPaths: Set<IndexPath>) -> Self {
-        value.insertItems(at: indexPaths)
-        return self
+        self.value.insertItems(at: indexPaths)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func deleteItems(at indexPaths: Set<IndexPath>) -> Self {
-        value.deleteItems(at: indexPaths)
-        return self
+        self.value.deleteItems(at: indexPaths)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func reloadItems(at indexPaths: Set<IndexPath>) -> Self {
-        value.reloadItems(at: indexPaths)
-        return self
+        self.value.reloadItems(at: indexPaths)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func moveItem(at indexPath: IndexPath, to newIndexPath: IndexPath) -> Self {
-        value.moveItem(at: indexPath, to: newIndexPath)
-        return self
+        self.value.moveItem(at: indexPath, to: newIndexPath)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func performBatchUpdates(_ updates: (() -> Void)?, completionHandler: ((Bool) -> Void)? = nil) -> Self {
-        value.performBatchUpdates(updates, completionHandler: completionHandler)
-        return self
+        self.value.performBatchUpdates(updates, completionHandler: completionHandler)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func scrollToItems(at indexPaths: Set<IndexPath>, scrollPosition: NSCollectionView.ScrollPosition) -> Self {
-        value.scrollToItems(at: indexPaths, scrollPosition: scrollPosition)
-        return self
+        self.value.scrollToItems(at: indexPaths, scrollPosition: scrollPosition)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     public func setDraggingSourceOperationMask(_ dragOperationMask: NSDragOperation, forLocal localDestination: Bool) -> Self {
-        value.setDraggingSourceOperationMask(dragOperationMask, forLocal: localDestination)
-        return self
+        self.value.setDraggingSourceOperationMask(dragOperationMask, forLocal: localDestination)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

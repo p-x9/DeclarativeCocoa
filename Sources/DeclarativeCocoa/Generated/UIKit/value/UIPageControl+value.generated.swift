@@ -10,24 +10,24 @@ extension Modify.DynamicMemberWrap where T: UIPageControl {
     @discardableResult
     @_disfavoredOverload
     public func setIndicatorImage(_ image: UIImage?, forPage page: Int) -> T {
-        value.setIndicatorImage(image, forPage: page)
-        return value
+        self.value.setIndicatorImage(image, forPage: page)
+        return self.value
     }
 
     @available(iOS 16.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setCurrentPageIndicatorImage(_ image: UIImage?, forPage page: Int) -> T {
-        value.setCurrentPageIndicatorImage(image, forPage: page)
-        return value
+        self.value.setCurrentPageIndicatorImage(image, forPage: page)
+        return self.value
     }
 
     @available(iOS, introduced: 2.0, deprecated: 14.0, message: "updateCurrentPageDisplay no longer does anything reasonable with the new interaction mode.")
     @discardableResult
     @_disfavoredOverload
     public func updateCurrentPageDisplay() -> T {
-        value.updateCurrentPageDisplay()
-        return value
+        self.value.updateCurrentPageDisplay()
+        return self.value
     }
 }
 

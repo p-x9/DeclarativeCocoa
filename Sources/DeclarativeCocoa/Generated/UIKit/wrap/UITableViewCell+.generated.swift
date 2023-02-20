@@ -9,60 +9,60 @@ extension Modify.DynamicMemberWrap where T: UITableViewCell {
     @available(iOS 14.0, *)
     @discardableResult
     public func setNeedsUpdateConfiguration() -> Self {
-        value.setNeedsUpdateConfiguration()
-        return self
+        self.value.setNeedsUpdateConfiguration()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func prepareForReuse() -> Self {
-        value.prepareForReuse()
-        return self
+        self.value.prepareForReuse()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setSelected(_ selected: Bool, animated: Bool) -> Self {
-        value.setSelected(selected, animated: animated)
-        return self
+        self.value.setSelected(selected, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setHighlighted(_ highlighted: Bool, animated: Bool) -> Self {
-        value.setHighlighted(highlighted, animated: animated)
-        return self
+        self.value.setHighlighted(highlighted, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setEditing(_ editing: Bool, animated: Bool) -> Self {
-        value.setEditing(editing, animated: animated)
-        return self
+        self.value.setEditing(editing, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 3.0, *)
     @discardableResult
     public func willTransition(to state: UITableViewCell.StateMask) -> Self {
-        value.willTransition(to: state)
-        return self
+        self.value.willTransition(to: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 3.0, *)
     @discardableResult
     public func didTransition(to state: UITableViewCell.StateMask) -> Self {
-        value.didTransition(to: state)
-        return self
+        self.value.didTransition(to: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 11.0, *)
     @discardableResult
     public func dragStateDidChange(_ dragState: UITableViewCell.DragState) -> Self {
-        value.dragStateDidChange(dragState)
-        return self
+        self.value.dragStateDidChange(dragState)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 14.0, tvOS 14.0, *)
     @discardableResult
     @MainActor dynamic public func updateConfiguration(using state: UICellConfigurationState) -> Self {
-        value.updateConfiguration(using: state)
-        return self
+        self.value.updateConfiguration(using: state)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

@@ -8,14 +8,14 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UIActivityIndicatorView {
     @discardableResult
     public func startAnimating() -> Self {
-        value.startAnimating()
-        return self
+        self.value.startAnimating()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func stopAnimating() -> Self {
-        value.stopAnimating()
-        return self
+        self.value.stopAnimating()
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

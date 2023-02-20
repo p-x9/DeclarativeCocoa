@@ -10,8 +10,8 @@ extension Modify.DynamicMemberWrap where T: NSMenuItem {
     @discardableResult
     @_disfavoredOverload
     public func setTitleWithMnemonic(_ stringWithAmpersand: String) -> T {
-        value.setTitleWithMnemonic(stringWithAmpersand)
-        return value
+        self.value.setTitleWithMnemonic(stringWithAmpersand)
+        return self.value
     }
 }
 

@@ -8,135 +8,135 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSControl {
     @discardableResult
     public func sizeToFit() -> Self {
-        value.sizeToFit()
-        return self
+        self.value.sizeToFit()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func takeIntValueFrom(_ sender: Any?) -> Self {
-        value.takeIntValueFrom(sender)
-        return self
+        self.value.takeIntValueFrom(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func takeFloatValueFrom(_ sender: Any?) -> Self {
-        value.takeFloatValueFrom(sender)
-        return self
+        self.value.takeFloatValueFrom(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func takeDoubleValueFrom(_ sender: Any?) -> Self {
-        value.takeDoubleValueFrom(sender)
-        return self
+        self.value.takeDoubleValueFrom(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func takeStringValueFrom(_ sender: Any?) -> Self {
-        value.takeStringValueFrom(sender)
-        return self
+        self.value.takeStringValueFrom(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func takeObjectValueFrom(_ sender: Any?) -> Self {
-        value.takeObjectValueFrom(sender)
-        return self
+        self.value.takeObjectValueFrom(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     public func takeIntegerValueFrom(_ sender: Any?) -> Self {
-        value.takeIntegerValueFrom(sender)
-        return self
+        self.value.takeIntegerValueFrom(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func mouseDown(with event: NSEvent) -> Self {
-        value.mouseDown(with: event)
-        return self
+        self.value.mouseDown(with: event)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func performClick(_ sender: Any?) -> Self {
-        value.performClick(sender)
-        return self
+        self.value.performClick(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     public func draw(withExpansionFrame contentFrame: NSRect, in view: NSView) -> Self {
-        value.draw(withExpansionFrame: contentFrame, in: view)
-        return self
+        self.value.draw(withExpansionFrame: contentFrame, in: view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func validateEditing() -> Self {
-        value.validateEditing()
-        return self
+        self.value.validateEditing()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     public func edit(withFrame rect: NSRect, editor textObj: NSText, delegate: Any?, event: NSEvent) -> Self {
-        value.edit(withFrame: rect, editor: textObj, delegate: delegate, event: event)
-        return self
+        self.value.edit(withFrame: rect, editor: textObj, delegate: delegate, event: event)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     public func select(withFrame rect: NSRect, editor textObj: NSText, delegate: Any?, start selStart: Int, length selLength: Int) -> Self {
-        value.select(withFrame: rect, editor: textObj, delegate: delegate, start: selStart, length: selLength)
-        return self
+        self.value.select(withFrame: rect, editor: textObj, delegate: delegate, start: selStart, length: selLength)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     public func endEditing(_ textObj: NSText) -> Self {
-        value.endEditing(textObj)
-        return self
+        self.value.endEditing(textObj)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Set the needsDisplay property to YES instead")
     @discardableResult
     public func setNeedsDisplay() -> Self {
-        value.setNeedsDisplay()
-        return self
+        self.value.setNeedsDisplay()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Override -layout instead. This method should never be called")
     @discardableResult
     public func calcSize() -> Self {
-        value.calcSize()
-        return self
+        self.value.calcSize()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func updateCell(_ cell: NSCell) -> Self {
-        value.updateCell(cell)
-        return self
+        self.value.updateCell(cell)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func updateCellInside(_ cell: NSCell) -> Self {
-        value.updateCellInside(cell)
-        return self
+        self.value.updateCellInside(cell)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func drawCellInside(_ cell: NSCell) -> Self {
-        value.drawCellInside(cell)
-        return self
+        self.value.drawCellInside(cell)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func drawCell(_ cell: NSCell) -> Self {
-        value.drawCell(cell)
-        return self
+        self.value.drawCell(cell)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectCell(_ cell: NSCell) -> Self {
-        value.selectCell(cell)
-        return self
+        self.value.selectCell(cell)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

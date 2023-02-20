@@ -9,490 +9,490 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
     @available(macOS 10.10, *)
     @discardableResult
     public func addTitlebarAccessoryViewController(_ childViewController: NSTitlebarAccessoryViewController) -> Self {
-        value.addTitlebarAccessoryViewController(childViewController)
-        return self
+        self.value.addTitlebarAccessoryViewController(childViewController)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     public func insertTitlebarAccessoryViewController(_ childViewController: NSTitlebarAccessoryViewController, at index: Int) -> Self {
-        value.insertTitlebarAccessoryViewController(childViewController, at: index)
-        return self
+        self.value.insertTitlebarAccessoryViewController(childViewController, at: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     public func removeTitlebarAccessoryViewController(at index: Int) -> Self {
-        value.removeTitlebarAccessoryViewController(at: index)
-        return self
+        self.value.removeTitlebarAccessoryViewController(at: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setTitleWithRepresentedFilename(_ filename: String) -> Self {
-        value.setTitleWithRepresentedFilename(filename)
-        return self
+        self.value.setTitleWithRepresentedFilename(filename)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func endEditing(for object: Any?) -> Self {
-        value.endEditing(for: object)
-        return self
+        self.value.endEditing(for: object)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setFrame(_ frameRect: NSRect, display flag: Bool) -> Self {
-        value.setFrame(frameRect, display: flag)
-        return self
+        self.value.setFrame(frameRect, display: flag)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setContentSize(_ size: NSSize) -> Self {
-        value.setContentSize(size)
-        return self
+        self.value.setContentSize(size)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setFrameOrigin(_ point: NSPoint) -> Self {
-        value.setFrameOrigin(point)
-        return self
+        self.value.setFrameOrigin(point)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setFrameTopLeftPoint(_ point: NSPoint) -> Self {
-        value.setFrameTopLeftPoint(point)
-        return self
+        self.value.setFrameTopLeftPoint(point)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setFrame(_ frameRect: NSRect, display displayFlag: Bool, animate animateFlag: Bool) -> Self {
-        value.setFrame(frameRect, display: displayFlag, animate: animateFlag)
-        return self
+        self.value.setFrame(frameRect, display: displayFlag, animate: animateFlag)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func displayIfNeeded() -> Self {
-        value.displayIfNeeded()
-        return self
+        self.value.displayIfNeeded()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func display() -> Self {
-        value.display()
-        return self
+        self.value.display()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func update() -> Self {
-        value.update()
-        return self
+        self.value.update()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func close() -> Self {
-        value.close()
-        return self
+        self.value.close()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func miniaturize(_ sender: Any?) -> Self {
-        value.miniaturize(sender)
-        return self
+        self.value.miniaturize(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func deminiaturize(_ sender: Any?) -> Self {
-        value.deminiaturize(sender)
-        return self
+        self.value.deminiaturize(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func zoom(_ sender: Any?) -> Self {
-        value.zoom(sender)
-        return self
+        self.value.zoom(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     public func setContentBorderThickness(_ thickness: CGFloat, for edge: NSRectEdge) -> Self {
-        value.setContentBorderThickness(thickness, for: edge)
-        return self
+        self.value.setContentBorderThickness(thickness, for: edge)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     public func setAutorecalculatesContentBorderThickness(_ flag: Bool, for edge: NSRectEdge) -> Self {
-        value.setAutorecalculatesContentBorderThickness(flag, for: edge)
-        return self
+        self.value.setAutorecalculatesContentBorderThickness(flag, for: edge)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func center() -> Self {
-        value.center()
-        return self
+        self.value.center()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func makeKeyAndOrderFront(_ sender: Any?) -> Self {
-        value.makeKeyAndOrderFront(sender)
-        return self
+        self.value.makeKeyAndOrderFront(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func orderFront(_ sender: Any?) -> Self {
-        value.orderFront(sender)
-        return self
+        self.value.orderFront(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func orderBack(_ sender: Any?) -> Self {
-        value.orderBack(sender)
-        return self
+        self.value.orderBack(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func orderOut(_ sender: Any?) -> Self {
-        value.orderOut(sender)
-        return self
+        self.value.orderOut(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func order(_ place: NSWindow.OrderingMode, relativeTo otherWin: Int) -> Self {
-        value.order(place, relativeTo: otherWin)
-        return self
+        self.value.order(place, relativeTo: otherWin)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func orderFrontRegardless() -> Self {
-        value.orderFrontRegardless()
-        return self
+        self.value.orderFrontRegardless()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func makeKey() -> Self {
-        value.makeKey()
-        return self
+        self.value.makeKey()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func makeMain() -> Self {
-        value.makeMain()
-        return self
+        self.value.makeMain()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func becomeKey() -> Self {
-        value.becomeKey()
-        return self
+        self.value.becomeKey()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func resignKey() -> Self {
-        value.resignKey()
-        return self
+        self.value.resignKey()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func becomeMain() -> Self {
-        value.becomeMain()
-        return self
+        self.value.becomeMain()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func resignMain() -> Self {
-        value.resignMain()
-        return self
+        self.value.resignMain()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func performClose(_ sender: Any?) -> Self {
-        value.performClose(sender)
-        return self
+        self.value.performClose(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func performMiniaturize(_ sender: Any?) -> Self {
-        value.performMiniaturize(sender)
-        return self
+        self.value.performMiniaturize(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func performZoom(_ sender: Any?) -> Self {
-        value.performZoom(sender)
-        return self
+        self.value.performZoom(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func printWindow(_ sender: Any?) -> Self {
-        value.printWindow(sender)
-        return self
+        self.value.printWindow(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setDynamicDepthLimit(_ flag: Bool) -> Self {
-        value.setDynamicDepthLimit(flag)
-        return self
+        self.value.setDynamicDepthLimit(flag)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func invalidateShadow() -> Self {
-        value.invalidateShadow()
-        return self
+        self.value.invalidateShadow()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func disableScreenUpdatesUntilFlush() -> Self {
-        value.disableScreenUpdatesUntilFlush()
-        return self
+        self.value.disableScreenUpdatesUntilFlush()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func toggleFullScreen(_ sender: Any?) -> Self {
-        value.toggleFullScreen(sender)
-        return self
+        self.value.toggleFullScreen(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setFrame(from string: NSWindow.PersistableFrameDescriptor) -> Self {
-        value.setFrame(from: string)
-        return self
+        self.value.setFrame(from: string)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func saveFrame(usingName name: NSWindow.FrameAutosaveName) -> Self {
-        value.saveFrame(usingName: name)
-        return self
+        self.value.saveFrame(usingName: name)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     public func beginSheet(_ sheetWindow: NSWindow, completionHandler handler: ((NSApplication.ModalResponse) -> Void)? = nil) -> Self {
-        value.beginSheet(sheetWindow, completionHandler: handler)
-        return self
+        self.value.beginSheet(sheetWindow, completionHandler: handler)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     public func beginCriticalSheet(_ sheetWindow: NSWindow, completionHandler handler: ((NSApplication.ModalResponse) -> Void)? = nil) -> Self {
-        value.beginCriticalSheet(sheetWindow, completionHandler: handler)
-        return self
+        self.value.beginCriticalSheet(sheetWindow, completionHandler: handler)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     public func endSheet(_ sheetWindow: NSWindow) -> Self {
-        value.endSheet(sheetWindow)
-        return self
+        self.value.endSheet(sheetWindow)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.9, *)
     @discardableResult
     public func endSheet(_ sheetWindow: NSWindow, returnCode: NSApplication.ModalResponse) -> Self {
-        value.endSheet(sheetWindow, returnCode: returnCode)
-        return self
+        self.value.endSheet(sheetWindow, returnCode: returnCode)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func addChildWindow(_ childWin: NSWindow, ordered place: NSWindow.OrderingMode) -> Self {
-        value.addChildWindow(childWin, ordered: place)
-        return self
+        self.value.addChildWindow(childWin, ordered: place)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func removeChildWindow(_ childWin: NSWindow) -> Self {
-        value.removeChildWindow(childWin)
-        return self
+        self.value.removeChildWindow(childWin)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func performDrag(with event: NSEvent) -> Self {
-        value.performDrag(with: event)
-        return self
+        self.value.performDrag(with: event)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectNextKeyView(_ sender: Any?) -> Self {
-        value.selectNextKeyView(sender)
-        return self
+        self.value.selectNextKeyView(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectPreviousKeyView(_ sender: Any?) -> Self {
-        value.selectPreviousKeyView(sender)
-        return self
+        self.value.selectPreviousKeyView(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectKeyView(following view: NSView) -> Self {
-        value.selectKeyView(following: view)
-        return self
+        self.value.selectKeyView(following: view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectKeyView(preceding view: NSView) -> Self {
-        value.selectKeyView(preceding: view)
-        return self
+        self.value.selectKeyView(preceding: view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func disableKeyEquivalentForDefaultButtonCell() -> Self {
-        value.disableKeyEquivalentForDefaultButtonCell()
-        return self
+        self.value.disableKeyEquivalentForDefaultButtonCell()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func enableKeyEquivalentForDefaultButtonCell() -> Self {
-        value.enableKeyEquivalentForDefaultButtonCell()
-        return self
+        self.value.enableKeyEquivalentForDefaultButtonCell()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func recalculateKeyViewLoop() -> Self {
-        value.recalculateKeyViewLoop()
-        return self
+        self.value.recalculateKeyViewLoop()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func toggleToolbarShown(_ sender: Any?) -> Self {
-        value.toggleToolbarShown(sender)
-        return self
+        self.value.toggleToolbarShown(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func runToolbarCustomizationPalette(_ sender: Any?) -> Self {
-        value.runToolbarCustomizationPalette(sender)
-        return self
+        self.value.runToolbarCustomizationPalette(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.12, *)
     @discardableResult
     public func addTabbedWindow(_ window: NSWindow, ordered: NSWindow.OrderingMode) -> Self {
-        value.addTabbedWindow(window, ordered: ordered)
-        return self
+        self.value.addTabbedWindow(window, ordered: ordered)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
     public func trackEvents(matching mask: NSEvent.EventTypeMask, timeout: TimeInterval, mode: RunLoop.Mode, handler trackingHandler: (NSEvent?, UnsafeMutablePointer<ObjCBool>) -> Void) -> Self {
-        value.trackEvents(matching: mask, timeout: timeout, mode: mode, handler: trackingHandler)
-        return self
+        self.value.trackEvents(matching: mask, timeout: timeout, mode: mode, handler: trackingHandler)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func discardEvents(matching mask: NSEvent.EventTypeMask, before lastEvent: NSEvent?) -> Self {
-        value.discardEvents(matching: mask, before: lastEvent)
-        return self
+        self.value.discardEvents(matching: mask, before: lastEvent)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func postEvent(_ event: NSEvent, atStart flag: Bool) -> Self {
-        value.postEvent(event, atStart: flag)
-        return self
+        self.value.postEvent(event, atStart: flag)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func sendEvent(_ event: NSEvent) -> Self {
-        value.sendEvent(event)
-        return self
+        self.value.sendEvent(event)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func disableCursorRects() -> Self {
-        value.disableCursorRects()
-        return self
+        self.value.disableCursorRects()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func enableCursorRects() -> Self {
-        value.enableCursorRects()
-        return self
+        self.value.enableCursorRects()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func discardCursorRects() -> Self {
-        value.discardCursorRects()
-        return self
+        self.value.discardCursorRects()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func invalidateCursorRects(for view: NSView) -> Self {
-        value.invalidateCursorRects(for: view)
-        return self
+        self.value.invalidateCursorRects(for: view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func resetCursorRects() -> Self {
-        value.resetCursorRects()
-        return self
+        self.value.resetCursorRects()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func registerForDraggedTypes(_ newTypes: [NSPasteboard.PasteboardType]) -> Self {
-        value.registerForDraggedTypes(newTypes)
-        return self
+        self.value.registerForDraggedTypes(newTypes)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func unregisterDraggedTypes() -> Self {
-        value.unregisterDraggedTypes()
-        return self
+        self.value.unregisterDraggedTypes()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
     @discardableResult
     public func cacheImage(in rect: NSRect) -> Self {
-        value.cacheImage(in: rect)
-        return self
+        self.value.cacheImage(in: rect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
     @discardableResult
     public func restoreCachedImage() -> Self {
-        value.restoreCachedImage()
-        return self
+        self.value.restoreCachedImage()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
     @discardableResult
     public func discardCachedImage() -> Self {
-        value.discardCachedImage()
-        return self
+        self.value.discardCachedImage()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.10, message: "This method does not do anything and should not be called.")
     @discardableResult
     public func useOptimizedDrawing(_ flag: Bool) -> Self {
-        value.useOptimizedDrawing(flag)
-        return self
+        self.value.useOptimizedDrawing(flag)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
     @discardableResult
     public func disableFlushing() -> Self {
-        value.disableFlushing()
-        return self
+        self.value.disableFlushing()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
     @discardableResult
     public func enableFlushing() -> Self {
-        value.enableFlushing()
-        return self
+        self.value.enableFlushing()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Allow AppKit's automatic deferred display mechanism to take care of flushing any graphics contexts as needed.")
     @discardableResult
     public func flush() -> Self {
-        value.flush()
-        return self
+        self.value.flush()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Allow AppKit's automatic deferred display mechanism to take care of flushing any graphics contexts as needed.")
     @discardableResult
     public func flushIfNeeded() -> Self {
-        value.flushIfNeeded()
-        return self
+        self.value.flushIfNeeded()
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

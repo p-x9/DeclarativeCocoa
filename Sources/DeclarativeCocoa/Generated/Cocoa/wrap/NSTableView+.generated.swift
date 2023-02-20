@@ -8,250 +8,250 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSTableView {
     @discardableResult
     public func noteHeightOfRows(withIndexesChanged indexSet: IndexSet) -> Self {
-        value.noteHeightOfRows(withIndexesChanged: indexSet)
-        return self
+        self.value.noteHeightOfRows(withIndexesChanged: indexSet)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func addTableColumn(_ tableColumn: NSTableColumn) -> Self {
-        value.addTableColumn(tableColumn)
-        return self
+        self.value.addTableColumn(tableColumn)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func removeTableColumn(_ tableColumn: NSTableColumn) -> Self {
-        value.removeTableColumn(tableColumn)
-        return self
+        self.value.removeTableColumn(tableColumn)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func moveColumn(_ oldIndex: Int, toColumn newIndex: Int) -> Self {
-        value.moveColumn(oldIndex, toColumn: newIndex)
-        return self
+        self.value.moveColumn(oldIndex, toColumn: newIndex)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func tile() -> Self {
-        value.tile()
-        return self
+        self.value.tile()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func sizeToFit() -> Self {
-        value.sizeToFit()
-        return self
+        self.value.sizeToFit()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func sizeLastColumnToFit() -> Self {
-        value.sizeLastColumnToFit()
-        return self
+        self.value.sizeLastColumnToFit()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func scrollRowToVisible(_ row: Int) -> Self {
-        value.scrollRowToVisible(row)
-        return self
+        self.value.scrollRowToVisible(row)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func scrollColumnToVisible(_ column: Int) -> Self {
-        value.scrollColumnToVisible(column)
-        return self
+        self.value.scrollColumnToVisible(column)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func reloadData() -> Self {
-        value.reloadData()
-        return self
+        self.value.reloadData()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func noteNumberOfRowsChanged() -> Self {
-        value.noteNumberOfRowsChanged()
-        return self
+        self.value.noteNumberOfRowsChanged()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     public func reloadData(forRowIndexes rowIndexes: IndexSet, columnIndexes: IndexSet) -> Self {
-        value.reloadData(forRowIndexes: rowIndexes, columnIndexes: columnIndexes)
-        return self
+        self.value.reloadData(forRowIndexes: rowIndexes, columnIndexes: columnIndexes)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setIndicatorImage(_ image: NSImage?, in tableColumn: NSTableColumn) -> Self {
-        value.setIndicatorImage(image, in: tableColumn)
-        return self
+        self.value.setIndicatorImage(image, in: tableColumn)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setDraggingSourceOperationMask(_ mask: NSDragOperation, forLocal isLocal: Bool) -> Self {
-        value.setDraggingSourceOperationMask(mask, forLocal: isLocal)
-        return self
+        self.value.setDraggingSourceOperationMask(mask, forLocal: isLocal)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setDropRow(_ row: Int, dropOperation: NSTableView.DropOperation) -> Self {
-        value.setDropRow(row, dropOperation: dropOperation)
-        return self
+        self.value.setDropRow(row, dropOperation: dropOperation)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectAll(_ sender: Any?) -> Self {
-        value.selectAll(sender)
-        return self
+        self.value.selectAll(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func deselectAll(_ sender: Any?) -> Self {
-        value.deselectAll(sender)
-        return self
+        self.value.deselectAll(sender)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectColumnIndexes(_ indexes: IndexSet, byExtendingSelection extend: Bool) -> Self {
-        value.selectColumnIndexes(indexes, byExtendingSelection: extend)
-        return self
+        self.value.selectColumnIndexes(indexes, byExtendingSelection: extend)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func selectRowIndexes(_ indexes: IndexSet, byExtendingSelection extend: Bool) -> Self {
-        value.selectRowIndexes(indexes, byExtendingSelection: extend)
-        return self
+        self.value.selectRowIndexes(indexes, byExtendingSelection: extend)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func deselectColumn(_ column: Int) -> Self {
-        value.deselectColumn(column)
-        return self
+        self.value.deselectColumn(column)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func deselectRow(_ row: Int) -> Self {
-        value.deselectRow(row)
-        return self
+        self.value.deselectRow(row)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func editColumn(_ column: Int, row: Int, with event: NSEvent?, select: Bool) -> Self {
-        value.editColumn(column, row: row, with: event, select: select)
-        return self
+        self.value.editColumn(column, row: row, with: event, select: select)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func drawRow(_ row: Int, clipRect: NSRect) -> Self {
-        value.drawRow(row, clipRect: clipRect)
-        return self
+        self.value.drawRow(row, clipRect: clipRect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func highlightSelection(inClipRect clipRect: NSRect) -> Self {
-        value.highlightSelection(inClipRect: clipRect)
-        return self
+        self.value.highlightSelection(inClipRect: clipRect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func drawGrid(inClipRect clipRect: NSRect) -> Self {
-        value.drawGrid(inClipRect: clipRect)
-        return self
+        self.value.drawGrid(inClipRect: clipRect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func drawBackground(inClipRect clipRect: NSRect) -> Self {
-        value.drawBackground(inClipRect: clipRect)
-        return self
+        self.value.drawBackground(inClipRect: clipRect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func enumerateAvailableRowViews(_ handler: (NSTableRowView, Int) -> Void) -> Self {
-        value.enumerateAvailableRowViews(handler)
-        return self
+        self.value.enumerateAvailableRowViews(handler)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func beginUpdates() -> Self {
-        value.beginUpdates()
-        return self
+        self.value.beginUpdates()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func endUpdates() -> Self {
-        value.endUpdates()
-        return self
+        self.value.endUpdates()
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func insertRows(at indexes: IndexSet, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> Self {
-        value.insertRows(at: indexes, withAnimation: animationOptions)
-        return self
+        self.value.insertRows(at: indexes, withAnimation: animationOptions)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func removeRows(at indexes: IndexSet, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> Self {
-        value.removeRows(at: indexes, withAnimation: animationOptions)
-        return self
+        self.value.removeRows(at: indexes, withAnimation: animationOptions)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func moveRow(at oldIndex: Int, to newIndex: Int) -> Self {
-        value.moveRow(at: oldIndex, to: newIndex)
-        return self
+        self.value.moveRow(at: oldIndex, to: newIndex)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func hideRows(at indexes: IndexSet, withAnimation rowAnimation: NSTableView.AnimationOptions = []) -> Self {
-        value.hideRows(at: indexes, withAnimation: rowAnimation)
-        return self
+        self.value.hideRows(at: indexes, withAnimation: rowAnimation)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func unhideRows(at indexes: IndexSet, withAnimation rowAnimation: NSTableView.AnimationOptions = []) -> Self {
-        value.unhideRows(at: indexes, withAnimation: rowAnimation)
-        return self
+        self.value.unhideRows(at: indexes, withAnimation: rowAnimation)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.8, *)
     @discardableResult
     public func register(_ nib: NSNib?, forIdentifier identifier: NSUserInterfaceItemIdentifier) -> Self {
-        value.register(nib, forIdentifier: identifier)
-        return self
+        self.value.register(nib, forIdentifier: identifier)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func didAdd(_ rowView: NSTableRowView, forRow row: Int) -> Self {
-        value.didAdd(rowView, forRow: row)
-        return self
+        self.value.didAdd(rowView, forRow: row)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     public func didRemove(_ rowView: NSTableRowView, forRow row: Int) -> Self {
-        value.didRemove(rowView, forRow: row)
-        return self
+        self.value.didRemove(rowView, forRow: row)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.6, deprecated: 10.10, message: "Use a View Based TableView; make a particular view the first responder with [window makeFirstResponder:view] to focus it.")
     @discardableResult
     public func setFocusedColumn(_ focusedColumn: Int) -> Self {
-        value.setFocusedColumn(focusedColumn)
-        return self
+        self.value.setFocusedColumn(focusedColumn)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS, introduced: 10.6, deprecated: 10.10, message: "Use a View Based TableView; directly interact with a particular view as required and call -performClick: on it, if necessary")
     @discardableResult
     public func performClickOnCell(atColumn column: Int, row: Int) -> Self {
-        value.performClickOnCell(atColumn: column, row: row)
-        return self
+        self.value.performClickOnCell(atColumn: column, row: row)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

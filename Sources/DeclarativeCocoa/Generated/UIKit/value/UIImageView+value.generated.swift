@@ -9,15 +9,15 @@ extension Modify.DynamicMemberWrap where T: UIImageView {
     @discardableResult
     @_disfavoredOverload
     public func startAnimating() -> T {
-        value.startAnimating()
-        return value
+        self.value.startAnimating()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func stopAnimating() -> T {
-        value.stopAnimating()
-        return value
+        self.value.stopAnimating()
+        return self.value
     }
 }
 

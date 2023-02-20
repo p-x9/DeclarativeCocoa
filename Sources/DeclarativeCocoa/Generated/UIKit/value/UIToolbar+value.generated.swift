@@ -9,24 +9,24 @@ extension Modify.DynamicMemberWrap where T: UIToolbar {
     @discardableResult
     @_disfavoredOverload
     public func setItems(_ items: [UIBarButtonItem]?, animated: Bool) -> T {
-        value.setItems(items, animated: animated)
-        return value
+        self.value.setItems(items, animated: animated)
+        return self.value
     }
 
     @available(iOS 5.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setBackgroundImage(_ backgroundImage: UIImage?, forToolbarPosition topOrBottom: UIBarPosition, barMetrics: UIBarMetrics) -> T {
-        value.setBackgroundImage(backgroundImage, forToolbarPosition: topOrBottom, barMetrics: barMetrics)
-        return value
+        self.value.setBackgroundImage(backgroundImage, forToolbarPosition: topOrBottom, barMetrics: barMetrics)
+        return self.value
     }
 
     @available(iOS 6.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setShadowImage(_ shadowImage: UIImage?, forToolbarPosition topOrBottom: UIBarPosition) -> T {
-        value.setShadowImage(shadowImage, forToolbarPosition: topOrBottom)
-        return value
+        self.value.setShadowImage(shadowImage, forToolbarPosition: topOrBottom)
+        return self.value
     }
 }
 

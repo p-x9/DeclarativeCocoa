@@ -9,22 +9,22 @@ extension Modify.DynamicMemberWrap where T: UIGestureRecognizer {
     @discardableResult
     @_disfavoredOverload
     public func addTarget(_ target: Any, action: Selector) -> T {
-        value.addTarget(target, action: action)
-        return value
+        self.value.addTarget(target, action: action)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func removeTarget(_ target: Any?, action: Selector?) -> T {
-        value.removeTarget(target, action: action)
-        return value
+        self.value.removeTarget(target, action: action)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func require(toFail otherGestureRecognizer: UIGestureRecognizer) -> T {
-        value.require(toFail: otherGestureRecognizer)
-        return value
+        self.value.require(toFail: otherGestureRecognizer)
+        return self.value
     }
 }
 

@@ -8,8 +8,8 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UITextView {
     @discardableResult
     public func scrollRangeToVisible(_ range: NSRange) -> Self {
-        value.scrollRangeToVisible(range)
-        return self
+        self.value.scrollRangeToVisible(range)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

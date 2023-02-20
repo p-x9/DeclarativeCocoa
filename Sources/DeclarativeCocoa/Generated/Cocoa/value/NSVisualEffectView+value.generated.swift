@@ -9,15 +9,15 @@ extension Modify.DynamicMemberWrap where T: NSVisualEffectView {
     @discardableResult
     @_disfavoredOverload
     public func viewDidMoveToWindow() -> T {
-        value.viewDidMoveToWindow()
-        return value
+        self.value.viewDidMoveToWindow()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func viewWillMove(toWindow newWindow: NSWindow?) -> T {
-        value.viewWillMove(toWindow: newWindow)
-        return value
+        self.value.viewWillMove(toWindow: newWindow)
+        return self.value
     }
 }
 

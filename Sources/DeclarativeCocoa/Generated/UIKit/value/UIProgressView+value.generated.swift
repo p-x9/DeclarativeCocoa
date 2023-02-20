@@ -10,8 +10,8 @@ extension Modify.DynamicMemberWrap where T: UIProgressView {
     @discardableResult
     @_disfavoredOverload
     public func setProgress(_ progress: Float, animated: Bool) -> T {
-        value.setProgress(progress, animated: animated)
-        return value
+        self.value.setProgress(progress, animated: animated)
+        return self.value
     }
 }
 

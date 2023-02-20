@@ -9,14 +9,14 @@ extension Modify.DynamicMemberWrap where T: UITextField {
     @available(iOS, introduced: 2.0, deprecated: 15.0, message: "This method is no longer called.")
     @discardableResult
     public func drawText(in rect: CGRect) -> Self {
-        value.drawText(in: rect)
-        return self
+        self.value.drawText(in: rect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func drawPlaceholder(in rect: CGRect) -> Self {
-        value.drawPlaceholder(in: rect)
-        return self
+        self.value.drawPlaceholder(in: rect)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

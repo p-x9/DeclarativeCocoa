@@ -9,53 +9,53 @@ extension Modify.DynamicMemberWrap where T: UICollectionViewCell {
     @discardableResult
     @_disfavoredOverload
     public func prepareForReuse() -> T {
-        value.prepareForReuse()
-        return value
+        self.value.prepareForReuse()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) -> T {
-        value.apply(layoutAttributes)
-        return value
+        self.value.apply(layoutAttributes)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func willTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> T {
-        value.willTransition(from: oldLayout, to: newLayout)
-        return value
+        self.value.willTransition(from: oldLayout, to: newLayout)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func didTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) -> T {
-        value.didTransition(from: oldLayout, to: newLayout)
-        return value
+        self.value.didTransition(from: oldLayout, to: newLayout)
+        return self.value
     }
 
     @available(iOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     public func setNeedsUpdateConfiguration() -> T {
-        value.setNeedsUpdateConfiguration()
-        return value
+        self.value.setNeedsUpdateConfiguration()
+        return self.value
     }
 
     @available(iOS 11.0, *)
     @discardableResult
     @_disfavoredOverload
     public func dragStateDidChange(_ dragState: UICollectionViewCell.DragState) -> T {
-        value.dragStateDidChange(dragState)
-        return value
+        self.value.dragStateDidChange(dragState)
+        return self.value
     }
 
     @available(iOS 14.0, tvOS 14.0, *)
     @discardableResult
     @_disfavoredOverload
     @MainActor dynamic public func updateConfiguration(using state: UICellConfigurationState) -> T {
-        value.updateConfiguration(using: state)
-        return value
+        self.value.updateConfiguration(using: state)
+        return self.value
     }
 }
 

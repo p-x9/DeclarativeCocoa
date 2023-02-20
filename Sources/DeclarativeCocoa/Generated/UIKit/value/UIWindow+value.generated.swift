@@ -9,36 +9,36 @@ extension Modify.DynamicMemberWrap where T: UIWindow {
     @discardableResult
     @_disfavoredOverload
     public func becomeKey() -> T {
-        value.becomeKey()
-        return value
+        self.value.becomeKey()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func resignKey() -> T {
-        value.resignKey()
-        return value
+        self.value.resignKey()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func makeKey() -> T {
-        value.makeKey()
-        return value
+        self.value.makeKey()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func makeKeyAndVisible() -> T {
-        value.makeKeyAndVisible()
-        return value
+        self.value.makeKeyAndVisible()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func sendEvent(_ event: UIEvent) -> T {
-        value.sendEvent(event)
-        return value
+        self.value.sendEvent(event)
+        return self.value
     }
 }
 

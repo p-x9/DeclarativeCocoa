@@ -8,34 +8,34 @@ import UIKit
 extension Modify.DynamicMemberWrap where T: UINavigationItem {
     @discardableResult
     public func setHidesBackButton(_ hidesBackButton: Bool, animated: Bool) -> Self {
-        value.setHidesBackButton(hidesBackButton, animated: animated)
-        return self
+        self.value.setHidesBackButton(hidesBackButton, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 5.0, *)
     @discardableResult
     public func setLeftBarButtonItems(_ items: [UIBarButtonItem]?, animated: Bool) -> Self {
-        value.setLeftBarButtonItems(items, animated: animated)
-        return self
+        self.value.setLeftBarButtonItems(items, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(iOS 5.0, *)
     @discardableResult
     public func setRightBarButtonItems(_ items: [UIBarButtonItem]?, animated: Bool) -> Self {
-        value.setRightBarButtonItems(items, animated: animated)
-        return self
+        self.value.setRightBarButtonItems(items, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setLeftBarButton(_ item: UIBarButtonItem?, animated: Bool) -> Self {
-        value.setLeftBarButton(item, animated: animated)
-        return self
+        self.value.setLeftBarButton(item, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setRightBarButton(_ item: UIBarButtonItem?, animated: Bool) -> Self {
-        value.setRightBarButton(item, animated: animated)
-        return self
+        self.value.setRightBarButton(item, animated: animated)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

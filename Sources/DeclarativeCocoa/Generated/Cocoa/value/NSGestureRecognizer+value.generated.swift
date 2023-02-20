@@ -9,153 +9,153 @@ extension Modify.DynamicMemberWrap where T: NSGestureRecognizer {
     @discardableResult
     @_disfavoredOverload
     public func reset() -> T {
-        value.reset()
-        return value
+        self.value.reset()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func mouseDown(with event: NSEvent) -> T {
-        value.mouseDown(with: event)
-        return value
+        self.value.mouseDown(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func rightMouseDown(with event: NSEvent) -> T {
-        value.rightMouseDown(with: event)
-        return value
+        self.value.rightMouseDown(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func otherMouseDown(with event: NSEvent) -> T {
-        value.otherMouseDown(with: event)
-        return value
+        self.value.otherMouseDown(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func mouseUp(with event: NSEvent) -> T {
-        value.mouseUp(with: event)
-        return value
+        self.value.mouseUp(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func rightMouseUp(with event: NSEvent) -> T {
-        value.rightMouseUp(with: event)
-        return value
+        self.value.rightMouseUp(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func otherMouseUp(with event: NSEvent) -> T {
-        value.otherMouseUp(with: event)
-        return value
+        self.value.otherMouseUp(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func mouseDragged(with event: NSEvent) -> T {
-        value.mouseDragged(with: event)
-        return value
+        self.value.mouseDragged(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func rightMouseDragged(with event: NSEvent) -> T {
-        value.rightMouseDragged(with: event)
-        return value
+        self.value.rightMouseDragged(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func otherMouseDragged(with event: NSEvent) -> T {
-        value.otherMouseDragged(with: event)
-        return value
+        self.value.otherMouseDragged(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func keyDown(with event: NSEvent) -> T {
-        value.keyDown(with: event)
-        return value
+        self.value.keyDown(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func keyUp(with event: NSEvent) -> T {
-        value.keyUp(with: event)
-        return value
+        self.value.keyUp(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func flagsChanged(with event: NSEvent) -> T {
-        value.flagsChanged(with: event)
-        return value
+        self.value.flagsChanged(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func tabletPoint(with event: NSEvent) -> T {
-        value.tabletPoint(with: event)
-        return value
+        self.value.tabletPoint(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func magnify(with event: NSEvent) -> T {
-        value.magnify(with: event)
-        return value
+        self.value.magnify(with: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func rotate(with event: NSEvent) -> T {
-        value.rotate(with: event)
-        return value
+        self.value.rotate(with: event)
+        return self.value
     }
 
     @available(macOS 10.10.3, *)
     @discardableResult
     @_disfavoredOverload
     public func pressureChange(with event: NSEvent) -> T {
-        value.pressureChange(with: event)
-        return value
+        self.value.pressureChange(with: event)
+        return self.value
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
     @_disfavoredOverload
     public func touchesBegan(with event: NSEvent) -> T {
-        value.touchesBegan(with: event)
-        return value
+        self.value.touchesBegan(with: event)
+        return self.value
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
     @_disfavoredOverload
     public func touchesMoved(with event: NSEvent) -> T {
-        value.touchesMoved(with: event)
-        return value
+        self.value.touchesMoved(with: event)
+        return self.value
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
     @_disfavoredOverload
     public func touchesEnded(with event: NSEvent) -> T {
-        value.touchesEnded(with: event)
-        return value
+        self.value.touchesEnded(with: event)
+        return self.value
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
     @_disfavoredOverload
     public func touchesCancelled(with event: NSEvent) -> T {
-        value.touchesCancelled(with: event)
-        return value
+        self.value.touchesCancelled(with: event)
+        return self.value
     }
 }
 

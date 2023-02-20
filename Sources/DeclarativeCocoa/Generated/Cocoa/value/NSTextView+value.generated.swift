@@ -9,363 +9,363 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     @discardableResult
     @_disfavoredOverload
     public func replaceTextContainer(_ newContainer: NSTextContainer) -> T {
-        value.replaceTextContainer(newContainer)
-        return value
+        self.value.replaceTextContainer(newContainer)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func invalidateTextContainerOrigin() -> T {
-        value.invalidateTextContainerOrigin()
-        return value
+        self.value.invalidateTextContainerOrigin()
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.11, message: "Use -insertText:replacementRange: from NSTextInputClient instead. Since the method is designed to be used solely by the input system, the message should never be sent to a text view from applications. Any content modifications should be via either NSTextStorage or NSText methods.")
     @discardableResult
     @_disfavoredOverload
     public func insertText(_ insertString: Any) -> T {
-        value.insertText(insertString)
-        return value
+        self.value.insertText(insertString)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setConstrainedFrameSize(_ desiredSize: NSSize) -> T {
-        value.setConstrainedFrameSize(desiredSize)
-        return value
+        self.value.setConstrainedFrameSize(desiredSize)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setAlignment(_ alignment: NSTextAlignment, range: NSRange) -> T {
-        value.setAlignment(alignment, range: range)
-        return value
+        self.value.setAlignment(alignment, range: range)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setBaseWritingDirection(_ writingDirection: NSWritingDirection, range: NSRange) -> T {
-        value.setBaseWritingDirection(writingDirection, range: range)
-        return value
+        self.value.setBaseWritingDirection(writingDirection, range: range)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func turnOffKerning(_ sender: Any?) -> T {
-        value.turnOffKerning(sender)
-        return value
+        self.value.turnOffKerning(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func tightenKerning(_ sender: Any?) -> T {
-        value.tightenKerning(sender)
-        return value
+        self.value.tightenKerning(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func loosenKerning(_ sender: Any?) -> T {
-        value.loosenKerning(sender)
-        return value
+        self.value.loosenKerning(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func useStandardKerning(_ sender: Any?) -> T {
-        value.useStandardKerning(sender)
-        return value
+        self.value.useStandardKerning(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func turnOffLigatures(_ sender: Any?) -> T {
-        value.turnOffLigatures(sender)
-        return value
+        self.value.turnOffLigatures(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func useStandardLigatures(_ sender: Any?) -> T {
-        value.useStandardLigatures(sender)
-        return value
+        self.value.useStandardLigatures(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func useAllLigatures(_ sender: Any?) -> T {
-        value.useAllLigatures(sender)
-        return value
+        self.value.useAllLigatures(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func raiseBaseline(_ sender: Any?) -> T {
-        value.raiseBaseline(sender)
-        return value
+        self.value.raiseBaseline(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func lowerBaseline(_ sender: Any?) -> T {
-        value.lowerBaseline(sender)
-        return value
+        self.value.lowerBaseline(sender)
+        return self.value
     }
 
     @available(macOS, introduced: 10.0, deprecated: 10.11, message: "Use the traditional shaped characters encoded in the Unicode standard. Access the characters via the character palette.")
     @discardableResult
     @_disfavoredOverload
     public func toggleTraditionalCharacterShape(_ sender: Any?) -> T {
-        value.toggleTraditionalCharacterShape(sender)
-        return value
+        self.value.toggleTraditionalCharacterShape(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func outline(_ sender: Any?) -> T {
-        value.outline(sender)
-        return value
+        self.value.outline(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func performFindPanelAction(_ sender: Any?) -> T {
-        value.performFindPanelAction(sender)
-        return value
+        self.value.performFindPanelAction(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func alignJustified(_ sender: Any?) -> T {
-        value.alignJustified(sender)
-        return value
+        self.value.alignJustified(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func changeColor(_ sender: Any?) -> T {
-        value.changeColor(sender)
-        return value
+        self.value.changeColor(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func changeAttributes(_ sender: Any?) -> T {
-        value.changeAttributes(sender)
-        return value
+        self.value.changeAttributes(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func changeDocumentBackgroundColor(_ sender: Any?) -> T {
-        value.changeDocumentBackgroundColor(sender)
-        return value
+        self.value.changeDocumentBackgroundColor(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func orderFrontSpacingPanel(_ sender: Any?) -> T {
-        value.orderFrontSpacingPanel(sender)
-        return value
+        self.value.orderFrontSpacingPanel(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func orderFrontLinkPanel(_ sender: Any?) -> T {
-        value.orderFrontLinkPanel(sender)
-        return value
+        self.value.orderFrontLinkPanel(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func orderFrontListPanel(_ sender: Any?) -> T {
-        value.orderFrontListPanel(sender)
-        return value
+        self.value.orderFrontListPanel(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func orderFrontTablePanel(_ sender: Any?) -> T {
-        value.orderFrontTablePanel(sender)
-        return value
+        self.value.orderFrontTablePanel(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func rulerView(_ ruler: NSRulerView, didMove marker: NSRulerMarker) -> T {
-        value.rulerView(ruler, didMove: marker)
-        return value
+        self.value.rulerView(ruler, didMove: marker)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func rulerView(_ ruler: NSRulerView, didRemove marker: NSRulerMarker) -> T {
-        value.rulerView(ruler, didRemove: marker)
-        return value
+        self.value.rulerView(ruler, didRemove: marker)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func rulerView(_ ruler: NSRulerView, didAdd marker: NSRulerMarker) -> T {
-        value.rulerView(ruler, didAdd: marker)
-        return value
+        self.value.rulerView(ruler, didAdd: marker)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func rulerView(_ ruler: NSRulerView, handleMouseDownWith event: NSEvent) -> T {
-        value.rulerView(ruler, handleMouseDownWith: event)
-        return value
+        self.value.rulerView(ruler, handleMouseDownWith: event)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setNeedsDisplay(_ rect: NSRect, avoidAdditionalLayout flag: Bool) -> T {
-        value.setNeedsDisplay(rect, avoidAdditionalLayout: flag)
-        return value
+        self.value.setNeedsDisplay(rect, avoidAdditionalLayout: flag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawInsertionPoint(in rect: NSRect, color: NSColor, turnedOn flag: Bool) -> T {
-        value.drawInsertionPoint(in: rect, color: color, turnedOn: flag)
-        return value
+        self.value.drawInsertionPoint(in: rect, color: color, turnedOn: flag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawBackground(in rect: NSRect) -> T {
-        value.drawBackground(in: rect)
-        return value
+        self.value.drawBackground(in: rect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func updateRuler() -> T {
-        value.updateRuler()
-        return value
+        self.value.updateRuler()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func updateFontPanel() -> T {
-        value.updateFontPanel()
-        return value
+        self.value.updateFontPanel()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func updateDragTypeRegistration() -> T {
-        value.updateDragTypeRegistration()
-        return value
+        self.value.updateDragTypeRegistration()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func clicked(onLink link: Any, at charIndex: Int) -> T {
-        value.clicked(onLink: link, at: charIndex)
-        return value
+        self.value.clicked(onLink: link, at: charIndex)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func startSpeaking(_ sender: Any?) -> T {
-        value.startSpeaking(sender)
-        return value
+        self.value.startSpeaking(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func stopSpeaking(_ sender: Any?) -> T {
-        value.stopSpeaking(sender)
-        return value
+        self.value.stopSpeaking(sender)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func setLayoutOrientation(_ orientation: NSLayoutManager.TextLayoutOrientation) -> T {
-        value.setLayoutOrientation(orientation)
-        return value
+        self.value.setLayoutOrientation(orientation)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func changeLayoutOrientation(_ sender: Any?) -> T {
-        value.changeLayoutOrientation(sender)
-        return value
+        self.value.changeLayoutOrientation(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func complete(_ sender: Any?) -> T {
-        value.complete(sender)
-        return value
+        self.value.complete(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func insertCompletion(_ word: String, forPartialWordRange charRange: NSRange, movement: Int, isFinal flag: Bool) -> T {
-        value.insertCompletion(word, forPartialWordRange: charRange, movement: movement, isFinal: flag)
-        return value
+        self.value.insertCompletion(word, forPartialWordRange: charRange, movement: movement, isFinal: flag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func pasteAsPlainText(_ sender: Any?) -> T {
-        value.pasteAsPlainText(sender)
-        return value
+        self.value.pasteAsPlainText(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func pasteAsRichText(_ sender: Any?) -> T {
-        value.pasteAsRichText(sender)
-        return value
+        self.value.pasteAsRichText(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func cleanUpAfterDragOperation() -> T {
-        value.cleanUpAfterDragOperation()
-        return value
+        self.value.cleanUpAfterDragOperation()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setSelectedRanges(_ ranges: [NSValue], affinity: NSSelectionAffinity, stillSelecting stillSelectingFlag: Bool) -> T {
-        value.setSelectedRanges(ranges, affinity: affinity, stillSelecting: stillSelectingFlag)
-        return value
+        self.value.setSelectedRanges(ranges, affinity: affinity, stillSelecting: stillSelectingFlag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setSelectedRange(_ charRange: NSRange, affinity: NSSelectionAffinity, stillSelecting stillSelectingFlag: Bool) -> T {
-        value.setSelectedRange(charRange, affinity: affinity, stillSelecting: stillSelectingFlag)
-        return value
+        self.value.setSelectedRange(charRange, affinity: affinity, stillSelecting: stillSelectingFlag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func updateInsertionPointStateAndRestartTimer(_ restartFlag: Bool) -> T {
-        value.updateInsertionPointStateAndRestartTimer(restartFlag)
-        return value
+        self.value.updateInsertionPointStateAndRestartTimer(restartFlag)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func toggleContinuousSpellChecking(_ sender: Any?) -> T {
-        value.toggleContinuousSpellChecking(sender)
-        return value
+        self.value.toggleContinuousSpellChecking(sender)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func toggleGrammarChecking(_ sender: Any?) -> T {
-        value.toggleGrammarChecking(sender)
-        return value
+        self.value.toggleGrammarChecking(sender)
+        return self.value
     }
 
     @available(macOS 10.5, *)
@@ -379,164 +379,164 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     @discardableResult
     @_disfavoredOverload
     public func didChangeText() -> T {
-        value.didChangeText()
-        return value
+        self.value.didChangeText()
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func breakUndoCoalescing() -> T {
-        value.breakUndoCoalescing()
-        return value
+        self.value.breakUndoCoalescing()
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func showFindIndicator(for charRange: NSRange) -> T {
-        value.showFindIndicator(for: charRange)
-        return value
+        self.value.showFindIndicator(for: charRange)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func setSelectedRange(_ charRange: NSRange) -> T {
-        value.setSelectedRange(charRange)
-        return value
+        self.value.setSelectedRange(charRange)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func toggleSmartInsertDelete(_ sender: Any?) -> T {
-        value.toggleSmartInsertDelete(sender)
-        return value
+        self.value.toggleSmartInsertDelete(sender)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func smartInsert(for pasteString: String, replacing charRangeToReplace: NSRange, before beforeString: AutoreleasingUnsafeMutablePointer<NSString?>?, after afterString: AutoreleasingUnsafeMutablePointer<NSString?>?) -> T {
-        value.smartInsert(for: pasteString, replacing: charRangeToReplace, before: beforeString, after: afterString)
-        return value
+        self.value.smartInsert(for: pasteString, replacing: charRangeToReplace, before: beforeString, after: afterString)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func toggleAutomaticQuoteSubstitution(_ sender: Any?) -> T {
-        value.toggleAutomaticQuoteSubstitution(sender)
-        return value
+        self.value.toggleAutomaticQuoteSubstitution(sender)
+        return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
     public func toggleAutomaticLinkDetection(_ sender: Any?) -> T {
-        value.toggleAutomaticLinkDetection(sender)
-        return value
+        self.value.toggleAutomaticLinkDetection(sender)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func toggleAutomaticDataDetection(_ sender: Any?) -> T {
-        value.toggleAutomaticDataDetection(sender)
-        return value
+        self.value.toggleAutomaticDataDetection(sender)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func toggleAutomaticDashSubstitution(_ sender: Any?) -> T {
-        value.toggleAutomaticDashSubstitution(sender)
-        return value
+        self.value.toggleAutomaticDashSubstitution(sender)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func toggleAutomaticTextReplacement(_ sender: Any?) -> T {
-        value.toggleAutomaticTextReplacement(sender)
-        return value
+        self.value.toggleAutomaticTextReplacement(sender)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func toggleAutomaticSpellingCorrection(_ sender: Any?) -> T {
-        value.toggleAutomaticSpellingCorrection(sender)
-        return value
+        self.value.toggleAutomaticSpellingCorrection(sender)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func checkText(in range: NSRange, types checkingTypes: NSTextCheckingTypes, options: [NSSpellChecker.OptionKey : Any] = [:]) -> T {
-        value.checkText(in: range, types: checkingTypes, options: options)
-        return value
+        self.value.checkText(in: range, types: checkingTypes, options: options)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func handleTextCheckingResults(_ results: [NSTextCheckingResult], forRange range: NSRange, types checkingTypes: NSTextCheckingTypes, options: [NSSpellChecker.OptionKey : Any] = [:], orthography: NSOrthography, wordCount: Int) -> T {
-        value.handleTextCheckingResults(results, forRange: range, types: checkingTypes, options: options, orthography: orthography, wordCount: wordCount)
-        return value
+        self.value.handleTextCheckingResults(results, forRange: range, types: checkingTypes, options: options, orthography: orthography, wordCount: wordCount)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func orderFrontSubstitutionsPanel(_ sender: Any?) -> T {
-        value.orderFrontSubstitutionsPanel(sender)
-        return value
+        self.value.orderFrontSubstitutionsPanel(sender)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func checkTextInSelection(_ sender: Any?) -> T {
-        value.checkTextInSelection(sender)
-        return value
+        self.value.checkTextInSelection(sender)
+        return self.value
     }
 
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
     public func checkTextInDocument(_ sender: Any?) -> T {
-        value.checkTextInDocument(sender)
-        return value
+        self.value.checkTextInDocument(sender)
+        return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
     public func updateQuickLookPreviewPanel() -> T {
-        value.updateQuickLookPreviewPanel()
-        return value
+        self.value.updateQuickLookPreviewPanel()
+        return self.value
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
     @_disfavoredOverload
     public func updateTouchBarItemIdentifiers() -> T {
-        value.updateTouchBarItemIdentifiers()
-        return value
+        self.value.updateTouchBarItemIdentifiers()
+        return self.value
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
     @_disfavoredOverload
     public func updateTextTouchBarItems() -> T {
-        value.updateTextTouchBarItems()
-        return value
+        self.value.updateTextTouchBarItems()
+        return self.value
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
     @_disfavoredOverload
     public func updateCandidates() -> T {
-        value.updateCandidates()
-        return value
+        self.value.updateCandidates()
+        return self.value
     }
 }
 

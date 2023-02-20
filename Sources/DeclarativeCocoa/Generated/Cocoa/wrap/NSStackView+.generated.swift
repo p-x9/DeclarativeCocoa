@@ -8,71 +8,71 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSStackView {
     @discardableResult
     public func setCustomSpacing(_ spacing: CGFloat, after view: NSView) -> Self {
-        value.setCustomSpacing(spacing, after: view)
-        return self
+        self.value.setCustomSpacing(spacing, after: view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func addArrangedSubview(_ view: NSView) -> Self {
-        value.addArrangedSubview(view)
-        return self
+        self.value.addArrangedSubview(view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func insertArrangedSubview(_ view: NSView, at index: Int) -> Self {
-        value.insertArrangedSubview(view, at: index)
-        return self
+        self.value.insertArrangedSubview(view, at: index)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
     public func removeArrangedSubview(_ view: NSView) -> Self {
-        value.removeArrangedSubview(view)
-        return self
+        self.value.removeArrangedSubview(view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setVisibilityPriority(_ priority: NSStackView.VisibilityPriority, for view: NSView) -> Self {
-        value.setVisibilityPriority(priority, for: view)
-        return self
+        self.value.setVisibilityPriority(priority, for: view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setClippingResistancePriority(_ clippingResistancePriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> Self {
-        value.setClippingResistancePriority(clippingResistancePriority, for: orientation)
-        return self
+        self.value.setClippingResistancePriority(clippingResistancePriority, for: orientation)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setHuggingPriority(_ huggingPriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> Self {
-        value.setHuggingPriority(huggingPriority, for: orientation)
-        return self
+        self.value.setHuggingPriority(huggingPriority, for: orientation)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func addView(_ view: NSView, in gravity: NSStackView.Gravity) -> Self {
-        value.addView(view, in: gravity)
-        return self
+        self.value.addView(view, in: gravity)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func insertView(_ view: NSView, at index: Int, in gravity: NSStackView.Gravity) -> Self {
-        value.insertView(view, at: index, in: gravity)
-        return self
+        self.value.insertView(view, at: index, in: gravity)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func removeView(_ view: NSView) -> Self {
-        value.removeView(view)
-        return self
+        self.value.removeView(view)
+        return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
     public func setViews(_ views: [NSView], in gravity: NSStackView.Gravity) -> Self {
-        value.setViews(views, in: gravity)
-        return self
+        self.value.setViews(views, in: gravity)
+        return Modify.DynamicMemberWrap(self.value)
     }
 }
 

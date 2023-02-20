@@ -10,15 +10,15 @@ extension Modify.DynamicMemberWrap where T: UITextField {
     @discardableResult
     @_disfavoredOverload
     public func drawText(in rect: CGRect) -> T {
-        value.drawText(in: rect)
-        return value
+        self.value.drawText(in: rect)
+        return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
     public func drawPlaceholder(in rect: CGRect) -> T {
-        value.drawPlaceholder(in: rect)
-        return value
+        self.value.drawPlaceholder(in: rect)
+        return self.value
     }
 }
 
