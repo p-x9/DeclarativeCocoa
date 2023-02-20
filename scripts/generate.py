@@ -56,16 +56,31 @@ def generate(file: str):
     output_lines = list(map(lambda line: line.replace('open ', 'public '), output_lines))
 
     def convert(line: str) -> str:
-        components = line.split('\n')[-1].split(' ')
+        function_line = line.split('\n')[-1]
+        components = function_line.split(' ')
         function_name = components[components.index('func') + 1]
+
+        input_with_label = function_line.split('func')[-1]
+        input_with_label = input_with_label[input_with_label.index('(')+1:-1]
+        labels = input_with_label.split(', ')
+        labels = list(map(lambda c: c.split(' ')[0], labels))
+        labels = list(map(lambda c: c.replace(':', ''), labels))
 
         inputs = list(filter(lambda c: len(c) > 0 and c[-1] == ':', components))
         inputs = list(map(lambda c: c[:-1], inputs))
         inputs = list(map(lambda c: c.split('(')[-1], inputs))
         inputs = list(filter(lambda c: not len(c) == 0, inputs))
 
+        args = list[str]()
+
+        for label, input in zip(labels, inputs):
+            if label == '_':
+                args.append(input)
+            else:
+                args.append(f"{label}: {input}")
+
         if not  function_name[-2:] == '()':
-            function_name = function_name.split('(')[0] + '(' + ', '.join(inputs) + ')'
+            function_name = function_name.split('(')[0] + '(' + ', '.join(args) + ')'
 
         return line + ' -> Self' + ' {\n' + f'{tab}{tab}value.' + function_name + f"\n{tab}{tab}return self\n{tab}}}"
 
