@@ -1,0 +1,26 @@
+{
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "python.linting.flake8Args": [
+        "--ignore=E226 E402 E501 E741",
+        "--max-line-length=150",
+    ],
+    "python.formatting.autopep8Args": [
+        "--ignore=E402",
+        "--max-line-length=150",
+        "--aggressive",
+    ],
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyArgs": [
+        "--warn-return-any",
+        "--no-implicit-optional",
+        "--disallow-untyped-calls",
+        "--disallow-untyped-defs",
+        "--follow-imports=skip",
+        "--ignore-missing-imports",
+        "--show-column-numbers",
+    ]
+}

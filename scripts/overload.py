@@ -9,7 +9,8 @@ tab = '    '
 overwrite = False
 target = 'Cocoa'
 
-def generate(file: str):
+
+def generate(file: str) -> None:
     class_name = file.split('/')[-1]
     class_name = class_name.split('.')[0]
     class_name = class_name.replace('+', '')
@@ -31,7 +32,7 @@ def generate(file: str):
         f.close()
 
 
-def parse_args():
+def parse_args() -> None:
     global overwrite, target
 
     parser = argparse.ArgumentParser(
@@ -52,6 +53,7 @@ def parse_args():
 
     overwrite = args.overwrite
     target = args.target
+
 
 if __name__ == '__main__':
     parse_args()

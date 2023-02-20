@@ -16,7 +16,8 @@ tab = '    '
 overwrite = False
 target = 'Cocoa'
 
-def generate(file: str):
+
+def generate(file: str) -> None:
     class_name = file.split('/')[-1]
 
     output_path = f"{generated_dir_path}/{target}/wrap/{class_name}+.generated.swift"
@@ -25,7 +26,7 @@ def generate(file: str):
     text = f.read()
 
     # Strip Comments
-    text = re.sub('/\*(.|\s)*?\*/', '', text)
+    text = re.sub('/\\*(.|\\s)*?\\*/', '', text)
     text = re.sub('//.*', '', text)
 
     lines = text.split(sep="\n")
@@ -37,7 +38,7 @@ def generate(file: str):
 
     current_attributes = list[str]()
     for line in lines:
-        if line.startswith('@') and (not 'var ' in line) and (not 'func ' in line):
+        if line.startswith('@') and ('var ' not in line) and ('func ' not in line):
             current_attributes.append(line)
         else:
             function = f"{tab}@discardableResult\n{tab}{line}"
@@ -47,11 +48,11 @@ def generate(file: str):
                 output_lines.append(tab + f'\n{tab}'.join(current_attributes) + '\n' + function)
             current_attributes = []
 
-    output_lines = list(filter(lambda line: not 'var ' in line, output_lines))
-    output_lines = list(filter(lambda line: not 'class func' in line, output_lines))
-    output_lines = list(filter(lambda line: not ' init' in line, output_lines))
-    output_lines = list(filter(lambda line: not ' optional ' in line, output_lines))
-    output_lines = list(filter(lambda line: not '@IBAction ' in line, output_lines))
+    output_lines = list(filter(lambda line: 'var ' not in line, output_lines))
+    output_lines = list(filter(lambda line: 'class func' not in line, output_lines))
+    output_lines = list(filter(lambda line: ' init' not in line, output_lines))
+    output_lines = list(filter(lambda line: ' optional ' not in line, output_lines))
+    output_lines = list(filter(lambda line: '@IBAction ' not in line, output_lines))
     output_lines = list(filter(lambda line: line.endswith(')'), output_lines))
     output_lines = list(map(lambda line: line.replace('open ', 'public '), output_lines))
 
@@ -61,7 +62,7 @@ def generate(file: str):
         function_name = components[components.index('func') + 1]
 
         input_with_label = function_line.split('func')[-1]
-        input_with_label = input_with_label[input_with_label.index('(')+1:-1]
+        input_with_label = input_with_label[input_with_label.index('(') + 1:-1]
         labels = input_with_label.split(', ')
         labels = list(map(lambda c: c.split(' ')[0], labels))
         labels = list(map(lambda c: c.replace(':', ''), labels))
@@ -79,7 +80,7 @@ def generate(file: str):
             else:
                 args.append(f"{label}: {input}")
 
-        if not  function_name[-2:] == '()':
+        if not function_name[-2:] == '()':
             function_name = function_name.split('(')[0] + '(' + ', '.join(args) + ')'
 
         return line + ' -> Self' + ' {\n' + f'{tab}{tab}value.' + function_name + f"\n{tab}{tab}return self\n{tab}}}"
@@ -99,7 +100,7 @@ def generate(file: str):
         f.close()
 
 
-def parse_args():
+def parse_args() -> None:
     global overwrite, target
 
     parser = argparse.ArgumentParser(
