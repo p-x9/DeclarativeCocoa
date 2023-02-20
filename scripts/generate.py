@@ -83,7 +83,8 @@ def generate(file: str) -> None:
         if not function_name[-2:] == '()':
             function_name = function_name.split('(')[0] + '(' + ', '.join(args) + ')'
 
-        return line + ' -> Self' + ' {\n' + f'{tab}{tab}value.' + function_name + f"\n{tab}{tab}return self\n{tab}}}"
+        return line + ' -> Self' + ' {\n' + f'{tab}{tab}self.value.' + function_name + \
+            f"\n{tab}{tab}return Modify.DynamicMemberWrap(self.value)\n{tab}}}"
 
     output_lines = list(map(convert, output_lines))
 

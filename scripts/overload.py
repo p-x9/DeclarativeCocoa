@@ -22,7 +22,7 @@ def generate(file: str) -> None:
 
     text = text.replace('@discardableResult', f'@discardableResult\n{tab}@_disfavoredOverload')
     text = text.replace('-> Self', '-> T')
-    text = text.replace('return self', 'return value')
+    text = text.replace('return Modify.DynamicMemberWrap(self.value)', 'return self.value')
 
     f.close()
 
