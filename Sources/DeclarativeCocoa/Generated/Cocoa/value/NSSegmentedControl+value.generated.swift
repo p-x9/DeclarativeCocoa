@@ -8,14 +8,14 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSSegmentedControl {
     @discardableResult
     @_disfavoredOverload
-    public func setWidth(_ width: CGFloat, forSegment segment: Int) -> T {
+    public func setWidth(_ width: CoreFoundation.CGFloat, forSegment segment: Swift.Int) -> T {
         self.value.setWidth(width, forSegment: segment)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setImage(_ image: NSImage?, forSegment segment: Int) -> T {
+    public func setImage(_ image: AppKit.NSImage?, forSegment segment: Swift.Int) -> T {
         self.value.setImage(image, forSegment: segment)
         return self.value
     }
@@ -23,35 +23,35 @@ extension Modify.DynamicMemberWrap where T: NSSegmentedControl {
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
-    public func setImageScaling(_ scaling: NSImageScaling, forSegment segment: Int) -> T {
+    public func setImageScaling(_ scaling: AppKit.NSImageScaling, forSegment segment: Swift.Int) -> T {
         self.value.setImageScaling(scaling, forSegment: segment)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setLabel(_ label: String, forSegment segment: Int) -> T {
+    public func setLabel(_ label: Swift.String, forSegment segment: Swift.Int) -> T {
         self.value.setLabel(label, forSegment: segment)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setMenu(_ menu: NSMenu?, forSegment segment: Int) -> T {
+    public func setMenu(_ menu: AppKit.NSMenu?, forSegment segment: Swift.Int) -> T {
         self.value.setMenu(menu, forSegment: segment)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setSelected(_ selected: Bool, forSegment segment: Int) -> T {
+    public func setSelected(_ selected: Swift.Bool, forSegment segment: Swift.Int) -> T {
         self.value.setSelected(selected, forSegment: segment)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setEnabled(_ enabled: Bool, forSegment segment: Int) -> T {
+    public func setEnabled(_ enabled: Swift.Bool, forSegment segment: Swift.Int) -> T {
         self.value.setEnabled(enabled, forSegment: segment)
         return self.value
     }
@@ -59,7 +59,7 @@ extension Modify.DynamicMemberWrap where T: NSSegmentedControl {
     @available(macOS 10.13, *)
     @discardableResult
     @_disfavoredOverload
-    public func setToolTip(_ toolTip: String?, forSegment segment: Int) -> T {
+    public func setToolTip(_ toolTip: Swift.String?, forSegment segment: Swift.Int) -> T {
         self.value.setToolTip(toolTip, forSegment: segment)
         return self.value
     }
@@ -67,7 +67,7 @@ extension Modify.DynamicMemberWrap where T: NSSegmentedControl {
     @available(macOS 10.13, *)
     @discardableResult
     @_disfavoredOverload
-    public func setTag(_ tag: Int, forSegment segment: Int) -> T {
+    public func setTag(_ tag: Swift.Int, forSegment segment: Swift.Int) -> T {
         self.value.setTag(tag, forSegment: segment)
         return self.value
     }
@@ -75,7 +75,7 @@ extension Modify.DynamicMemberWrap where T: NSSegmentedControl {
     @available(macOS 10.13, *)
     @discardableResult
     @_disfavoredOverload
-    public func setShowsMenuIndicator(_ showsMenuIndicator: Bool, forSegment segment: Int) -> T {
+    public func setShowsMenuIndicator(_ showsMenuIndicator: Swift.Bool, forSegment segment: Swift.Int) -> T {
         self.value.setShowsMenuIndicator(showsMenuIndicator, forSegment: segment)
         return self.value
     }
@@ -83,7 +83,7 @@ extension Modify.DynamicMemberWrap where T: NSSegmentedControl {
     @available(macOS 10.13, *)
     @discardableResult
     @_disfavoredOverload
-    public func setAlignment(_ alignment: NSTextAlignment, forSegment segment: Int) -> T {
+    public func setAlignment(_ alignment: AppKit.NSTextAlignment, forSegment segment: Swift.Int) -> T {
         self.value.setAlignment(alignment, forSegment: segment)
         return self.value
     }
@@ -91,7 +91,7 @@ extension Modify.DynamicMemberWrap where T: NSSegmentedControl {
     @available(macOS 10.13, *)
     @discardableResult
     @_disfavoredOverload
-    public func compress(withPrioritizedCompressionOptions prioritizedOptions: [NSUserInterfaceCompressionOptions]) -> T {
+    public func compress(withPrioritizedCompressionOptions prioritizedOptions: [AppKit.NSUserInterfaceCompressionOptions]) -> T {
         self.value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
         return self.value
     }

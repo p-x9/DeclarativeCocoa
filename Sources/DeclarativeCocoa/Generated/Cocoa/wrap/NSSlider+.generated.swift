@@ -6,7 +6,47 @@
 import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSSlider {
+    @discardableResult
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.9, message: "-setTitleCell: had no effect since 10.0")
+    public func setTitleCell(_ cell: AppKit.NSCell!) -> Self {
+        self.value.setTitleCell(cell)
+        return Modify.DynamicMemberWrap(self.value)
+    }
 
+    @discardableResult
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.9, message: "-setTitleColor: had no effect since 10.0")
+    public func setTitleColor(_ newColor: AppKit.NSColor!) -> Self {
+        self.value.setTitleColor(newColor)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.9, message: "-setTitleFont: had no effect since 10.0")
+    public func setTitleFont(_ fontObj: AppKit.NSFont!) -> Self {
+        self.value.setTitleFont(fontObj)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.9, message: "-setTitle: had no effect since 10.0")
+    public func setTitle(_ string: Swift.String!) -> Self {
+        self.value.setTitle(string)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.9, message: "-knobThickness has returned 0 since 10.0")
+    public func setKnobThickness(_ thickness: CoreFoundation.CGFloat) -> Self {
+        self.value.setKnobThickness(thickness)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.9, message: "-setImage: had no effect since 10.0")
+    public func setImage(_ backgroundImage: AppKit.NSImage!) -> Self {
+        self.value.setImage(backgroundImage)
+        return Modify.DynamicMemberWrap(self.value)
+    }
 }
 
 #endif

@@ -8,28 +8,28 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSTableRowView {
     @discardableResult
     @_disfavoredOverload
-    public func drawBackground(in dirtyRect: NSRect) -> T {
+    public func drawBackground(in dirtyRect: Foundation.NSRect) -> T {
         self.value.drawBackground(in: dirtyRect)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func drawSelection(in dirtyRect: NSRect) -> T {
+    public func drawSelection(in dirtyRect: Foundation.NSRect) -> T {
         self.value.drawSelection(in: dirtyRect)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func drawSeparator(in dirtyRect: NSRect) -> T {
+    public func drawSeparator(in dirtyRect: Foundation.NSRect) -> T {
         self.value.drawSeparator(in: dirtyRect)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func drawDraggingDestinationFeedback(in dirtyRect: NSRect) -> T {
+    public func drawDraggingDestinationFeedback(in dirtyRect: Foundation.NSRect) -> T {
         self.value.drawDraggingDestinationFeedback(in: dirtyRect)
         return self.value
     }

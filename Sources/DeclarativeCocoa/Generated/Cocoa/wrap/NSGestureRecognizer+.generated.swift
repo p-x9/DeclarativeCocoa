@@ -6,6 +6,13 @@
 import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSGestureRecognizer {
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func encode(with coder: Foundation.NSCoder) -> Self {
+        self.value.encode(with: coder)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
     @discardableResult
     public func reset() -> Self {
         self.value.reset()
@@ -13,126 +20,126 @@ extension Modify.DynamicMemberWrap where T: NSGestureRecognizer {
     }
 
     @discardableResult
-    public func mouseDown(with event: NSEvent) -> Self {
+    public func mouseDown(with event: AppKit.NSEvent) -> Self {
         self.value.mouseDown(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func rightMouseDown(with event: NSEvent) -> Self {
+    public func rightMouseDown(with event: AppKit.NSEvent) -> Self {
         self.value.rightMouseDown(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func otherMouseDown(with event: NSEvent) -> Self {
+    public func otherMouseDown(with event: AppKit.NSEvent) -> Self {
         self.value.otherMouseDown(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func mouseUp(with event: NSEvent) -> Self {
+    public func mouseUp(with event: AppKit.NSEvent) -> Self {
         self.value.mouseUp(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func rightMouseUp(with event: NSEvent) -> Self {
+    public func rightMouseUp(with event: AppKit.NSEvent) -> Self {
         self.value.rightMouseUp(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func otherMouseUp(with event: NSEvent) -> Self {
+    public func otherMouseUp(with event: AppKit.NSEvent) -> Self {
         self.value.otherMouseUp(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func mouseDragged(with event: NSEvent) -> Self {
+    public func mouseDragged(with event: AppKit.NSEvent) -> Self {
         self.value.mouseDragged(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func rightMouseDragged(with event: NSEvent) -> Self {
+    public func rightMouseDragged(with event: AppKit.NSEvent) -> Self {
         self.value.rightMouseDragged(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func otherMouseDragged(with event: NSEvent) -> Self {
+    public func otherMouseDragged(with event: AppKit.NSEvent) -> Self {
         self.value.otherMouseDragged(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func keyDown(with event: NSEvent) -> Self {
+    public func keyDown(with event: AppKit.NSEvent) -> Self {
         self.value.keyDown(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func keyUp(with event: NSEvent) -> Self {
+    public func keyUp(with event: AppKit.NSEvent) -> Self {
         self.value.keyUp(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func flagsChanged(with event: NSEvent) -> Self {
+    public func flagsChanged(with event: AppKit.NSEvent) -> Self {
         self.value.flagsChanged(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func tabletPoint(with event: NSEvent) -> Self {
+    public func tabletPoint(with event: AppKit.NSEvent) -> Self {
         self.value.tabletPoint(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func magnify(with event: NSEvent) -> Self {
+    public func magnify(with event: AppKit.NSEvent) -> Self {
         self.value.magnify(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func rotate(with event: NSEvent) -> Self {
+    public func rotate(with event: AppKit.NSEvent) -> Self {
         self.value.rotate(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10.3, *)
     @discardableResult
-    public func pressureChange(with event: NSEvent) -> Self {
+    public func pressureChange(with event: AppKit.NSEvent) -> Self {
         self.value.pressureChange(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
-    public func touchesBegan(with event: NSEvent) -> Self {
+    public func touchesBegan(with event: AppKit.NSEvent) -> Self {
         self.value.touchesBegan(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
-    public func touchesMoved(with event: NSEvent) -> Self {
+    public func touchesMoved(with event: AppKit.NSEvent) -> Self {
         self.value.touchesMoved(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
-    public func touchesEnded(with event: NSEvent) -> Self {
+    public func touchesEnded(with event: AppKit.NSEvent) -> Self {
         self.value.touchesEnded(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.12.2, *)
     @discardableResult
-    public func touchesCancelled(with event: NSEvent) -> Self {
+    public func touchesCancelled(with event: AppKit.NSEvent) -> Self {
         self.value.touchesCancelled(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }

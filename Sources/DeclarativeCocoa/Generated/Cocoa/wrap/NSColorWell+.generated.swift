@@ -13,13 +13,13 @@ extension Modify.DynamicMemberWrap where T: NSColorWell {
     }
 
     @discardableResult
-    public func activate(_ exclusive: Bool) -> Self {
+    public func activate(_ exclusive: Swift.Bool) -> Self {
         self.value.activate(exclusive)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func drawWell(inside insideRect: NSRect) -> Self {
+    public func drawWell(inside insideRect: Foundation.NSRect) -> Self {
         self.value.drawWell(inside: insideRect)
         return Modify.DynamicMemberWrap(self.value)
     }

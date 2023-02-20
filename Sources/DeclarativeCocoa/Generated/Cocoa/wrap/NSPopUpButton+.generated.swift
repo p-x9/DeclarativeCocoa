@@ -7,31 +7,31 @@ import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSPopUpButton {
     @discardableResult
-    public func addItem(withTitle title: String) -> Self {
+    public func addItem(withTitle title: Swift.String) -> Self {
         self.value.addItem(withTitle: title)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func addItems(withTitles itemTitles: [String]) -> Self {
+    public func addItems(withTitles itemTitles: [Swift.String]) -> Self {
         self.value.addItems(withTitles: itemTitles)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func insertItem(withTitle title: String, at index: Int) -> Self {
+    public func insertItem(withTitle title: Swift.String, at index: Swift.Int) -> Self {
         self.value.insertItem(withTitle: title, at: index)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func removeItem(withTitle title: String) -> Self {
+    public func removeItem(withTitle title: Swift.String) -> Self {
         self.value.removeItem(withTitle: title)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func removeItem(at index: Int) -> Self {
+    public func removeItem(at index: Swift.Int) -> Self {
         self.value.removeItem(at: index)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -43,25 +43,25 @@ extension Modify.DynamicMemberWrap where T: NSPopUpButton {
     }
 
     @discardableResult
-    public func select(_ item: NSMenuItem?) -> Self {
+    public func select(_ item: AppKit.NSMenuItem?) -> Self {
         self.value.select(item)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func selectItem(at index: Int) -> Self {
+    public func selectItem(at index: Swift.Int) -> Self {
         self.value.selectItem(at: index)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func selectItem(withTitle title: String) -> Self {
+    public func selectItem(withTitle title: Swift.String) -> Self {
         self.value.selectItem(withTitle: title)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setTitle(_ string: String) -> Self {
+    public func setTitle(_ string: Swift.String) -> Self {
         self.value.setTitle(string)
         return Modify.DynamicMemberWrap(self.value)
     }

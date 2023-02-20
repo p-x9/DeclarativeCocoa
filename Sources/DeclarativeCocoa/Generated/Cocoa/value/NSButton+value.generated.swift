@@ -8,21 +8,21 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSButton {
     @discardableResult
     @_disfavoredOverload
-    public func setButtonType(_ type: NSButton.ButtonType) -> T {
+    public func setButtonType(_ type: AppKit.NSButton.ButtonType) -> T {
         self.value.setButtonType(type)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setPeriodicDelay(_ delay: Float, interval: Float) -> T {
+    public func setPeriodicDelay(_ delay: Swift.Float, interval: Swift.Float) -> T {
         self.value.setPeriodicDelay(delay, interval: interval)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func getPeriodicDelay(_ delay: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>) -> T {
+    public func getPeriodicDelay(_ delay: Swift.UnsafeMutablePointer<Swift.Float>, interval: Swift.UnsafeMutablePointer<Swift.Float>) -> T {
         self.value.getPeriodicDelay(delay, interval: interval)
         return self.value
     }
@@ -36,7 +36,7 @@ extension Modify.DynamicMemberWrap where T: NSButton {
 
     @discardableResult
     @_disfavoredOverload
-    public func highlight(_ flag: Bool) -> T {
+    public func highlight(_ flag: Swift.Bool) -> T {
         self.value.highlight(flag)
         return self.value
     }
@@ -44,8 +44,16 @@ extension Modify.DynamicMemberWrap where T: NSButton {
     @available(macOS 10.13, *)
     @discardableResult
     @_disfavoredOverload
-    public func compress(withPrioritizedCompressionOptions prioritizedOptions: [NSUserInterfaceCompressionOptions]) -> T {
+    public func compress(withPrioritizedCompressionOptions prioritizedOptions: [AppKit.NSUserInterfaceCompressionOptions]) -> T {
         self.value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.8, message: "Mnemonics are not used on macOS. Set the title property directly instead.")
+    public func setTitleWithMnemonic(_ stringWithAmpersand: Swift.String!) -> T {
+        self.value.setTitleWithMnemonic(stringWithAmpersand)
         return self.value
     }
 }

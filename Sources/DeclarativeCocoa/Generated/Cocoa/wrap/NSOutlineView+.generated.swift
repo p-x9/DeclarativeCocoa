@@ -7,7 +7,7 @@ import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSOutlineView {
     @discardableResult
-    public func expandItem(_ item: Any?, expandChildren: Bool) -> Self {
+    public func expandItem(_ item: Any?, expandChildren: Swift.Bool) -> Self {
         self.value.expandItem(item, expandChildren: expandChildren)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -19,7 +19,7 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
     }
 
     @discardableResult
-    public func collapseItem(_ item: Any?, collapseChildren: Bool) -> Self {
+    public func collapseItem(_ item: Any?, collapseChildren: Swift.Bool) -> Self {
         self.value.collapseItem(item, collapseChildren: collapseChildren)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -31,7 +31,7 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
     }
 
     @discardableResult
-    public func reloadItem(_ item: Any?, reloadChildren: Bool) -> Self {
+    public func reloadItem(_ item: Any?, reloadChildren: Swift.Bool) -> Self {
         self.value.reloadItem(item, reloadChildren: reloadChildren)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -43,28 +43,28 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
     }
 
     @discardableResult
-    public func setDropItem(_ item: Any?, dropChildIndex index: Int) -> Self {
+    public func setDropItem(_ item: Any?, dropChildIndex index: Swift.Int) -> Self {
         self.value.setDropItem(item, dropChildIndex: index)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
-    public func insertItems(at indexes: IndexSet, inParent parent: Any?, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> Self {
+    public func insertItems(at indexes: Foundation.IndexSet, inParent parent: Any?, withAnimation animationOptions: AppKit.NSTableView.AnimationOptions = []) -> Self {
         self.value.insertItems(at: indexes, inParent: parent, withAnimation: animationOptions)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
-    public func removeItems(at indexes: IndexSet, inParent parent: Any?, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> Self {
+    public func removeItems(at indexes: Foundation.IndexSet, inParent parent: Any?, withAnimation animationOptions: AppKit.NSTableView.AnimationOptions = []) -> Self {
         self.value.removeItems(at: indexes, inParent: parent, withAnimation: animationOptions)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.7, *)
     @discardableResult
-    public func moveItem(at fromIndex: Int, inParent oldParent: Any?, to toIndex: Int, inParent newParent: Any?) -> Self {
+    public func moveItem(at fromIndex: Swift.Int, inParent oldParent: Any?, to toIndex: Swift.Int, inParent newParent: Any?) -> Self {
         self.value.moveItem(at: fromIndex, inParent: oldParent, to: toIndex, inParent: newParent)
         return Modify.DynamicMemberWrap(self.value)
     }

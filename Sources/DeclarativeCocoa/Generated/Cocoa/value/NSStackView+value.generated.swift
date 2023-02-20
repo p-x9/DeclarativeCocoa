@@ -8,7 +8,7 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSStackView {
     @discardableResult
     @_disfavoredOverload
-    public func setCustomSpacing(_ spacing: CGFloat, after view: NSView) -> T {
+    public func setCustomSpacing(_ spacing: CoreFoundation.CGFloat, after view: AppKit.NSView) -> T {
         self.value.setCustomSpacing(spacing, after: view)
         return self.value
     }
@@ -16,7 +16,7 @@ extension Modify.DynamicMemberWrap where T: NSStackView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func addArrangedSubview(_ view: NSView) -> T {
+    public func addArrangedSubview(_ view: AppKit.NSView) -> T {
         self.value.addArrangedSubview(view)
         return self.value
     }
@@ -24,7 +24,7 @@ extension Modify.DynamicMemberWrap where T: NSStackView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func insertArrangedSubview(_ view: NSView, at index: Int) -> T {
+    public func insertArrangedSubview(_ view: AppKit.NSView, at index: Swift.Int) -> T {
         self.value.insertArrangedSubview(view, at: index)
         return self.value
     }
@@ -32,56 +32,56 @@ extension Modify.DynamicMemberWrap where T: NSStackView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func removeArrangedSubview(_ view: NSView) -> T {
+    public func removeArrangedSubview(_ view: AppKit.NSView) -> T {
         self.value.removeArrangedSubview(view)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setVisibilityPriority(_ priority: NSStackView.VisibilityPriority, for view: NSView) -> T {
+    public func setVisibilityPriority(_ priority: AppKit.NSStackView.VisibilityPriority, for view: AppKit.NSView) -> T {
         self.value.setVisibilityPriority(priority, for: view)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setClippingResistancePriority(_ clippingResistancePriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> T {
+    public func setClippingResistancePriority(_ clippingResistancePriority: AppKit.NSLayoutConstraint.Priority, for orientation: AppKit.NSLayoutConstraint.Orientation) -> T {
         self.value.setClippingResistancePriority(clippingResistancePriority, for: orientation)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setHuggingPriority(_ huggingPriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> T {
+    public func setHuggingPriority(_ huggingPriority: AppKit.NSLayoutConstraint.Priority, for orientation: AppKit.NSLayoutConstraint.Orientation) -> T {
         self.value.setHuggingPriority(huggingPriority, for: orientation)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func addView(_ view: NSView, in gravity: NSStackView.Gravity) -> T {
+    public func addView(_ view: AppKit.NSView, in gravity: AppKit.NSStackView.Gravity) -> T {
         self.value.addView(view, in: gravity)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func insertView(_ view: NSView, at index: Int, in gravity: NSStackView.Gravity) -> T {
+    public func insertView(_ view: AppKit.NSView, at index: Swift.Int, in gravity: AppKit.NSStackView.Gravity) -> T {
         self.value.insertView(view, at: index, in: gravity)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func removeView(_ view: NSView) -> T {
+    public func removeView(_ view: AppKit.NSView) -> T {
         self.value.removeView(view)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setViews(_ views: [NSView], in gravity: NSStackView.Gravity) -> T {
+    public func setViews(_ views: [AppKit.NSView], in gravity: AppKit.NSStackView.Gravity) -> T {
         self.value.setViews(views, in: gravity)
         return self.value
     }

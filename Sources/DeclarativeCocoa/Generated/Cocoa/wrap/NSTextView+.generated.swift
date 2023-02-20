@@ -7,7 +7,7 @@ import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSTextView {
     @discardableResult
-    public func replaceTextContainer(_ newContainer: NSTextContainer) -> Self {
+    public func replaceTextContainer(_ newContainer: AppKit.NSTextContainer) -> Self {
         self.value.replaceTextContainer(newContainer)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -18,27 +18,20 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.11, message: "Use -insertText:replacementRange: from NSTextInputClient instead. Since the method is designed to be used solely by the input system, the message should never be sent to a text view from applications. Any content modifications should be via either NSTextStorage or NSText methods.")
     @discardableResult
-    public func insertText(_ insertString: Any) -> Self {
-        self.value.insertText(insertString)
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @discardableResult
-    public func setConstrainedFrameSize(_ desiredSize: NSSize) -> Self {
+    public func setConstrainedFrameSize(_ desiredSize: Foundation.NSSize) -> Self {
         self.value.setConstrainedFrameSize(desiredSize)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setAlignment(_ alignment: NSTextAlignment, range: NSRange) -> Self {
+    public func setAlignment(_ alignment: AppKit.NSTextAlignment, range: Foundation.NSRange) -> Self {
         self.value.setAlignment(alignment, range: range)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setBaseWritingDirection(_ writingDirection: NSWritingDirection, range: NSRange) -> Self {
+    public func setBaseWritingDirection(_ writingDirection: AppKit.NSWritingDirection, range: Foundation.NSRange) -> Self {
         self.value.setBaseWritingDirection(writingDirection, range: range)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -97,8 +90,8 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.11, message: "Use the traditional shaped characters encoded in the Unicode standard. Access the characters via the character palette.")
     @discardableResult
+    @available(macOS, introduced: 10.0, deprecated: 10.11, message: "Use the traditional shaped characters encoded in the Unicode standard. Access the characters via the character palette.")
     public func toggleTraditionalCharacterShape(_ sender: Any?) -> Self {
         self.value.toggleTraditionalCharacterShape(sender)
         return Modify.DynamicMemberWrap(self.value)
@@ -165,43 +158,19 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     }
 
     @discardableResult
-    public func rulerView(_ ruler: NSRulerView, didMove marker: NSRulerMarker) -> Self {
-        self.value.rulerView(ruler, didMove: marker)
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @discardableResult
-    public func rulerView(_ ruler: NSRulerView, didRemove marker: NSRulerMarker) -> Self {
-        self.value.rulerView(ruler, didRemove: marker)
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @discardableResult
-    public func rulerView(_ ruler: NSRulerView, didAdd marker: NSRulerMarker) -> Self {
-        self.value.rulerView(ruler, didAdd: marker)
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @discardableResult
-    public func rulerView(_ ruler: NSRulerView, handleMouseDownWith event: NSEvent) -> Self {
-        self.value.rulerView(ruler, handleMouseDownWith: event)
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @discardableResult
-    public func setNeedsDisplay(_ rect: NSRect, avoidAdditionalLayout flag: Bool) -> Self {
+    public func setNeedsDisplay(_ rect: Foundation.NSRect, avoidAdditionalLayout flag: Swift.Bool) -> Self {
         self.value.setNeedsDisplay(rect, avoidAdditionalLayout: flag)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func drawInsertionPoint(in rect: NSRect, color: NSColor, turnedOn flag: Bool) -> Self {
+    public func drawInsertionPoint(in rect: Foundation.NSRect, color: AppKit.NSColor, turnedOn flag: Swift.Bool) -> Self {
         self.value.drawInsertionPoint(in: rect, color: color, turnedOn: flag)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func drawBackground(in rect: NSRect) -> Self {
+    public func drawBackground(in rect: Foundation.NSRect) -> Self {
         self.value.drawBackground(in: rect)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -225,7 +194,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     }
 
     @discardableResult
-    public func clicked(onLink link: Any, at charIndex: Int) -> Self {
+    public func clicked(onLink link: Any, at charIndex: Swift.Int) -> Self {
         self.value.clicked(onLink: link, at: charIndex)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -244,7 +213,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
 
     @available(macOS 10.7, *)
     @discardableResult
-    public func setLayoutOrientation(_ orientation: NSLayoutManager.TextLayoutOrientation) -> Self {
+    public func setLayoutOrientation(_ orientation: AppKit.NSLayoutManager.TextLayoutOrientation) -> Self {
         self.value.setLayoutOrientation(orientation)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -257,95 +226,111 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     }
 
     @discardableResult
-    public func complete(_ sender: Any?) -> Self {
-        self.value.complete(sender)
+    public func insertText(_ string: Any, replacementRange: Foundation.NSRange) -> Self {
+        self.value.insertText(string, replacementRange: replacementRange)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func insertCompletion(_ word: String, forPartialWordRange charRange: NSRange, movement: Int, isFinal flag: Bool) -> Self {
-        self.value.insertCompletion(word, forPartialWordRange: charRange, movement: movement, isFinal: flag)
+    public func setMarkedText(_ string: Any, selectedRange: Foundation.NSRange, replacementRange: Foundation.NSRange) -> Self {
+        self.value.setMarkedText(string, selectedRange: selectedRange, replacementRange: replacementRange)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func pasteAsPlainText(_ sender: Any?) -> Self {
-        self.value.pasteAsPlainText(sender)
+    public func unmarkText() -> Self {
+        self.value.unmarkText()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_Concurrency.MainActor public func draggingSession(_ session: AppKit.NSDraggingSession, willBeginAt screenPoint: Foundation.NSPoint) -> Self {
+        self.value.draggingSession(session, willBeginAt: screenPoint)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_Concurrency.MainActor public func draggingSession(_ session: AppKit.NSDraggingSession, movedTo screenPoint: Foundation.NSPoint) -> Self {
+        self.value.draggingSession(session, movedTo: screenPoint)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_Concurrency.MainActor public func draggingSession(_ session: AppKit.NSDraggingSession, endedAt screenPoint: Foundation.NSPoint, operation: AppKit.NSDragOperation) -> Self {
+        self.value.draggingSession(session, endedAt: screenPoint, operation: operation)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func pasteAsRichText(_ sender: Any?) -> Self {
-        self.value.pasteAsRichText(sender)
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.6, message: "APIs deprecated as of macOS 10.9 and earlier are unavailable in Swift")
+    public func setMarkedText(_ string: Any!, selectedRange selRange: Foundation.NSRange) -> Self {
+        self.value.setMarkedText(string, selectedRange: selRange)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func cleanUpAfterDragOperation() -> Self {
-        self.value.cleanUpAfterDragOperation()
+    @available(macOS, unavailable, introduced: 10.3, deprecated: 10.6, message: "Use NSResponder's makeBaseWritingDirectionNatural:, makeBaseWritingDirectionLeftToRight:, and makeBaseWritingDirectionRightToLeft: instead")
+    public func toggleBaseWritingDirection(_ sender: Any?) -> Self {
+        self.value.toggleBaseWritingDirection(sender)
         return Modify.DynamicMemberWrap(self.value)
     }
 
+    @available(macOS 10.12.2, *)
     @discardableResult
-    public func setSelectedRanges(_ ranges: [NSValue], affinity: NSSelectionAffinity, stillSelecting stillSelectingFlag: Bool) -> Self {
-        self.value.setSelectedRanges(ranges, affinity: affinity, stillSelecting: stillSelectingFlag)
+    public func updateTouchBarItemIdentifiers() -> Self {
+        self.value.updateTouchBarItemIdentifiers()
         return Modify.DynamicMemberWrap(self.value)
     }
 
+    @available(macOS 10.12.2, *)
     @discardableResult
-    public func setSelectedRange(_ charRange: NSRange, affinity: NSSelectionAffinity, stillSelecting stillSelectingFlag: Bool) -> Self {
-        self.value.setSelectedRange(charRange, affinity: affinity, stillSelecting: stillSelectingFlag)
+    public func updateTextTouchBarItems() -> Self {
+        self.value.updateTextTouchBarItems()
         return Modify.DynamicMemberWrap(self.value)
     }
 
+    @available(macOS 10.12.2, *)
     @discardableResult
-    public func updateInsertionPointStateAndRestartTimer(_ restartFlag: Bool) -> Self {
-        self.value.updateInsertionPointStateAndRestartTimer(restartFlag)
+    public func updateCandidates() -> Self {
+        self.value.updateCandidates()
         return Modify.DynamicMemberWrap(self.value)
     }
 
+    @available(macOS 10.12.2, *)
     @discardableResult
-    public func toggleContinuousSpellChecking(_ sender: Any?) -> Self {
-        self.value.toggleContinuousSpellChecking(sender)
+    @_Concurrency.MainActor public func candidateListTouchBarItem(_ anItem: AppKit.NSCandidateListTouchBarItem<AnyObject>, beginSelectingCandidateAt index: Swift.Int) -> Self {
+        self.value.candidateListTouchBarItem(anItem, beginSelectingCandidateAt: index)
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS 10.5, *)
+    @available(macOS 10.12.2, *)
     @discardableResult
-    public func toggleGrammarChecking(_ sender: Any?) -> Self {
-        self.value.toggleGrammarChecking(sender)
+    @_Concurrency.MainActor public func candidateListTouchBarItem(_ anItem: AppKit.NSCandidateListTouchBarItem<AnyObject>, changeSelectionFromCandidateAt previousIndex: Swift.Int, to index: Swift.Int) -> Self {
+        self.value.candidateListTouchBarItem(anItem, changeSelectionFromCandidateAt: previousIndex, to: index)
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS 10.5, *)
+    @available(macOS 10.12.2, *)
     @discardableResult
-    public func setSpellingState(_ value: Int, range charRange: NSRange) -> Self {
-        self.value.setSpellingState(value, range: charRange)
+    @_Concurrency.MainActor public func candidateListTouchBarItem(_ anItem: AppKit.NSCandidateListTouchBarItem<AnyObject>, endSelectingCandidateAt index: Swift.Int) -> Self {
+        self.value.candidateListTouchBarItem(anItem, endSelectingCandidateAt: index)
         return Modify.DynamicMemberWrap(self.value)
     }
 
+    @available(macOS 10.12.2, *)
     @discardableResult
-    public func didChangeText() -> Self {
-        self.value.didChangeText()
+    @_Concurrency.MainActor public func candidateListTouchBarItem(_ anItem: AppKit.NSCandidateListTouchBarItem<AnyObject>, changedCandidateListVisibility isVisible: Swift.Bool) -> Self {
+        self.value.candidateListTouchBarItem(anItem, changedCandidateListVisibility: isVisible)
         return Modify.DynamicMemberWrap(self.value)
     }
 
+    @available(macOS 10.7, *)
     @discardableResult
-    public func breakUndoCoalescing() -> Self {
-        self.value.breakUndoCoalescing()
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @available(macOS 10.5, *)
-    @discardableResult
-    public func showFindIndicator(for charRange: NSRange) -> Self {
-        self.value.showFindIndicator(for: charRange)
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @discardableResult
-    public func setSelectedRange(_ charRange: NSRange) -> Self {
-        self.value.setSelectedRange(charRange)
+    public func updateQuickLookPreviewPanel() -> Self {
+        self.value.updateQuickLookPreviewPanel()
         return Modify.DynamicMemberWrap(self.value)
     }
 
@@ -356,7 +341,7 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
     }
 
     @discardableResult
-    public func smartInsert(for pasteString: String, replacing charRangeToReplace: NSRange, before beforeString: AutoreleasingUnsafeMutablePointer<NSString?>?, after afterString: AutoreleasingUnsafeMutablePointer<NSString?>?) -> Self {
+    public func smartInsert(for pasteString: Swift.String, replacing charRangeToReplace: Foundation.NSRange, before beforeString: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?, after afterString: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Self {
         self.value.smartInsert(for: pasteString, replacing: charRangeToReplace, before: beforeString, after: afterString)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -405,14 +390,14 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
 
     @available(macOS 10.6, *)
     @discardableResult
-    public func checkText(in range: NSRange, types checkingTypes: NSTextCheckingTypes, options: [NSSpellChecker.OptionKey : Any] = [:]) -> Self {
+    public func checkText(in range: Foundation.NSRange, types checkingTypes: Foundation.NSTextCheckingTypes, options: [AppKit.NSSpellChecker.OptionKey : Any] = [:]) -> Self {
         self.value.checkText(in: range, types: checkingTypes, options: options)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.6, *)
     @discardableResult
-    public func handleTextCheckingResults(_ results: [NSTextCheckingResult], forRange range: NSRange, types checkingTypes: NSTextCheckingTypes, options: [NSSpellChecker.OptionKey : Any] = [:], orthography: NSOrthography, wordCount: Int) -> Self {
+    public func handleTextCheckingResults(_ results: [Foundation.NSTextCheckingResult], forRange range: Foundation.NSRange, types checkingTypes: Foundation.NSTextCheckingTypes, options: [AppKit.NSSpellChecker.OptionKey : Any] = [:], orthography: Foundation.NSOrthography, wordCount: Swift.Int) -> Self {
         self.value.handleTextCheckingResults(results, forRange: range, types: checkingTypes, options: options, orthography: orthography, wordCount: wordCount)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -438,31 +423,90 @@ extension Modify.DynamicMemberWrap where T: NSTextView {
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS 10.7, *)
     @discardableResult
-    public func updateQuickLookPreviewPanel() -> Self {
-        self.value.updateQuickLookPreviewPanel()
+    public func setSelectedRanges(_ ranges: [Foundation.NSValue], affinity: AppKit.NSSelectionAffinity, stillSelecting stillSelectingFlag: Swift.Bool) -> Self {
+        self.value.setSelectedRanges(ranges, affinity: affinity, stillSelecting: stillSelectingFlag)
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS 10.12.2, *)
     @discardableResult
-    public func updateTouchBarItemIdentifiers() -> Self {
-        self.value.updateTouchBarItemIdentifiers()
+    public func setSelectedRange(_ charRange: Foundation.NSRange, affinity: AppKit.NSSelectionAffinity, stillSelecting stillSelectingFlag: Swift.Bool) -> Self {
+        self.value.setSelectedRange(charRange, affinity: affinity, stillSelecting: stillSelectingFlag)
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS 10.12.2, *)
     @discardableResult
-    public func updateTextTouchBarItems() -> Self {
-        self.value.updateTextTouchBarItems()
+    public func updateInsertionPointStateAndRestartTimer(_ restartFlag: Swift.Bool) -> Self {
+        self.value.updateInsertionPointStateAndRestartTimer(restartFlag)
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS 10.12.2, *)
     @discardableResult
-    public func updateCandidates() -> Self {
-        self.value.updateCandidates()
+    public func toggleContinuousSpellChecking(_ sender: Any?) -> Self {
+        self.value.toggleContinuousSpellChecking(sender)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.5, *)
+    @discardableResult
+    public func toggleGrammarChecking(_ sender: Any?) -> Self {
+        self.value.toggleGrammarChecking(sender)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.5, *)
+    @discardableResult
+    public func setSpellingState(_ value: Swift.Int, range charRange: Foundation.NSRange) -> Self {
+        self.value.setSpellingState(value, range: charRange)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func didChangeText() -> Self {
+        self.value.didChangeText()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func breakUndoCoalescing() -> Self {
+        self.value.breakUndoCoalescing()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.5, *)
+    @discardableResult
+    public func showFindIndicator(for charRange: Foundation.NSRange) -> Self {
+        self.value.showFindIndicator(for: charRange)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func setSelectedRange(_ charRange: Foundation.NSRange) -> Self {
+        self.value.setSelectedRange(charRange)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func cleanUpAfterDragOperation() -> Self {
+        self.value.cleanUpAfterDragOperation()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func pasteAsPlainText(_ sender: Any?) -> Self {
+        self.value.pasteAsPlainText(sender)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func pasteAsRichText(_ sender: Any?) -> Self {
+        self.value.pasteAsRichText(sender)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func insertCompletion(_ word: Swift.String, forPartialWordRange charRange: Foundation.NSRange, movement: Swift.Int, isFinal flag: Swift.Bool) -> Self {
+        self.value.insertCompletion(word, forPartialWordRange: charRange, movement: movement, isFinal: flag)
         return Modify.DynamicMemberWrap(self.value)
     }
 }

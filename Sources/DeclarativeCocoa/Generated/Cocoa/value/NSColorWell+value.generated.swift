@@ -15,14 +15,14 @@ extension Modify.DynamicMemberWrap where T: NSColorWell {
 
     @discardableResult
     @_disfavoredOverload
-    public func activate(_ exclusive: Bool) -> T {
+    public func activate(_ exclusive: Swift.Bool) -> T {
         self.value.activate(exclusive)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func drawWell(inside insideRect: NSRect) -> T {
+    public func drawWell(inside insideRect: Foundation.NSRect) -> T {
         self.value.drawWell(inside: insideRect)
         return self.value
     }

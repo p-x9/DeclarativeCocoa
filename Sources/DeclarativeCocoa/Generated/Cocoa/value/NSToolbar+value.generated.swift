@@ -8,14 +8,14 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSToolbar {
     @discardableResult
     @_disfavoredOverload
-    public func insertItem(withItemIdentifier itemIdentifier: NSToolbarItem.Identifier, at index: Int) -> T {
+    public func insertItem(withItemIdentifier itemIdentifier: AppKit.NSToolbarItem.Identifier, at index: Swift.Int) -> T {
         self.value.insertItem(withItemIdentifier: itemIdentifier, at: index)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func removeItem(at index: Int) -> T {
+    public func removeItem(at index: Swift.Int) -> T {
         self.value.removeItem(at: index)
         return self.value
     }
@@ -29,7 +29,7 @@ extension Modify.DynamicMemberWrap where T: NSToolbar {
 
     @discardableResult
     @_disfavoredOverload
-    public func setConfiguration(_ configDict: [String : Any]) -> T {
+    public func setConfiguration(_ configDict: [Swift.String : Any]) -> T {
         self.value.setConfiguration(configDict)
         return self.value
     }

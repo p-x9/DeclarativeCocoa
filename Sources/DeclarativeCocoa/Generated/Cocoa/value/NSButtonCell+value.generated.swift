@@ -8,64 +8,66 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSButtonCell {
     @discardableResult
     @_disfavoredOverload
-    public func setButtonType(_ type: NSButton.ButtonType) -> T {
+    public func setButtonType(_ type: AppKit.NSButton.ButtonType) -> T {
         self.value.setButtonType(type)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setPeriodicDelay(_ delay: Float, interval: Float) -> T {
+    public func setPeriodicDelay(_ delay: Swift.Float, interval: Swift.Float) -> T {
         self.value.setPeriodicDelay(delay, interval: interval)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func getPeriodicDelay(_ delay: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>) -> T {
-        self.value.getPeriodicDelay(delay, interval: interval)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func performClick(_ sender: Any?) -> T {
-        self.value.performClick(sender)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func mouseEntered(with event: NSEvent) -> T {
+    public func mouseEntered(with event: AppKit.NSEvent) -> T {
         self.value.mouseEntered(with: event)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func mouseExited(with event: NSEvent) -> T {
+    public func mouseExited(with event: AppKit.NSEvent) -> T {
         self.value.mouseExited(with: event)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func drawBezel(withFrame frame: NSRect, in controlView: NSView) -> T {
+    public func drawBezel(withFrame frame: Foundation.NSRect, in controlView: AppKit.NSView) -> T {
         self.value.drawBezel(withFrame: frame, in: controlView)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func drawImage(_ image: NSImage, withFrame frame: NSRect, in controlView: NSView) -> T {
+    public func drawImage(_ image: AppKit.NSImage, withFrame frame: Foundation.NSRect, in controlView: AppKit.NSView) -> T {
         self.value.drawImage(image, withFrame: frame, in: controlView)
         return self.value
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.15, message: "The keyEquivalentFont property is no longer used. Setting it has no effect.")
     @discardableResult
     @_disfavoredOverload
-    public func setKeyEquivalentFont(_ fontName: String, size fontSize: CGFloat) -> T {
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.8, message: "Mnemonics are not used on macOS. Set the alternateTitle property directly instead.")
+    public func setAlternateTitleWithMnemonic(_ stringWithAmpersand: Swift.String!) -> T {
+        self.value.setAlternateTitleWithMnemonic(stringWithAmpersand)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.8, message: "Mnemonics are not used on macOS. Calling this method has no effect.")
+    public func setAlternateMnemonicLocation(_ location: Swift.Int) -> T {
+        self.value.setAlternateMnemonicLocation(location)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @available(macOS, introduced: 10.0, deprecated: 10.15, message: "The keyEquivalentFont property is no longer used. Setting it has no effect.")
+    public func setKeyEquivalentFont(_ fontName: Swift.String, size fontSize: CoreFoundation.CGFloat) -> T {
         self.value.setKeyEquivalentFont(fontName, size: fontSize)
         return self.value
     }

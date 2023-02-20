@@ -7,79 +7,79 @@ import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSSegmentedControl {
     @discardableResult
-    public func setWidth(_ width: CGFloat, forSegment segment: Int) -> Self {
+    public func setWidth(_ width: CoreFoundation.CGFloat, forSegment segment: Swift.Int) -> Self {
         self.value.setWidth(width, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setImage(_ image: NSImage?, forSegment segment: Int) -> Self {
+    public func setImage(_ image: AppKit.NSImage?, forSegment segment: Swift.Int) -> Self {
         self.value.setImage(image, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.5, *)
     @discardableResult
-    public func setImageScaling(_ scaling: NSImageScaling, forSegment segment: Int) -> Self {
+    public func setImageScaling(_ scaling: AppKit.NSImageScaling, forSegment segment: Swift.Int) -> Self {
         self.value.setImageScaling(scaling, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setLabel(_ label: String, forSegment segment: Int) -> Self {
+    public func setLabel(_ label: Swift.String, forSegment segment: Swift.Int) -> Self {
         self.value.setLabel(label, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setMenu(_ menu: NSMenu?, forSegment segment: Int) -> Self {
+    public func setMenu(_ menu: AppKit.NSMenu?, forSegment segment: Swift.Int) -> Self {
         self.value.setMenu(menu, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setSelected(_ selected: Bool, forSegment segment: Int) -> Self {
+    public func setSelected(_ selected: Swift.Bool, forSegment segment: Swift.Int) -> Self {
         self.value.setSelected(selected, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setEnabled(_ enabled: Bool, forSegment segment: Int) -> Self {
+    public func setEnabled(_ enabled: Swift.Bool, forSegment segment: Swift.Int) -> Self {
         self.value.setEnabled(enabled, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
-    public func setToolTip(_ toolTip: String?, forSegment segment: Int) -> Self {
+    public func setToolTip(_ toolTip: Swift.String?, forSegment segment: Swift.Int) -> Self {
         self.value.setToolTip(toolTip, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
-    public func setTag(_ tag: Int, forSegment segment: Int) -> Self {
+    public func setTag(_ tag: Swift.Int, forSegment segment: Swift.Int) -> Self {
         self.value.setTag(tag, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
-    public func setShowsMenuIndicator(_ showsMenuIndicator: Bool, forSegment segment: Int) -> Self {
+    public func setShowsMenuIndicator(_ showsMenuIndicator: Swift.Bool, forSegment segment: Swift.Int) -> Self {
         self.value.setShowsMenuIndicator(showsMenuIndicator, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
-    public func setAlignment(_ alignment: NSTextAlignment, forSegment segment: Int) -> Self {
+    public func setAlignment(_ alignment: AppKit.NSTextAlignment, forSegment segment: Swift.Int) -> Self {
         self.value.setAlignment(alignment, forSegment: segment)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
-    public func compress(withPrioritizedCompressionOptions prioritizedOptions: [NSUserInterfaceCompressionOptions]) -> Self {
+    public func compress(withPrioritizedCompressionOptions prioritizedOptions: [AppKit.NSUserInterfaceCompressionOptions]) -> Self {
         self.value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
         return Modify.DynamicMemberWrap(self.value)
     }

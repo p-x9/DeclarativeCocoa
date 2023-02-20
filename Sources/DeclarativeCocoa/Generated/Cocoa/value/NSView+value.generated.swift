@@ -8,7 +8,7 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSView {
     @discardableResult
     @_disfavoredOverload
-    public func getRectsBeingDrawn(_ rects: UnsafeMutablePointer<UnsafePointer<NSRect>?>?, count: UnsafeMutablePointer<Int>?) -> T {
+    public func getRectsBeingDrawn(_ rects: Swift.UnsafeMutablePointer<Swift.UnsafePointer<Foundation.NSRect>?>?, count: Swift.UnsafeMutablePointer<Swift.Int>?) -> T {
         self.value.getRectsBeingDrawn(rects, count: count)
         return self.value
     }
@@ -31,28 +31,28 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func addSubview(_ view: NSView) -> T {
+    public func addSubview(_ view: AppKit.NSView) -> T {
         self.value.addSubview(view)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func addSubview(_ view: NSView, positioned place: NSWindow.OrderingMode, relativeTo otherView: NSView?) -> T {
+    public func addSubview(_ view: AppKit.NSView, positioned place: AppKit.NSWindow.OrderingMode, relativeTo otherView: AppKit.NSView?) -> T {
         self.value.addSubview(view, positioned: place, relativeTo: otherView)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func sortSubviews(_ compare: @convention(c) (NSView, NSView, UnsafeMutableRawPointer?) -> ComparisonResult, context: UnsafeMutableRawPointer?) -> T {
+    public func sortSubviews(_ compare: @convention(c) (AppKit.NSView, AppKit.NSView, Swift.UnsafeMutableRawPointer?) -> Foundation.ComparisonResult, context: Swift.UnsafeMutableRawPointer?) -> T {
         self.value.sortSubviews(compare, context: context)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func viewWillMove(toWindow newWindow: NSWindow?) -> T {
+    public func viewWillMove(toWindow newWindow: AppKit.NSWindow?) -> T {
         self.value.viewWillMove(toWindow: newWindow)
         return self.value
     }
@@ -66,7 +66,7 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func viewWillMove(toSuperview newSuperview: NSView?) -> T {
+    public func viewWillMove(toSuperview newSuperview: AppKit.NSView?) -> T {
         self.value.viewWillMove(toSuperview: newSuperview)
         return self.value
     }
@@ -80,14 +80,14 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func didAddSubview(_ subview: NSView) -> T {
+    public func didAddSubview(_ subview: AppKit.NSView) -> T {
         self.value.didAddSubview(subview)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func willRemoveSubview(_ subview: NSView) -> T {
+    public func willRemoveSubview(_ subview: AppKit.NSView) -> T {
         self.value.willRemoveSubview(subview)
         return self.value
     }
@@ -101,7 +101,7 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func replaceSubview(_ oldView: NSView, with newView: NSView) -> T {
+    public func replaceSubview(_ oldView: AppKit.NSView, with newView: AppKit.NSView) -> T {
         self.value.replaceSubview(oldView, with: newView)
         return self.value
     }
@@ -123,85 +123,85 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func resizeSubviews(withOldSize oldSize: NSSize) -> T {
+    public func resizeSubviews(withOldSize oldSize: Foundation.NSSize) -> T {
         self.value.resizeSubviews(withOldSize: oldSize)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func resize(withOldSuperviewSize oldSize: NSSize) -> T {
+    public func resize(withOldSuperviewSize oldSize: Foundation.NSSize) -> T {
         self.value.resize(withOldSuperviewSize: oldSize)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setFrameOrigin(_ newOrigin: NSPoint) -> T {
+    public func setFrameOrigin(_ newOrigin: Foundation.NSPoint) -> T {
         self.value.setFrameOrigin(newOrigin)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setFrameSize(_ newSize: NSSize) -> T {
+    public func setFrameSize(_ newSize: Foundation.NSSize) -> T {
         self.value.setFrameSize(newSize)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setBoundsOrigin(_ newOrigin: NSPoint) -> T {
+    public func setBoundsOrigin(_ newOrigin: Foundation.NSPoint) -> T {
         self.value.setBoundsOrigin(newOrigin)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setBoundsSize(_ newSize: NSSize) -> T {
+    public func setBoundsSize(_ newSize: Foundation.NSSize) -> T {
         self.value.setBoundsSize(newSize)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func translateOrigin(to translation: NSPoint) -> T {
+    public func translateOrigin(to translation: Foundation.NSPoint) -> T {
         self.value.translateOrigin(to: translation)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func scaleUnitSquare(to newUnitSize: NSSize) -> T {
+    public func scaleUnitSquare(to newUnitSize: Foundation.NSSize) -> T {
         self.value.scaleUnitSquare(to: newUnitSize)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func rotate(byDegrees angle: CGFloat) -> T {
+    public func rotate(byDegrees angle: CoreFoundation.CGFloat) -> T {
         self.value.rotate(byDegrees: angle)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setNeedsDisplay(_ invalidRect: NSRect) -> T {
+    public func setNeedsDisplay(_ invalidRect: Foundation.NSRect) -> T {
         self.value.setNeedsDisplay(invalidRect)
         return self.value
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "To draw, subclass NSView and implement -drawRect:; AppKit's automatic deferred display mechanism will call -drawRect: as necessary to display the view.")
     @discardableResult
     @_disfavoredOverload
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "To draw, subclass NSView and implement -drawRect:; AppKit's automatic deferred display mechanism will call -drawRect: as necessary to display the view.")
     public func lockFocus() -> T {
         self.value.lockFocus()
         return self.value
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "To draw, subclass NSView and implement -drawRect:; AppKit's automatic deferred display mechanism will call -drawRect: as necessary to display the view.")
     @discardableResult
     @_disfavoredOverload
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "To draw, subclass NSView and implement -drawRect:; AppKit's automatic deferred display mechanism will call -drawRect: as necessary to display the view.")
     public func unlockFocus() -> T {
         self.value.unlockFocus()
         return self.value
@@ -230,49 +230,49 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func display(_ rect: NSRect) -> T {
+    public func display(_ rect: Foundation.NSRect) -> T {
         self.value.display(rect)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func displayIfNeeded(_ rect: NSRect) -> T {
+    public func displayIfNeeded(_ rect: Foundation.NSRect) -> T {
         self.value.displayIfNeeded(rect)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func displayIgnoringOpacity(_ rect: NSRect) -> T {
+    public func displayIgnoringOpacity(_ rect: Foundation.NSRect) -> T {
         self.value.displayIgnoringOpacity(rect)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func displayIfNeededIgnoringOpacity(_ rect: NSRect) -> T {
+    public func displayIfNeededIgnoringOpacity(_ rect: Foundation.NSRect) -> T {
         self.value.displayIfNeededIgnoringOpacity(rect)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func draw(_ dirtyRect: NSRect) -> T {
+    public func draw(_ dirtyRect: Foundation.NSRect) -> T {
         self.value.draw(dirtyRect)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func displayIgnoringOpacity(_ rect: NSRect, in context: NSGraphicsContext) -> T {
+    public func displayIgnoringOpacity(_ rect: Foundation.NSRect, in context: AppKit.NSGraphicsContext) -> T {
         self.value.displayIgnoringOpacity(rect, in: context)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func cacheDisplay(in rect: NSRect, to bitmapImageRep: NSBitmapImageRep) -> T {
+    public func cacheDisplay(in rect: Foundation.NSRect, to bitmapImageRep: AppKit.NSBitmapImageRep) -> T {
         self.value.cacheDisplay(in: rect, to: bitmapImageRep)
         return self.value
     }
@@ -287,15 +287,15 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func scroll(_ point: NSPoint) -> T {
+    public func scroll(_ point: Foundation.NSPoint) -> T {
         self.value.scroll(point)
         return self.value
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use NSScrollView to achieve scrolling views.")
     @discardableResult
     @_disfavoredOverload
-    public func scroll(_ rect: NSRect, by delta: NSSize) -> T {
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use NSScrollView to achieve scrolling views.")
+    public func scroll(_ rect: Foundation.NSRect, by delta: Foundation.NSSize) -> T {
         self.value.scroll(rect, by: delta)
         return self.value
     }
@@ -303,7 +303,7 @@ extension Modify.DynamicMemberWrap where T: NSView {
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
-    public func translateRectsNeedingDisplay(in clipRect: NSRect, by delta: NSSize) -> T {
+    public func translateRectsNeedingDisplay(in clipRect: Foundation.NSRect, by delta: Foundation.NSSize) -> T {
         self.value.translateRectsNeedingDisplay(in: clipRect, by: delta)
         return self.value
     }
@@ -335,7 +335,7 @@ extension Modify.DynamicMemberWrap where T: NSView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func willOpenMenu(_ menu: NSMenu, with event: NSEvent) -> T {
+    public func willOpenMenu(_ menu: AppKit.NSMenu, with event: AppKit.NSEvent) -> T {
         self.value.willOpenMenu(menu, with: event)
         return self.value
     }
@@ -343,14 +343,14 @@ extension Modify.DynamicMemberWrap where T: NSView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func didCloseMenu(_ menu: NSMenu, with event: NSEvent?) -> T {
+    public func didCloseMenu(_ menu: AppKit.NSMenu, with event: AppKit.NSEvent?) -> T {
         self.value.didCloseMenu(menu, with: event)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func removeToolTip(_ tag: NSView.ToolTipTag) -> T {
+    public func removeToolTip(_ tag: AppKit.NSView.ToolTipTag) -> T {
         self.value.removeToolTip(tag)
         return self.value
     }
@@ -378,7 +378,7 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func getRectsExposedDuringLiveResize(_ exposedRects: UnsafeMutablePointer<NSRect>, count: UnsafeMutablePointer<Int>) -> T {
+    public func getRectsExposedDuringLiveResize(_ exposedRects: Swift.UnsafeMutablePointer<Foundation.NSRect>, count: Swift.UnsafeMutablePointer<Swift.Int>) -> T {
         self.value.getRectsExposedDuringLiveResize(exposedRects, count: count)
         return self.value
     }
@@ -394,7 +394,7 @@ extension Modify.DynamicMemberWrap where T: NSView {
     @available(macOS 10.9, *)
     @discardableResult
     @_disfavoredOverload
-    public func prepareContent(in rect: NSRect) -> T {
+    public func prepareContent(in rect: Foundation.NSRect) -> T {
         self.value.prepareContent(in: rect)
         return self.value
     }
@@ -409,163 +409,1190 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func setKeyboardFocusRingNeedsDisplay(_ rect: NSRect) -> T {
-        self.value.setKeyboardFocusRingNeedsDisplay(rect)
+    @_Concurrency.MainActor public func draggingExited(_ sender: AppKit.NSDraggingInfo?) -> T {
+        self.value.draggingExited(sender)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @_Concurrency.MainActor public func concludeDragOperation(_ sender: AppKit.NSDraggingInfo?) -> T {
+        self.value.concludeDragOperation(sender)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @_Concurrency.MainActor public func draggingEnded(_ sender: AppKit.NSDraggingInfo) -> T {
+        self.value.draggingEnded(sender)
         return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
-    public func drawFocusRingMask() -> T {
-        self.value.drawFocusRingMask()
+    @_Concurrency.MainActor public func updateDraggingItemsForDrag(_ sender: AppKit.NSDraggingInfo?) -> T {
+        self.value.updateDraggingItemsForDrag(sender)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityElement(_ accessibilityElement: Swift.Bool) -> T {
+        self.value.setAccessibilityElement(accessibilityElement)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityFrame(_ accessibilityFrame: Foundation.NSRect) -> T {
+        self.value.setAccessibilityFrame(accessibilityFrame)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityFocused(_ accessibilityFocused: Swift.Bool) -> T {
+        self.value.setAccessibilityFocused(accessibilityFocused)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityActivationPoint(_ accessibilityActivationPoint: Foundation.NSPoint) -> T {
+        self.value.setAccessibilityActivationPoint(accessibilityActivationPoint)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityTopLevelUIElement(_ accessibilityTopLevelUIElement: Any?) -> T {
+        self.value.setAccessibilityTopLevelUIElement(accessibilityTopLevelUIElement)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityURL(_ accessibilityURL: Foundation.URL?) -> T {
+        self.value.setAccessibilityURL(accessibilityURL)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityValue(_ accessibilityValue: Any?) -> T {
+        self.value.setAccessibilityValue(accessibilityValue)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityValueDescription(_ accessibilityValueDescription: Swift.String?) -> T {
+        self.value.setAccessibilityValueDescription(accessibilityValueDescription)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityVisibleChildren(_ accessibilityVisibleChildren: [Any]?) -> T {
+        self.value.setAccessibilityVisibleChildren(accessibilityVisibleChildren)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySubrole(_ accessibilitySubrole: AppKit.NSAccessibility.Subrole?) -> T {
+        self.value.setAccessibilitySubrole(accessibilitySubrole)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityTitle(_ accessibilityTitle: Swift.String?) -> T {
+        self.value.setAccessibilityTitle(accessibilityTitle)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityTitleUIElement(_ accessibilityTitleUIElement: Any?) -> T {
+        self.value.setAccessibilityTitleUIElement(accessibilityTitleUIElement)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityNextContents(_ accessibilityNextContents: [Any]?) -> T {
+        self.value.setAccessibilityNextContents(accessibilityNextContents)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityOrientation(_ accessibilityOrientation: AppKit.NSAccessibilityOrientation) -> T {
+        self.value.setAccessibilityOrientation(accessibilityOrientation)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityOverflowButton(_ accessibilityOverflowButton: Any?) -> T {
+        self.value.setAccessibilityOverflowButton(accessibilityOverflowButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityParent(_ accessibilityParent: Any?) -> T {
+        self.value.setAccessibilityParent(accessibilityParent)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityPlaceholderValue(_ accessibilityPlaceholderValue: Swift.String?) -> T {
+        self.value.setAccessibilityPlaceholderValue(accessibilityPlaceholderValue)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityPreviousContents(_ accessibilityPreviousContents: [Any]?) -> T {
+        self.value.setAccessibilityPreviousContents(accessibilityPreviousContents)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityRole(_ accessibilityRole: AppKit.NSAccessibility.Role?) -> T {
+        self.value.setAccessibilityRole(accessibilityRole)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityRoleDescription(_ accessibilityRoleDescription: Swift.String?) -> T {
+        self.value.setAccessibilityRoleDescription(accessibilityRoleDescription)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySearchButton(_ accessibilitySearchButton: Any?) -> T {
+        self.value.setAccessibilitySearchButton(accessibilitySearchButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySearchMenu(_ accessibilitySearchMenu: Any?) -> T {
+        self.value.setAccessibilitySearchMenu(accessibilitySearchMenu)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySelected(_ accessibilitySelected: Swift.Bool) -> T {
+        self.value.setAccessibilitySelected(accessibilitySelected)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySelectedChildren(_ accessibilitySelectedChildren: [Any]?) -> T {
+        self.value.setAccessibilitySelectedChildren(accessibilitySelectedChildren)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityServesAsTitleForUIElements(_ accessibilityServesAsTitleForUIElements: [Any]?) -> T {
+        self.value.setAccessibilityServesAsTitleForUIElements(accessibilityServesAsTitleForUIElements)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityShownMenu(_ accessibilityShownMenu: Any?) -> T {
+        self.value.setAccessibilityShownMenu(accessibilityShownMenu)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMinValue(_ accessibilityMinValue: Any?) -> T {
+        self.value.setAccessibilityMinValue(accessibilityMinValue)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMaxValue(_ accessibilityMaxValue: Any?) -> T {
+        self.value.setAccessibilityMaxValue(accessibilityMaxValue)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityLinkedUIElements(_ accessibilityLinkedUIElements: [Any]?) -> T {
+        self.value.setAccessibilityLinkedUIElements(accessibilityLinkedUIElements)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityWindow(_ accessibilityWindow: Any?) -> T {
+        self.value.setAccessibilityWindow(accessibilityWindow)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityIdentifier(_ accessibilityIdentifier: Swift.String?) -> T {
+        self.value.setAccessibilityIdentifier(accessibilityIdentifier)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityHelp(_ accessibilityHelp: Swift.String?) -> T {
+        self.value.setAccessibilityHelp(accessibilityHelp)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityFilename(_ accessibilityFilename: Swift.String?) -> T {
+        self.value.setAccessibilityFilename(accessibilityFilename)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityExpanded(_ accessibilityExpanded: Swift.Bool) -> T {
+        self.value.setAccessibilityExpanded(accessibilityExpanded)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityEdited(_ accessibilityEdited: Swift.Bool) -> T {
+        self.value.setAccessibilityEdited(accessibilityEdited)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityEnabled(_ accessibilityEnabled: Swift.Bool) -> T {
+        self.value.setAccessibilityEnabled(accessibilityEnabled)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityChildren(_ accessibilityChildren: [Any]?) -> T {
+        self.value.setAccessibilityChildren(accessibilityChildren)
+        return self.value
+    }
+
+    @available(macOS 10.13, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityChildrenInNavigationOrder(_ accessibilityChildrenInNavigationOrder: [AppKit.NSAccessibilityElementProtocol]?) -> T {
+        self.value.setAccessibilityChildrenInNavigationOrder(accessibilityChildrenInNavigationOrder)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityClearButton(_ accessibilityClearButton: Any?) -> T {
+        self.value.setAccessibilityClearButton(accessibilityClearButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityCancelButton(_ accessibilityCancelButton: Any?) -> T {
+        self.value.setAccessibilityCancelButton(accessibilityCancelButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityProtectedContent(_ accessibilityProtectedContent: Swift.Bool) -> T {
+        self.value.setAccessibilityProtectedContent(accessibilityProtectedContent)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityContents(_ accessibilityContents: [Any]?) -> T {
+        self.value.setAccessibilityContents(accessibilityContents)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityLabel(_ accessibilityLabel: Swift.String?) -> T {
+        self.value.setAccessibilityLabel(accessibilityLabel)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityAlternateUIVisible(_ accessibilityAlternateUIVisible: Swift.Bool) -> T {
+        self.value.setAccessibilityAlternateUIVisible(accessibilityAlternateUIVisible)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySharedFocusElements(_ accessibilitySharedFocusElements: [Any]?) -> T {
+        self.value.setAccessibilitySharedFocusElements(accessibilitySharedFocusElements)
+        return self.value
+    }
+
+    @available(macOS 10.12, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityRequired(_ accessibilityRequired: Swift.Bool) -> T {
+        self.value.setAccessibilityRequired(accessibilityRequired)
+        return self.value
+    }
+
+    @available(macOS 10.13, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityCustomRotors(_ accessibilityCustomRotors: [AppKit.NSAccessibilityCustomRotor]) -> T {
+        self.value.setAccessibilityCustomRotors(accessibilityCustomRotors)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityApplicationFocusedUIElement(_ accessibilityApplicationFocusedUIElement: Any?) -> T {
+        self.value.setAccessibilityApplicationFocusedUIElement(accessibilityApplicationFocusedUIElement)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMainWindow(_ accessibilityMainWindow: Any?) -> T {
+        self.value.setAccessibilityMainWindow(accessibilityMainWindow)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityHidden(_ accessibilityHidden: Swift.Bool) -> T {
+        self.value.setAccessibilityHidden(accessibilityHidden)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityFrontmost(_ accessibilityFrontmost: Swift.Bool) -> T {
+        self.value.setAccessibilityFrontmost(accessibilityFrontmost)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityFocusedWindow(_ accessibilityFocusedWindow: Any?) -> T {
+        self.value.setAccessibilityFocusedWindow(accessibilityFocusedWindow)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityWindows(_ accessibilityWindows: [Any]?) -> T {
+        self.value.setAccessibilityWindows(accessibilityWindows)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityExtrasMenuBar(_ accessibilityExtrasMenuBar: Any?) -> T {
+        self.value.setAccessibilityExtrasMenuBar(accessibilityExtrasMenuBar)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMenuBar(_ accessibilityMenuBar: Any?) -> T {
+        self.value.setAccessibilityMenuBar(accessibilityMenuBar)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityColumnTitles(_ accessibilityColumnTitles: [Any]?) -> T {
+        self.value.setAccessibilityColumnTitles(accessibilityColumnTitles)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityOrderedByRow(_ accessibilityOrderedByRow: Swift.Bool) -> T {
+        self.value.setAccessibilityOrderedByRow(accessibilityOrderedByRow)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityHorizontalUnits(_ accessibilityHorizontalUnits: AppKit.NSAccessibilityUnits) -> T {
+        self.value.setAccessibilityHorizontalUnits(accessibilityHorizontalUnits)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityVerticalUnits(_ accessibilityVerticalUnits: AppKit.NSAccessibilityUnits) -> T {
+        self.value.setAccessibilityVerticalUnits(accessibilityVerticalUnits)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityHorizontalUnitDescription(_ accessibilityHorizontalUnitDescription: Swift.String?) -> T {
+        self.value.setAccessibilityHorizontalUnitDescription(accessibilityHorizontalUnitDescription)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityVerticalUnitDescription(_ accessibilityVerticalUnitDescription: Swift.String?) -> T {
+        self.value.setAccessibilityVerticalUnitDescription(accessibilityVerticalUnitDescription)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityHandles(_ accessibilityHandles: [Any]?) -> T {
+        self.value.setAccessibilityHandles(accessibilityHandles)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityWarningValue(_ accessibilityWarningValue: Any?) -> T {
+        self.value.setAccessibilityWarningValue(accessibilityWarningValue)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityCriticalValue(_ accessibilityCriticalValue: Any?) -> T {
+        self.value.setAccessibilityCriticalValue(accessibilityCriticalValue)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityDisclosed(_ accessibilityDisclosed: Swift.Bool) -> T {
+        self.value.setAccessibilityDisclosed(accessibilityDisclosed)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityDisclosedByRow(_ accessibilityDisclosedByRow: Any?) -> T {
+        self.value.setAccessibilityDisclosedByRow(accessibilityDisclosedByRow)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityDisclosedRows(_ accessibilityDisclosedRows: Any?) -> T {
+        self.value.setAccessibilityDisclosedRows(accessibilityDisclosedRows)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityDisclosureLevel(_ accessibilityDisclosureLevel: Swift.Int) -> T {
+        self.value.setAccessibilityDisclosureLevel(accessibilityDisclosureLevel)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMarkerUIElements(_ accessibilityMarkerUIElements: [Any]?) -> T {
+        self.value.setAccessibilityMarkerUIElements(accessibilityMarkerUIElements)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMarkerValues(_ accessibilityMarkerValues: Any?) -> T {
+        self.value.setAccessibilityMarkerValues(accessibilityMarkerValues)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMarkerGroupUIElement(_ accessibilityMarkerGroupUIElement: Any?) -> T {
+        self.value.setAccessibilityMarkerGroupUIElement(accessibilityMarkerGroupUIElement)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityUnits(_ accessibilityUnits: AppKit.NSAccessibilityUnits) -> T {
+        self.value.setAccessibilityUnits(accessibilityUnits)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityUnitDescription(_ accessibilityUnitDescription: Swift.String?) -> T {
+        self.value.setAccessibilityUnitDescription(accessibilityUnitDescription)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityRulerMarkerType(_ accessibilityRulerMarkerType: AppKit.NSAccessibilityRulerMarkerType) -> T {
+        self.value.setAccessibilityRulerMarkerType(accessibilityRulerMarkerType)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMarkerTypeDescription(_ accessibilityMarkerTypeDescription: Swift.String?) -> T {
+        self.value.setAccessibilityMarkerTypeDescription(accessibilityMarkerTypeDescription)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityHorizontalScrollBar(_ accessibilityHorizontalScrollBar: Any?) -> T {
+        self.value.setAccessibilityHorizontalScrollBar(accessibilityHorizontalScrollBar)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityVerticalScrollBar(_ accessibilityVerticalScrollBar: Any?) -> T {
+        self.value.setAccessibilityVerticalScrollBar(accessibilityVerticalScrollBar)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityAllowedValues(_ accessibilityAllowedValues: [Foundation.NSNumber]?) -> T {
+        self.value.setAccessibilityAllowedValues(accessibilityAllowedValues)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityLabelUIElements(_ accessibilityLabelUIElements: [Any]?) -> T {
+        self.value.setAccessibilityLabelUIElements(accessibilityLabelUIElements)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityLabelValue(_ accessibilityLabelValue: Swift.Float) -> T {
+        self.value.setAccessibilityLabelValue(accessibilityLabelValue)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySplitters(_ accessibilitySplitters: [Any]?) -> T {
+        self.value.setAccessibilitySplitters(accessibilitySplitters)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityDecrementButton(_ accessibilityDecrementButton: Any?) -> T {
+        self.value.setAccessibilityDecrementButton(accessibilityDecrementButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityIncrementButton(_ accessibilityIncrementButton: Any?) -> T {
+        self.value.setAccessibilityIncrementButton(accessibilityIncrementButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityTabs(_ accessibilityTabs: [Any]?) -> T {
+        self.value.setAccessibilityTabs(accessibilityTabs)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityHeader(_ accessibilityHeader: Any?) -> T {
+        self.value.setAccessibilityHeader(accessibilityHeader)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityColumnCount(_ accessibilityColumnCount: Swift.Int) -> T {
+        self.value.setAccessibilityColumnCount(accessibilityColumnCount)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityRowCount(_ accessibilityRowCount: Swift.Int) -> T {
+        self.value.setAccessibilityRowCount(accessibilityRowCount)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityIndex(_ accessibilityIndex: Swift.Int) -> T {
+        self.value.setAccessibilityIndex(accessibilityIndex)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityColumns(_ accessibilityColumns: [Any]?) -> T {
+        self.value.setAccessibilityColumns(accessibilityColumns)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityRows(_ accessibilityRows: [Any]?) -> T {
+        self.value.setAccessibilityRows(accessibilityRows)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityVisibleRows(_ accessibilityVisibleRows: [Any]?) -> T {
+        self.value.setAccessibilityVisibleRows(accessibilityVisibleRows)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySelectedRows(_ accessibilitySelectedRows: [Any]?) -> T {
+        self.value.setAccessibilitySelectedRows(accessibilitySelectedRows)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityVisibleColumns(_ accessibilityVisibleColumns: [Any]?) -> T {
+        self.value.setAccessibilityVisibleColumns(accessibilityVisibleColumns)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySelectedColumns(_ accessibilitySelectedColumns: [Any]?) -> T {
+        self.value.setAccessibilitySelectedColumns(accessibilitySelectedColumns)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySortDirection(_ accessibilitySortDirection: AppKit.NSAccessibilitySortDirection) -> T {
+        self.value.setAccessibilitySortDirection(accessibilitySortDirection)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityRowHeaderUIElements(_ accessibilityRowHeaderUIElements: [Any]?) -> T {
+        self.value.setAccessibilityRowHeaderUIElements(accessibilityRowHeaderUIElements)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySelectedCells(_ accessibilitySelectedCells: [Any]?) -> T {
+        self.value.setAccessibilitySelectedCells(accessibilitySelectedCells)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityVisibleCells(_ accessibilityVisibleCells: [Any]?) -> T {
+        self.value.setAccessibilityVisibleCells(accessibilityVisibleCells)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityColumnHeaderUIElements(_ accessibilityColumnHeaderUIElements: [Any]?) -> T {
+        self.value.setAccessibilityColumnHeaderUIElements(accessibilityColumnHeaderUIElements)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityRowIndexRange(_ accessibilityRowIndexRange: Foundation.NSRange) -> T {
+        self.value.setAccessibilityRowIndexRange(accessibilityRowIndexRange)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityColumnIndexRange(_ accessibilityColumnIndexRange: Foundation.NSRange) -> T {
+        self.value.setAccessibilityColumnIndexRange(accessibilityColumnIndexRange)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityInsertionPointLineNumber(_ accessibilityInsertionPointLineNumber: Swift.Int) -> T {
+        self.value.setAccessibilityInsertionPointLineNumber(accessibilityInsertionPointLineNumber)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySharedCharacterRange(_ accessibilitySharedCharacterRange: Foundation.NSRange) -> T {
+        self.value.setAccessibilitySharedCharacterRange(accessibilitySharedCharacterRange)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySharedTextUIElements(_ accessibilitySharedTextUIElements: [Any]?) -> T {
+        self.value.setAccessibilitySharedTextUIElements(accessibilitySharedTextUIElements)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityVisibleCharacterRange(_ accessibilityVisibleCharacterRange: Foundation.NSRange) -> T {
+        self.value.setAccessibilityVisibleCharacterRange(accessibilityVisibleCharacterRange)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityNumberOfCharacters(_ accessibilityNumberOfCharacters: Swift.Int) -> T {
+        self.value.setAccessibilityNumberOfCharacters(accessibilityNumberOfCharacters)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySelectedText(_ accessibilitySelectedText: Swift.String?) -> T {
+        self.value.setAccessibilitySelectedText(accessibilitySelectedText)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySelectedTextRange(_ accessibilitySelectedTextRange: Foundation.NSRange) -> T {
+        self.value.setAccessibilitySelectedTextRange(accessibilitySelectedTextRange)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilitySelectedTextRanges(_ accessibilitySelectedTextRanges: [Foundation.NSValue]?) -> T {
+        self.value.setAccessibilitySelectedTextRanges(accessibilitySelectedTextRanges)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityToolbarButton(_ accessibilityToolbarButton: Any?) -> T {
+        self.value.setAccessibilityToolbarButton(accessibilityToolbarButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityModal(_ accessibilityModal: Swift.Bool) -> T {
+        self.value.setAccessibilityModal(accessibilityModal)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityProxy(_ accessibilityProxy: Any?) -> T {
+        self.value.setAccessibilityProxy(accessibilityProxy)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMain(_ accessibilityMain: Swift.Bool) -> T {
+        self.value.setAccessibilityMain(accessibilityMain)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityFullScreenButton(_ accessibilityFullScreenButton: Any?) -> T {
+        self.value.setAccessibilityFullScreenButton(accessibilityFullScreenButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityGrowArea(_ accessibilityGrowArea: Any?) -> T {
+        self.value.setAccessibilityGrowArea(accessibilityGrowArea)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityDocument(_ accessibilityDocument: Swift.String?) -> T {
+        self.value.setAccessibilityDocument(accessibilityDocument)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityDefaultButton(_ accessibilityDefaultButton: Any?) -> T {
+        self.value.setAccessibilityDefaultButton(accessibilityDefaultButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityCloseButton(_ accessibilityCloseButton: Any?) -> T {
+        self.value.setAccessibilityCloseButton(accessibilityCloseButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityZoomButton(_ accessibilityZoomButton: Any?) -> T {
+        self.value.setAccessibilityZoomButton(accessibilityZoomButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMinimizeButton(_ accessibilityMinimizeButton: Any?) -> T {
+        self.value.setAccessibilityMinimizeButton(accessibilityMinimizeButton)
+        return self.value
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityMinimized(_ accessibilityMinimized: Swift.Bool) -> T {
+        self.value.setAccessibilityMinimized(accessibilityMinimized)
+        return self.value
+    }
+
+    @available(macOS 10.13, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setAccessibilityCustomActions(_ accessibilityCustomActions: [AppKit.NSAccessibilityCustomAction]?) -> T {
+        self.value.setAccessibilityCustomActions(accessibilityCustomActions)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func rulerView(_ ruler: AppKit.NSRulerView, didMove marker: AppKit.NSRulerMarker) -> T {
+        self.value.rulerView(ruler, didMove: marker)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func rulerView(_ ruler: AppKit.NSRulerView, didRemove marker: AppKit.NSRulerMarker) -> T {
+        self.value.rulerView(ruler, didRemove: marker)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func rulerView(_ ruler: AppKit.NSRulerView, didAdd marker: AppKit.NSRulerMarker) -> T {
+        self.value.rulerView(ruler, didAdd: marker)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func rulerView(_ ruler: AppKit.NSRulerView, handleMouseDownWith event: AppKit.NSEvent) -> T {
+        self.value.rulerView(ruler, handleMouseDownWith: event)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func rulerView(_ ruler: AppKit.NSRulerView, willSetClientView newClient: AppKit.NSView) -> T {
+        self.value.rulerView(ruler, willSetClientView: newClient)
+        return self.value
+    }
+
+    @available(macOS 10.11, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func addLayoutGuide(_ guide: AppKit.NSLayoutGuide) -> T {
+        self.value.addLayoutGuide(guide)
+        return self.value
+    }
+
+    @available(macOS 10.11, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func removeLayoutGuide(_ guide: AppKit.NSLayoutGuide) -> T {
+        self.value.removeLayoutGuide(guide)
         return self.value
     }
 
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
-    public func noteFocusRingMaskChanged() -> T {
-        self.value.noteFocusRingMaskChanged()
+    public func exerciseAmbiguityInLayout() -> T {
+        self.value.exerciseAmbiguityInLayout()
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func invalidateIntrinsicContentSize() -> T {
+        self.value.invalidateIntrinsicContentSize()
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setContentHuggingPriority(_ priority: AppKit.NSLayoutConstraint.Priority, for orientation: AppKit.NSLayoutConstraint.Orientation) -> T {
+        self.value.setContentHuggingPriority(priority, for: orientation)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func setContentCompressionResistancePriority(_ priority: AppKit.NSLayoutConstraint.Priority, for orientation: AppKit.NSLayoutConstraint.Orientation) -> T {
+        self.value.setContentCompressionResistancePriority(priority, for: orientation)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func updateConstraintsForSubtreeIfNeeded() -> T {
+        self.value.updateConstraintsForSubtreeIfNeeded()
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func updateConstraints() -> T {
+        self.value.updateConstraints()
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func addConstraint(_ constraint: AppKit.NSLayoutConstraint) -> T {
+        self.value.addConstraint(constraint)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func addConstraints(_ constraints: [AppKit.NSLayoutConstraint]) -> T {
+        self.value.addConstraints(constraints)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func removeConstraint(_ constraint: AppKit.NSLayoutConstraint) -> T {
+        self.value.removeConstraint(constraint)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func removeConstraints(_ constraints: [AppKit.NSLayoutConstraint]) -> T {
+        self.value.removeConstraints(constraints)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func writeEPS(inside rect: NSRect, to pasteboard: NSPasteboard) -> T {
-        self.value.writeEPS(inside: rect, to: pasteboard)
+    public func reflectScrolledClipView(_ clipView: AppKit.NSClipView) -> T {
+        self.value.reflectScrolledClipView(clipView)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func writePDF(inside rect: NSRect, to pasteboard: NSPasteboard) -> T {
-        self.value.writePDF(inside: rect, to: pasteboard)
+    public func scroll(_ clipView: AppKit.NSClipView, to point: Foundation.NSPoint) -> T {
+        self.value.scroll(clipView, to: point)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func printView(_ sender: Any?) -> T {
-        self.value.printView(sender)
+    @available(macOS, introduced: 10.0, deprecated: 10.10)
+    public func allocateGState() -> T {
+        self.value.allocateGState()
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func adjustPageWidthNew(_ newRight: UnsafeMutablePointer<CGFloat>, left oldLeft: CGFloat, right oldRight: CGFloat, limit rightLimit: CGFloat) -> T {
-        self.value.adjustPageWidthNew(newRight, left: oldLeft, right: oldRight, limit: rightLimit)
+    @available(macOS, introduced: 10.0, deprecated: 10.10)
+    public func releaseGState() -> T {
+        self.value.releaseGState()
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func adjustPageHeightNew(_ newBottom: UnsafeMutablePointer<CGFloat>, top oldTop: CGFloat, bottom oldBottom: CGFloat, limit bottomLimit: CGFloat) -> T {
-        self.value.adjustPageHeightNew(newBottom, top: oldTop, bottom: oldBottom, limit: bottomLimit)
+    @available(macOS, introduced: 10.0, deprecated: 10.10)
+    public func setUpGState() -> T {
+        self.value.setUpGState()
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func drawPageBorder(with borderSize: NSSize) -> T {
-        self.value.drawPageBorder(with: borderSize)
-        return self.value
-    }
-
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "This is never invoked and the NSView implementation does nothing")
-    @discardableResult
-    @_disfavoredOverload
-    public func drawSheetBorder(with borderSize: NSSize) -> T {
-        self.value.drawSheetBorder(with: borderSize)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func beginDocument() -> T {
-        self.value.beginDocument()
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func endDocument() -> T {
-        self.value.endDocument()
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func beginPage(in rect: NSRect, atPlacement location: NSPoint) -> T {
-        self.value.beginPage(in: rect, atPlacement: location)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func endPage() -> T {
-        self.value.endPage()
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func registerForDraggedTypes(_ newTypes: [NSPasteboard.PasteboardType]) -> T {
-        self.value.registerForDraggedTypes(newTypes)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func unregisterDraggedTypes() -> T {
-        self.value.unregisterDraggedTypes()
-        return self.value
-    }
-
-    @available(macOS 10.5, *)
-    @discardableResult
-    @_disfavoredOverload
-    public func exitFullScreenMode(options: [NSView.FullScreenModeOptionKey : Any]? = nil) -> T {
-        self.value.exitFullScreenMode(options: options)
-        return self.value
-    }
-
-    @available(macOS 10.6, *)
-    @discardableResult
-    @_disfavoredOverload
-    public func showDefinition(for attrString: NSAttributedString?, at textBaselineOrigin: NSPoint) -> T {
-        self.value.showDefinition(for: attrString, at: textBaselineOrigin)
-        return self.value
-    }
-
-    @available(macOS 10.6, *)
-    @discardableResult
-    @_disfavoredOverload
-    public func showDefinition(for attrString: NSAttributedString?, range targetRange: NSRange, options: [NSView.DefinitionOptionKey : Any]? = nil, baselineOriginProvider originProvider: ((NSRange) -> NSPoint)? = nil) -> T {
-        self.value.showDefinition(for: attrString, range: targetRange, options: options, baselineOriginProvider: originProvider)
-        return self.value
-    }
-
-    @available(macOS 10.10, *)
-    @discardableResult
-    @_disfavoredOverload
-    public func addGestureRecognizer(_ gestureRecognizer: NSGestureRecognizer) -> T {
-        self.value.addGestureRecognizer(gestureRecognizer)
-        return self.value
-    }
-
-    @available(macOS 10.10, *)
-    @discardableResult
-    @_disfavoredOverload
-    public func removeGestureRecognizer(_ gestureRecognizer: NSGestureRecognizer) -> T {
-        self.value.removeGestureRecognizer(gestureRecognizer)
+    @available(macOS, introduced: 10.0, deprecated: 10.10)
+    public func renewGState() -> T {
+        self.value.renewGState()
         return self.value
     }
 
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
-    public func addTrackingArea(_ trackingArea: NSTrackingArea) -> T {
+    public func addTrackingArea(_ trackingArea: AppKit.NSTrackingArea) -> T {
         self.value.addTrackingArea(trackingArea)
         return self.value
     }
@@ -573,7 +1600,7 @@ extension Modify.DynamicMemberWrap where T: NSView {
     @available(macOS 10.5, *)
     @discardableResult
     @_disfavoredOverload
-    public func removeTrackingArea(_ trackingArea: NSTrackingArea) -> T {
+    public func removeTrackingArea(_ trackingArea: AppKit.NSTrackingArea) -> T {
         self.value.removeTrackingArea(trackingArea)
         return self.value
     }
@@ -588,14 +1615,14 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func addCursorRect(_ rect: NSRect, cursor object: NSCursor) -> T {
+    public func addCursorRect(_ rect: Foundation.NSRect, cursor object: AppKit.NSCursor) -> T {
         self.value.addCursorRect(rect, cursor: object)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func removeCursorRect(_ rect: NSRect, cursor object: NSCursor) -> T {
+    public func removeCursorRect(_ rect: Foundation.NSRect, cursor object: AppKit.NSCursor) -> T {
         self.value.removeCursorRect(rect, cursor: object)
         return self.value
     }
@@ -616,40 +1643,163 @@ extension Modify.DynamicMemberWrap where T: NSView {
 
     @discardableResult
     @_disfavoredOverload
-    public func removeTrackingRect(_ tag: NSView.TrackingRectTag) -> T {
+    public func removeTrackingRect(_ tag: AppKit.NSView.TrackingRectTag) -> T {
         self.value.removeTrackingRect(tag)
         return self.value
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.10)
+    @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
-    public func allocateGState() -> T {
-        self.value.allocateGState()
+    public func addGestureRecognizer(_ gestureRecognizer: AppKit.NSGestureRecognizer) -> T {
+        self.value.addGestureRecognizer(gestureRecognizer)
         return self.value
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.10)
+    @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
-    public func releaseGState() -> T {
-        self.value.releaseGState()
+    public func removeGestureRecognizer(_ gestureRecognizer: AppKit.NSGestureRecognizer) -> T {
+        self.value.removeGestureRecognizer(gestureRecognizer)
         return self.value
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.10)
+    @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
-    public func setUpGState() -> T {
-        self.value.setUpGState()
+    public func showDefinition(for attrString: Foundation.NSAttributedString?, at textBaselineOrigin: Foundation.NSPoint) -> T {
+        self.value.showDefinition(for: attrString, at: textBaselineOrigin)
         return self.value
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.10)
+    @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
-    public func renewGState() -> T {
-        self.value.renewGState()
+    public func showDefinition(for attrString: Foundation.NSAttributedString?, range targetRange: Foundation.NSRange, options: [AppKit.NSView.DefinitionOptionKey : Any]? = nil, baselineOriginProvider originProvider: ((Foundation.NSRange) -> Foundation.NSPoint)? = nil) -> T {
+        self.value.showDefinition(for: attrString, range: targetRange, options: options, baselineOriginProvider: originProvider)
+        return self.value
+    }
+
+    @available(macOS 10.5, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func exitFullScreenMode(options: [AppKit.NSView.FullScreenModeOptionKey : Any]? = nil) -> T {
+        self.value.exitFullScreenMode(options: options)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func registerForDraggedTypes(_ newTypes: [AppKit.NSPasteboard.PasteboardType]) -> T {
+        self.value.registerForDraggedTypes(newTypes)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func unregisterDraggedTypes() -> T {
+        self.value.unregisterDraggedTypes()
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func writeEPS(inside rect: Foundation.NSRect, to pasteboard: AppKit.NSPasteboard) -> T {
+        self.value.writeEPS(inside: rect, to: pasteboard)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func writePDF(inside rect: Foundation.NSRect, to pasteboard: AppKit.NSPasteboard) -> T {
+        self.value.writePDF(inside: rect, to: pasteboard)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func printView(_ sender: Any?) -> T {
+        self.value.printView(sender)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func adjustPageWidthNew(_ newRight: Swift.UnsafeMutablePointer<CoreFoundation.CGFloat>, left oldLeft: CoreFoundation.CGFloat, right oldRight: CoreFoundation.CGFloat, limit rightLimit: CoreFoundation.CGFloat) -> T {
+        self.value.adjustPageWidthNew(newRight, left: oldLeft, right: oldRight, limit: rightLimit)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func adjustPageHeightNew(_ newBottom: Swift.UnsafeMutablePointer<CoreFoundation.CGFloat>, top oldTop: CoreFoundation.CGFloat, bottom oldBottom: CoreFoundation.CGFloat, limit bottomLimit: CoreFoundation.CGFloat) -> T {
+        self.value.adjustPageHeightNew(newBottom, top: oldTop, bottom: oldBottom, limit: bottomLimit)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func drawPageBorder(with borderSize: Foundation.NSSize) -> T {
+        self.value.drawPageBorder(with: borderSize)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "This is never invoked and the NSView implementation does nothing")
+    public func drawSheetBorder(with borderSize: Foundation.NSSize) -> T {
+        self.value.drawSheetBorder(with: borderSize)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func beginDocument() -> T {
+        self.value.beginDocument()
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func endDocument() -> T {
+        self.value.endDocument()
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func beginPage(in rect: Foundation.NSRect, atPlacement location: Foundation.NSPoint) -> T {
+        self.value.beginPage(in: rect, atPlacement: location)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func endPage() -> T {
+        self.value.endPage()
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func setKeyboardFocusRingNeedsDisplay(_ rect: Foundation.NSRect) -> T {
+        self.value.setKeyboardFocusRingNeedsDisplay(rect)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func drawFocusRingMask() -> T {
+        self.value.drawFocusRingMask()
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func noteFocusRingMaskChanged() -> T {
+        self.value.noteFocusRingMaskChanged()
         return self.value
     }
 }

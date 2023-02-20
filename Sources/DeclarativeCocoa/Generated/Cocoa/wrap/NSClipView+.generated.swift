@@ -7,32 +7,20 @@ import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSClipView {
     @discardableResult
-    public func viewFrameChanged(_ notification: Notification) -> Self {
+    public func viewFrameChanged(_ notification: Foundation.Notification) -> Self {
         self.value.viewFrameChanged(notification)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func viewBoundsChanged(_ notification: Notification) -> Self {
+    public func viewBoundsChanged(_ notification: Foundation.Notification) -> Self {
         self.value.viewBoundsChanged(notification)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func scroll(to newOrigin: NSPoint) -> Self {
+    public func scroll(to newOrigin: Foundation.NSPoint) -> Self {
         self.value.scroll(to: newOrigin)
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @discardableResult
-    public func reflectScrolledClipView(_ clipView: NSClipView) -> Self {
-        self.value.reflectScrolledClipView(clipView)
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @discardableResult
-    public func scroll(_ clipView: NSClipView, to point: NSPoint) -> Self {
-        self.value.scroll(clipView, to: point)
         return Modify.DynamicMemberWrap(self.value)
     }
 }

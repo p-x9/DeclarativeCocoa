@@ -13,20 +13,6 @@ extension Modify.DynamicMemberWrap where T: NSScrollView {
         return self.value
     }
 
-    @discardableResult
-    @_disfavoredOverload
-    public func reflectScrolledClipView(_ cView: NSClipView) -> T {
-        self.value.reflectScrolledClipView(cView)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func scrollWheel(with event: NSEvent) -> T {
-        self.value.scrollWheel(with: event)
-        return self.value
-    }
-
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
@@ -38,7 +24,7 @@ extension Modify.DynamicMemberWrap where T: NSScrollView {
     @available(macOS 10.8, *)
     @discardableResult
     @_disfavoredOverload
-    public func magnify(toFit rect: NSRect) -> T {
+    public func magnify(toFit rect: Foundation.NSRect) -> T {
         self.value.magnify(toFit: rect)
         return self.value
     }
@@ -46,7 +32,7 @@ extension Modify.DynamicMemberWrap where T: NSScrollView {
     @available(macOS 10.8, *)
     @discardableResult
     @_disfavoredOverload
-    public func setMagnification(_ magnification: CGFloat, centeredAt point: NSPoint) -> T {
+    public func setMagnification(_ magnification: CoreFoundation.CGFloat, centeredAt point: Foundation.NSPoint) -> T {
         self.value.setMagnification(magnification, centeredAt: point)
         return self.value
     }
@@ -54,8 +40,15 @@ extension Modify.DynamicMemberWrap where T: NSScrollView {
     @available(macOS 10.9, *)
     @discardableResult
     @_disfavoredOverload
-    public func addFloatingSubview(_ view: NSView, for axis: NSEvent.GestureAxis) -> T {
+    public func addFloatingSubview(_ view: AppKit.NSView, for axis: AppKit.NSEvent.GestureAxis) -> T {
         self.value.addFloatingSubview(view, for: axis)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func findBarViewDidChangeHeight() -> T {
+        self.value.findBarViewDidChangeHeight()
         return self.value
     }
 }

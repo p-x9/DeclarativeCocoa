@@ -8,35 +8,35 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSPopUpButton {
     @discardableResult
     @_disfavoredOverload
-    public func addItem(withTitle title: String) -> T {
+    public func addItem(withTitle title: Swift.String) -> T {
         self.value.addItem(withTitle: title)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func addItems(withTitles itemTitles: [String]) -> T {
+    public func addItems(withTitles itemTitles: [Swift.String]) -> T {
         self.value.addItems(withTitles: itemTitles)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func insertItem(withTitle title: String, at index: Int) -> T {
+    public func insertItem(withTitle title: Swift.String, at index: Swift.Int) -> T {
         self.value.insertItem(withTitle: title, at: index)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func removeItem(withTitle title: String) -> T {
+    public func removeItem(withTitle title: Swift.String) -> T {
         self.value.removeItem(withTitle: title)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func removeItem(at index: Int) -> T {
+    public func removeItem(at index: Swift.Int) -> T {
         self.value.removeItem(at: index)
         return self.value
     }
@@ -50,28 +50,28 @@ extension Modify.DynamicMemberWrap where T: NSPopUpButton {
 
     @discardableResult
     @_disfavoredOverload
-    public func select(_ item: NSMenuItem?) -> T {
+    public func select(_ item: AppKit.NSMenuItem?) -> T {
         self.value.select(item)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func selectItem(at index: Int) -> T {
+    public func selectItem(at index: Swift.Int) -> T {
         self.value.selectItem(at: index)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func selectItem(withTitle title: String) -> T {
+    public func selectItem(withTitle title: Swift.String) -> T {
         self.value.selectItem(withTitle: title)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func setTitle(_ string: String) -> T {
+    public func setTitle(_ string: Swift.String) -> T {
         self.value.setTitle(string)
         return self.value
     }

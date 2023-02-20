@@ -8,27 +8,27 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSWindow {
     @available(macOS 10.10, *)
     @discardableResult
-    public func addTitlebarAccessoryViewController(_ childViewController: NSTitlebarAccessoryViewController) -> Self {
+    public func addTitlebarAccessoryViewController(_ childViewController: AppKit.NSTitlebarAccessoryViewController) -> Self {
         self.value.addTitlebarAccessoryViewController(childViewController)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
-    public func insertTitlebarAccessoryViewController(_ childViewController: NSTitlebarAccessoryViewController, at index: Int) -> Self {
+    public func insertTitlebarAccessoryViewController(_ childViewController: AppKit.NSTitlebarAccessoryViewController, at index: Swift.Int) -> Self {
         self.value.insertTitlebarAccessoryViewController(childViewController, at: index)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
-    public func removeTitlebarAccessoryViewController(at index: Int) -> Self {
+    public func removeTitlebarAccessoryViewController(at index: Swift.Int) -> Self {
         self.value.removeTitlebarAccessoryViewController(at: index)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setTitleWithRepresentedFilename(_ filename: String) -> Self {
+    public func setTitleWithRepresentedFilename(_ filename: Swift.String) -> Self {
         self.value.setTitleWithRepresentedFilename(filename)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -40,31 +40,31 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
     }
 
     @discardableResult
-    public func setFrame(_ frameRect: NSRect, display flag: Bool) -> Self {
+    public func setFrame(_ frameRect: Foundation.NSRect, display flag: Swift.Bool) -> Self {
         self.value.setFrame(frameRect, display: flag)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setContentSize(_ size: NSSize) -> Self {
+    public func setContentSize(_ size: Foundation.NSSize) -> Self {
         self.value.setContentSize(size)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setFrameOrigin(_ point: NSPoint) -> Self {
+    public func setFrameOrigin(_ point: Foundation.NSPoint) -> Self {
         self.value.setFrameOrigin(point)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setFrameTopLeftPoint(_ point: NSPoint) -> Self {
+    public func setFrameTopLeftPoint(_ point: Foundation.NSPoint) -> Self {
         self.value.setFrameTopLeftPoint(point)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setFrame(_ frameRect: NSRect, display displayFlag: Bool, animate animateFlag: Bool) -> Self {
+    public func setFrame(_ frameRect: Foundation.NSRect, display displayFlag: Swift.Bool, animate animateFlag: Swift.Bool) -> Self {
         self.value.setFrame(frameRect, display: displayFlag, animate: animateFlag)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -113,14 +113,14 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
 
     @available(macOS 10.5, *)
     @discardableResult
-    public func setContentBorderThickness(_ thickness: CGFloat, for edge: NSRectEdge) -> Self {
+    public func setContentBorderThickness(_ thickness: CoreFoundation.CGFloat, for edge: Foundation.NSRectEdge) -> Self {
         self.value.setContentBorderThickness(thickness, for: edge)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.5, *)
     @discardableResult
-    public func setAutorecalculatesContentBorderThickness(_ flag: Bool, for edge: NSRectEdge) -> Self {
+    public func setAutorecalculatesContentBorderThickness(_ flag: Swift.Bool, for edge: Foundation.NSRectEdge) -> Self {
         self.value.setAutorecalculatesContentBorderThickness(flag, for: edge)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -156,7 +156,7 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
     }
 
     @discardableResult
-    public func order(_ place: NSWindow.OrderingMode, relativeTo otherWin: Int) -> Self {
+    public func order(_ place: AppKit.NSWindow.OrderingMode, relativeTo otherWin: Swift.Int) -> Self {
         self.value.order(place, relativeTo: otherWin)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -228,7 +228,7 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
     }
 
     @discardableResult
-    public func setDynamicDepthLimit(_ flag: Bool) -> Self {
+    public func setDynamicDepthLimit(_ flag: Swift.Bool) -> Self {
         self.value.setDynamicDepthLimit(flag)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -253,60 +253,60 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
     }
 
     @discardableResult
-    public func setFrame(from string: NSWindow.PersistableFrameDescriptor) -> Self {
+    public func setFrame(from string: AppKit.NSWindow.PersistableFrameDescriptor) -> Self {
         self.value.setFrame(from: string)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func saveFrame(usingName name: NSWindow.FrameAutosaveName) -> Self {
+    public func saveFrame(usingName name: AppKit.NSWindow.FrameAutosaveName) -> Self {
         self.value.saveFrame(usingName: name)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.9, *)
     @discardableResult
-    public func beginSheet(_ sheetWindow: NSWindow, completionHandler handler: ((NSApplication.ModalResponse) -> Void)? = nil) -> Self {
+    public func beginSheet(_ sheetWindow: AppKit.NSWindow, completionHandler handler: ((AppKit.NSApplication.ModalResponse) -> Swift.Void)? = nil) -> Self {
         self.value.beginSheet(sheetWindow, completionHandler: handler)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.9, *)
     @discardableResult
-    public func beginCriticalSheet(_ sheetWindow: NSWindow, completionHandler handler: ((NSApplication.ModalResponse) -> Void)? = nil) -> Self {
+    public func beginCriticalSheet(_ sheetWindow: AppKit.NSWindow, completionHandler handler: ((AppKit.NSApplication.ModalResponse) -> Swift.Void)? = nil) -> Self {
         self.value.beginCriticalSheet(sheetWindow, completionHandler: handler)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.9, *)
     @discardableResult
-    public func endSheet(_ sheetWindow: NSWindow) -> Self {
+    public func endSheet(_ sheetWindow: AppKit.NSWindow) -> Self {
         self.value.endSheet(sheetWindow)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.9, *)
     @discardableResult
-    public func endSheet(_ sheetWindow: NSWindow, returnCode: NSApplication.ModalResponse) -> Self {
+    public func endSheet(_ sheetWindow: AppKit.NSWindow, returnCode: AppKit.NSApplication.ModalResponse) -> Self {
         self.value.endSheet(sheetWindow, returnCode: returnCode)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func addChildWindow(_ childWin: NSWindow, ordered place: NSWindow.OrderingMode) -> Self {
+    public func addChildWindow(_ childWin: AppKit.NSWindow, ordered place: AppKit.NSWindow.OrderingMode) -> Self {
         self.value.addChildWindow(childWin, ordered: place)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func removeChildWindow(_ childWin: NSWindow) -> Self {
+    public func removeChildWindow(_ childWin: AppKit.NSWindow) -> Self {
         self.value.removeChildWindow(childWin)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.11, *)
     @discardableResult
-    public func performDrag(with event: NSEvent) -> Self {
+    public func performDrag(with event: AppKit.NSEvent) -> Self {
         self.value.performDrag(with: event)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -324,13 +324,13 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
     }
 
     @discardableResult
-    public func selectKeyView(following view: NSView) -> Self {
+    public func selectKeyView(following view: AppKit.NSView) -> Self {
         self.value.selectKeyView(following: view)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func selectKeyView(preceding view: NSView) -> Self {
+    public func selectKeyView(preceding view: AppKit.NSView) -> Self {
         self.value.selectKeyView(preceding: view)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -367,33 +367,987 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
 
     @available(macOS 10.12, *)
     @discardableResult
-    public func addTabbedWindow(_ window: NSWindow, ordered: NSWindow.OrderingMode) -> Self {
+    public func addTabbedWindow(_ window: AppKit.NSWindow, ordered: AppKit.NSWindow.OrderingMode) -> Self {
         self.value.addTabbedWindow(window, ordered: ordered)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.10, *)
     @discardableResult
-    public func trackEvents(matching mask: NSEvent.EventTypeMask, timeout: TimeInterval, mode: RunLoop.Mode, handler trackingHandler: (NSEvent?, UnsafeMutablePointer<ObjCBool>) -> Void) -> Self {
-        self.value.trackEvents(matching: mask, timeout: timeout, mode: mode, handler: trackingHandler)
+    public func setAccessibilityElement(_ accessibilityElement: Swift.Bool) -> Self {
+        self.value.setAccessibilityElement(accessibilityElement)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityFrame(_ accessibilityFrame: Foundation.NSRect) -> Self {
+        self.value.setAccessibilityFrame(accessibilityFrame)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityFocused(_ accessibilityFocused: Swift.Bool) -> Self {
+        self.value.setAccessibilityFocused(accessibilityFocused)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityActivationPoint(_ accessibilityActivationPoint: Foundation.NSPoint) -> Self {
+        self.value.setAccessibilityActivationPoint(accessibilityActivationPoint)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityTopLevelUIElement(_ accessibilityTopLevelUIElement: Any?) -> Self {
+        self.value.setAccessibilityTopLevelUIElement(accessibilityTopLevelUIElement)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityURL(_ accessibilityURL: Foundation.URL?) -> Self {
+        self.value.setAccessibilityURL(accessibilityURL)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityValue(_ accessibilityValue: Any?) -> Self {
+        self.value.setAccessibilityValue(accessibilityValue)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityValueDescription(_ accessibilityValueDescription: Swift.String?) -> Self {
+        self.value.setAccessibilityValueDescription(accessibilityValueDescription)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityVisibleChildren(_ accessibilityVisibleChildren: [Any]?) -> Self {
+        self.value.setAccessibilityVisibleChildren(accessibilityVisibleChildren)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySubrole(_ accessibilitySubrole: AppKit.NSAccessibility.Subrole?) -> Self {
+        self.value.setAccessibilitySubrole(accessibilitySubrole)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityTitle(_ accessibilityTitle: Swift.String?) -> Self {
+        self.value.setAccessibilityTitle(accessibilityTitle)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityTitleUIElement(_ accessibilityTitleUIElement: Any?) -> Self {
+        self.value.setAccessibilityTitleUIElement(accessibilityTitleUIElement)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityNextContents(_ accessibilityNextContents: [Any]?) -> Self {
+        self.value.setAccessibilityNextContents(accessibilityNextContents)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityOrientation(_ accessibilityOrientation: AppKit.NSAccessibilityOrientation) -> Self {
+        self.value.setAccessibilityOrientation(accessibilityOrientation)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityOverflowButton(_ accessibilityOverflowButton: Any?) -> Self {
+        self.value.setAccessibilityOverflowButton(accessibilityOverflowButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityParent(_ accessibilityParent: Any?) -> Self {
+        self.value.setAccessibilityParent(accessibilityParent)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityPlaceholderValue(_ accessibilityPlaceholderValue: Swift.String?) -> Self {
+        self.value.setAccessibilityPlaceholderValue(accessibilityPlaceholderValue)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityPreviousContents(_ accessibilityPreviousContents: [Any]?) -> Self {
+        self.value.setAccessibilityPreviousContents(accessibilityPreviousContents)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityRole(_ accessibilityRole: AppKit.NSAccessibility.Role?) -> Self {
+        self.value.setAccessibilityRole(accessibilityRole)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityRoleDescription(_ accessibilityRoleDescription: Swift.String?) -> Self {
+        self.value.setAccessibilityRoleDescription(accessibilityRoleDescription)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySearchButton(_ accessibilitySearchButton: Any?) -> Self {
+        self.value.setAccessibilitySearchButton(accessibilitySearchButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySearchMenu(_ accessibilitySearchMenu: Any?) -> Self {
+        self.value.setAccessibilitySearchMenu(accessibilitySearchMenu)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySelected(_ accessibilitySelected: Swift.Bool) -> Self {
+        self.value.setAccessibilitySelected(accessibilitySelected)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySelectedChildren(_ accessibilitySelectedChildren: [Any]?) -> Self {
+        self.value.setAccessibilitySelectedChildren(accessibilitySelectedChildren)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityServesAsTitleForUIElements(_ accessibilityServesAsTitleForUIElements: [Any]?) -> Self {
+        self.value.setAccessibilityServesAsTitleForUIElements(accessibilityServesAsTitleForUIElements)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityShownMenu(_ accessibilityShownMenu: Any?) -> Self {
+        self.value.setAccessibilityShownMenu(accessibilityShownMenu)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMinValue(_ accessibilityMinValue: Any?) -> Self {
+        self.value.setAccessibilityMinValue(accessibilityMinValue)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMaxValue(_ accessibilityMaxValue: Any?) -> Self {
+        self.value.setAccessibilityMaxValue(accessibilityMaxValue)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityLinkedUIElements(_ accessibilityLinkedUIElements: [Any]?) -> Self {
+        self.value.setAccessibilityLinkedUIElements(accessibilityLinkedUIElements)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityWindow(_ accessibilityWindow: Any?) -> Self {
+        self.value.setAccessibilityWindow(accessibilityWindow)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityIdentifier(_ accessibilityIdentifier: Swift.String?) -> Self {
+        self.value.setAccessibilityIdentifier(accessibilityIdentifier)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityHelp(_ accessibilityHelp: Swift.String?) -> Self {
+        self.value.setAccessibilityHelp(accessibilityHelp)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityFilename(_ accessibilityFilename: Swift.String?) -> Self {
+        self.value.setAccessibilityFilename(accessibilityFilename)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityExpanded(_ accessibilityExpanded: Swift.Bool) -> Self {
+        self.value.setAccessibilityExpanded(accessibilityExpanded)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityEdited(_ accessibilityEdited: Swift.Bool) -> Self {
+        self.value.setAccessibilityEdited(accessibilityEdited)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityEnabled(_ accessibilityEnabled: Swift.Bool) -> Self {
+        self.value.setAccessibilityEnabled(accessibilityEnabled)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityChildren(_ accessibilityChildren: [Any]?) -> Self {
+        self.value.setAccessibilityChildren(accessibilityChildren)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.13, *)
+    @discardableResult
+    public func setAccessibilityChildrenInNavigationOrder(_ accessibilityChildrenInNavigationOrder: [AppKit.NSAccessibilityElementProtocol]?) -> Self {
+        self.value.setAccessibilityChildrenInNavigationOrder(accessibilityChildrenInNavigationOrder)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityClearButton(_ accessibilityClearButton: Any?) -> Self {
+        self.value.setAccessibilityClearButton(accessibilityClearButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityCancelButton(_ accessibilityCancelButton: Any?) -> Self {
+        self.value.setAccessibilityCancelButton(accessibilityCancelButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityProtectedContent(_ accessibilityProtectedContent: Swift.Bool) -> Self {
+        self.value.setAccessibilityProtectedContent(accessibilityProtectedContent)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityContents(_ accessibilityContents: [Any]?) -> Self {
+        self.value.setAccessibilityContents(accessibilityContents)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityLabel(_ accessibilityLabel: Swift.String?) -> Self {
+        self.value.setAccessibilityLabel(accessibilityLabel)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityAlternateUIVisible(_ accessibilityAlternateUIVisible: Swift.Bool) -> Self {
+        self.value.setAccessibilityAlternateUIVisible(accessibilityAlternateUIVisible)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySharedFocusElements(_ accessibilitySharedFocusElements: [Any]?) -> Self {
+        self.value.setAccessibilitySharedFocusElements(accessibilitySharedFocusElements)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.12, *)
+    @discardableResult
+    public func setAccessibilityRequired(_ accessibilityRequired: Swift.Bool) -> Self {
+        self.value.setAccessibilityRequired(accessibilityRequired)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.13, *)
+    @discardableResult
+    public func setAccessibilityCustomRotors(_ accessibilityCustomRotors: [AppKit.NSAccessibilityCustomRotor]) -> Self {
+        self.value.setAccessibilityCustomRotors(accessibilityCustomRotors)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityApplicationFocusedUIElement(_ accessibilityApplicationFocusedUIElement: Any?) -> Self {
+        self.value.setAccessibilityApplicationFocusedUIElement(accessibilityApplicationFocusedUIElement)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMainWindow(_ accessibilityMainWindow: Any?) -> Self {
+        self.value.setAccessibilityMainWindow(accessibilityMainWindow)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityHidden(_ accessibilityHidden: Swift.Bool) -> Self {
+        self.value.setAccessibilityHidden(accessibilityHidden)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityFrontmost(_ accessibilityFrontmost: Swift.Bool) -> Self {
+        self.value.setAccessibilityFrontmost(accessibilityFrontmost)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityFocusedWindow(_ accessibilityFocusedWindow: Any?) -> Self {
+        self.value.setAccessibilityFocusedWindow(accessibilityFocusedWindow)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityWindows(_ accessibilityWindows: [Any]?) -> Self {
+        self.value.setAccessibilityWindows(accessibilityWindows)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityExtrasMenuBar(_ accessibilityExtrasMenuBar: Any?) -> Self {
+        self.value.setAccessibilityExtrasMenuBar(accessibilityExtrasMenuBar)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMenuBar(_ accessibilityMenuBar: Any?) -> Self {
+        self.value.setAccessibilityMenuBar(accessibilityMenuBar)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityColumnTitles(_ accessibilityColumnTitles: [Any]?) -> Self {
+        self.value.setAccessibilityColumnTitles(accessibilityColumnTitles)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityOrderedByRow(_ accessibilityOrderedByRow: Swift.Bool) -> Self {
+        self.value.setAccessibilityOrderedByRow(accessibilityOrderedByRow)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityHorizontalUnits(_ accessibilityHorizontalUnits: AppKit.NSAccessibilityUnits) -> Self {
+        self.value.setAccessibilityHorizontalUnits(accessibilityHorizontalUnits)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityVerticalUnits(_ accessibilityVerticalUnits: AppKit.NSAccessibilityUnits) -> Self {
+        self.value.setAccessibilityVerticalUnits(accessibilityVerticalUnits)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityHorizontalUnitDescription(_ accessibilityHorizontalUnitDescription: Swift.String?) -> Self {
+        self.value.setAccessibilityHorizontalUnitDescription(accessibilityHorizontalUnitDescription)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityVerticalUnitDescription(_ accessibilityVerticalUnitDescription: Swift.String?) -> Self {
+        self.value.setAccessibilityVerticalUnitDescription(accessibilityVerticalUnitDescription)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityHandles(_ accessibilityHandles: [Any]?) -> Self {
+        self.value.setAccessibilityHandles(accessibilityHandles)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityWarningValue(_ accessibilityWarningValue: Any?) -> Self {
+        self.value.setAccessibilityWarningValue(accessibilityWarningValue)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityCriticalValue(_ accessibilityCriticalValue: Any?) -> Self {
+        self.value.setAccessibilityCriticalValue(accessibilityCriticalValue)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityDisclosed(_ accessibilityDisclosed: Swift.Bool) -> Self {
+        self.value.setAccessibilityDisclosed(accessibilityDisclosed)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityDisclosedByRow(_ accessibilityDisclosedByRow: Any?) -> Self {
+        self.value.setAccessibilityDisclosedByRow(accessibilityDisclosedByRow)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityDisclosedRows(_ accessibilityDisclosedRows: Any?) -> Self {
+        self.value.setAccessibilityDisclosedRows(accessibilityDisclosedRows)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityDisclosureLevel(_ accessibilityDisclosureLevel: Swift.Int) -> Self {
+        self.value.setAccessibilityDisclosureLevel(accessibilityDisclosureLevel)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMarkerUIElements(_ accessibilityMarkerUIElements: [Any]?) -> Self {
+        self.value.setAccessibilityMarkerUIElements(accessibilityMarkerUIElements)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMarkerValues(_ accessibilityMarkerValues: Any?) -> Self {
+        self.value.setAccessibilityMarkerValues(accessibilityMarkerValues)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMarkerGroupUIElement(_ accessibilityMarkerGroupUIElement: Any?) -> Self {
+        self.value.setAccessibilityMarkerGroupUIElement(accessibilityMarkerGroupUIElement)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityUnits(_ accessibilityUnits: AppKit.NSAccessibilityUnits) -> Self {
+        self.value.setAccessibilityUnits(accessibilityUnits)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityUnitDescription(_ accessibilityUnitDescription: Swift.String?) -> Self {
+        self.value.setAccessibilityUnitDescription(accessibilityUnitDescription)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityRulerMarkerType(_ accessibilityRulerMarkerType: AppKit.NSAccessibilityRulerMarkerType) -> Self {
+        self.value.setAccessibilityRulerMarkerType(accessibilityRulerMarkerType)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMarkerTypeDescription(_ accessibilityMarkerTypeDescription: Swift.String?) -> Self {
+        self.value.setAccessibilityMarkerTypeDescription(accessibilityMarkerTypeDescription)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityHorizontalScrollBar(_ accessibilityHorizontalScrollBar: Any?) -> Self {
+        self.value.setAccessibilityHorizontalScrollBar(accessibilityHorizontalScrollBar)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityVerticalScrollBar(_ accessibilityVerticalScrollBar: Any?) -> Self {
+        self.value.setAccessibilityVerticalScrollBar(accessibilityVerticalScrollBar)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityAllowedValues(_ accessibilityAllowedValues: [Foundation.NSNumber]?) -> Self {
+        self.value.setAccessibilityAllowedValues(accessibilityAllowedValues)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityLabelUIElements(_ accessibilityLabelUIElements: [Any]?) -> Self {
+        self.value.setAccessibilityLabelUIElements(accessibilityLabelUIElements)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityLabelValue(_ accessibilityLabelValue: Swift.Float) -> Self {
+        self.value.setAccessibilityLabelValue(accessibilityLabelValue)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySplitters(_ accessibilitySplitters: [Any]?) -> Self {
+        self.value.setAccessibilitySplitters(accessibilitySplitters)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityDecrementButton(_ accessibilityDecrementButton: Any?) -> Self {
+        self.value.setAccessibilityDecrementButton(accessibilityDecrementButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityIncrementButton(_ accessibilityIncrementButton: Any?) -> Self {
+        self.value.setAccessibilityIncrementButton(accessibilityIncrementButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityTabs(_ accessibilityTabs: [Any]?) -> Self {
+        self.value.setAccessibilityTabs(accessibilityTabs)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityHeader(_ accessibilityHeader: Any?) -> Self {
+        self.value.setAccessibilityHeader(accessibilityHeader)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityColumnCount(_ accessibilityColumnCount: Swift.Int) -> Self {
+        self.value.setAccessibilityColumnCount(accessibilityColumnCount)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityRowCount(_ accessibilityRowCount: Swift.Int) -> Self {
+        self.value.setAccessibilityRowCount(accessibilityRowCount)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityIndex(_ accessibilityIndex: Swift.Int) -> Self {
+        self.value.setAccessibilityIndex(accessibilityIndex)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityColumns(_ accessibilityColumns: [Any]?) -> Self {
+        self.value.setAccessibilityColumns(accessibilityColumns)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityRows(_ accessibilityRows: [Any]?) -> Self {
+        self.value.setAccessibilityRows(accessibilityRows)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityVisibleRows(_ accessibilityVisibleRows: [Any]?) -> Self {
+        self.value.setAccessibilityVisibleRows(accessibilityVisibleRows)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySelectedRows(_ accessibilitySelectedRows: [Any]?) -> Self {
+        self.value.setAccessibilitySelectedRows(accessibilitySelectedRows)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityVisibleColumns(_ accessibilityVisibleColumns: [Any]?) -> Self {
+        self.value.setAccessibilityVisibleColumns(accessibilityVisibleColumns)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySelectedColumns(_ accessibilitySelectedColumns: [Any]?) -> Self {
+        self.value.setAccessibilitySelectedColumns(accessibilitySelectedColumns)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySortDirection(_ accessibilitySortDirection: AppKit.NSAccessibilitySortDirection) -> Self {
+        self.value.setAccessibilitySortDirection(accessibilitySortDirection)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityRowHeaderUIElements(_ accessibilityRowHeaderUIElements: [Any]?) -> Self {
+        self.value.setAccessibilityRowHeaderUIElements(accessibilityRowHeaderUIElements)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySelectedCells(_ accessibilitySelectedCells: [Any]?) -> Self {
+        self.value.setAccessibilitySelectedCells(accessibilitySelectedCells)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityVisibleCells(_ accessibilityVisibleCells: [Any]?) -> Self {
+        self.value.setAccessibilityVisibleCells(accessibilityVisibleCells)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityColumnHeaderUIElements(_ accessibilityColumnHeaderUIElements: [Any]?) -> Self {
+        self.value.setAccessibilityColumnHeaderUIElements(accessibilityColumnHeaderUIElements)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityRowIndexRange(_ accessibilityRowIndexRange: Foundation.NSRange) -> Self {
+        self.value.setAccessibilityRowIndexRange(accessibilityRowIndexRange)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityColumnIndexRange(_ accessibilityColumnIndexRange: Foundation.NSRange) -> Self {
+        self.value.setAccessibilityColumnIndexRange(accessibilityColumnIndexRange)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityInsertionPointLineNumber(_ accessibilityInsertionPointLineNumber: Swift.Int) -> Self {
+        self.value.setAccessibilityInsertionPointLineNumber(accessibilityInsertionPointLineNumber)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySharedCharacterRange(_ accessibilitySharedCharacterRange: Foundation.NSRange) -> Self {
+        self.value.setAccessibilitySharedCharacterRange(accessibilitySharedCharacterRange)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySharedTextUIElements(_ accessibilitySharedTextUIElements: [Any]?) -> Self {
+        self.value.setAccessibilitySharedTextUIElements(accessibilitySharedTextUIElements)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityVisibleCharacterRange(_ accessibilityVisibleCharacterRange: Foundation.NSRange) -> Self {
+        self.value.setAccessibilityVisibleCharacterRange(accessibilityVisibleCharacterRange)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityNumberOfCharacters(_ accessibilityNumberOfCharacters: Swift.Int) -> Self {
+        self.value.setAccessibilityNumberOfCharacters(accessibilityNumberOfCharacters)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySelectedText(_ accessibilitySelectedText: Swift.String?) -> Self {
+        self.value.setAccessibilitySelectedText(accessibilitySelectedText)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySelectedTextRange(_ accessibilitySelectedTextRange: Foundation.NSRange) -> Self {
+        self.value.setAccessibilitySelectedTextRange(accessibilitySelectedTextRange)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilitySelectedTextRanges(_ accessibilitySelectedTextRanges: [Foundation.NSValue]?) -> Self {
+        self.value.setAccessibilitySelectedTextRanges(accessibilitySelectedTextRanges)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityToolbarButton(_ accessibilityToolbarButton: Any?) -> Self {
+        self.value.setAccessibilityToolbarButton(accessibilityToolbarButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityModal(_ accessibilityModal: Swift.Bool) -> Self {
+        self.value.setAccessibilityModal(accessibilityModal)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityProxy(_ accessibilityProxy: Any?) -> Self {
+        self.value.setAccessibilityProxy(accessibilityProxy)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMain(_ accessibilityMain: Swift.Bool) -> Self {
+        self.value.setAccessibilityMain(accessibilityMain)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityFullScreenButton(_ accessibilityFullScreenButton: Any?) -> Self {
+        self.value.setAccessibilityFullScreenButton(accessibilityFullScreenButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityGrowArea(_ accessibilityGrowArea: Any?) -> Self {
+        self.value.setAccessibilityGrowArea(accessibilityGrowArea)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityDocument(_ accessibilityDocument: Swift.String?) -> Self {
+        self.value.setAccessibilityDocument(accessibilityDocument)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityDefaultButton(_ accessibilityDefaultButton: Any?) -> Self {
+        self.value.setAccessibilityDefaultButton(accessibilityDefaultButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityCloseButton(_ accessibilityCloseButton: Any?) -> Self {
+        self.value.setAccessibilityCloseButton(accessibilityCloseButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityZoomButton(_ accessibilityZoomButton: Any?) -> Self {
+        self.value.setAccessibilityZoomButton(accessibilityZoomButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMinimizeButton(_ accessibilityMinimizeButton: Any?) -> Self {
+        self.value.setAccessibilityMinimizeButton(accessibilityMinimizeButton)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.10, *)
+    @discardableResult
+    public func setAccessibilityMinimized(_ accessibilityMinimized: Swift.Bool) -> Self {
+        self.value.setAccessibilityMinimized(accessibilityMinimized)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.13, *)
+    @discardableResult
+    public func setAccessibilityCustomActions(_ accessibilityCustomActions: [AppKit.NSAccessibilityCustomAction]?) -> Self {
+        self.value.setAccessibilityCustomActions(accessibilityCustomActions)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func discardEvents(matching mask: NSEvent.EventTypeMask, before lastEvent: NSEvent?) -> Self {
-        self.value.discardEvents(matching: mask, before: lastEvent)
+    public func disableSnapshotRestoration() -> Self {
+        self.value.disableSnapshotRestoration()
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func postEvent(_ event: NSEvent, atStart flag: Bool) -> Self {
-        self.value.postEvent(event, atStart: flag)
+    public func enableSnapshotRestoration() -> Self {
+        self.value.enableSnapshotRestoration()
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func sendEvent(_ event: NSEvent) -> Self {
-        self.value.sendEvent(event)
+    public func setIsMiniaturized(_ flag: Swift.Bool) -> Self {
+        self.value.setIsMiniaturized(flag)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func setIsVisible(_ flag: Swift.Bool) -> Self {
+        self.value.setIsVisible(flag)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func setIsZoomed(_ flag: Swift.Bool) -> Self {
+        self.value.setIsZoomed(flag)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    public func visualizeConstraints(_ constraints: [AppKit.NSLayoutConstraint]?) -> Self {
+        self.value.visualizeConstraints(constraints)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func setAnchorAttribute(_ attr: AppKit.NSLayoutConstraint.Attribute, for orientation: AppKit.NSLayoutConstraint.Orientation) -> Self {
+        self.value.setAnchorAttribute(attr, for: orientation)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    public func updateConstraintsIfNeeded() -> Self {
+        self.value.updateConstraintsIfNeeded()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    public func layoutIfNeeded() -> Self {
+        self.value.layoutIfNeeded()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
+    public func cacheImage(in rect: Foundation.NSRect) -> Self {
+        self.value.cacheImage(in: rect)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
+    public func restoreCachedImage() -> Self {
+        self.value.restoreCachedImage()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
+    public func discardCachedImage() -> Self {
+        self.value.discardCachedImage()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, introduced: 10.0, deprecated: 10.10, message: "This method does not do anything and should not be called.")
+    public func useOptimizedDrawing(_ flag: Swift.Bool) -> Self {
+        self.value.useOptimizedDrawing(flag)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
+    public func disableFlushing() -> Self {
+        self.value.disableFlushing()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
+    public func enableFlushing() -> Self {
+        self.value.enableFlushing()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Allow AppKit's automatic deferred display mechanism to take care of flushing any graphics contexts as needed.")
+    public func flush() -> Self {
+        self.value.flush()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Allow AppKit's automatic deferred display mechanism to take care of flushing any graphics contexts as needed.")
+    public func flushIfNeeded() -> Self {
+        self.value.flushIfNeeded()
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func registerForDraggedTypes(_ newTypes: [AppKit.NSPasteboard.PasteboardType]) -> Self {
+        self.value.registerForDraggedTypes(newTypes)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    public func unregisterDraggedTypes() -> Self {
+        self.value.unregisterDraggedTypes()
         return Modify.DynamicMemberWrap(self.value)
     }
 
@@ -416,7 +1370,7 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
     }
 
     @discardableResult
-    public func invalidateCursorRects(for view: NSView) -> Self {
+    public func invalidateCursorRects(for view: AppKit.NSView) -> Self {
         self.value.invalidateCursorRects(for: view)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -427,71 +1381,28 @@ extension Modify.DynamicMemberWrap where T: NSWindow {
         return Modify.DynamicMemberWrap(self.value)
     }
 
+    @available(macOS 10.10, *)
     @discardableResult
-    public func registerForDraggedTypes(_ newTypes: [NSPasteboard.PasteboardType]) -> Self {
-        self.value.registerForDraggedTypes(newTypes)
+    public func trackEvents(matching mask: AppKit.NSEvent.EventTypeMask, timeout: Foundation.TimeInterval, mode: Foundation.RunLoop.Mode, handler trackingHandler: (AppKit.NSEvent?, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> Swift.Void) -> Self {
+        self.value.trackEvents(matching: mask, timeout: timeout, mode: mode, handler: trackingHandler)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func unregisterDraggedTypes() -> Self {
-        self.value.unregisterDraggedTypes()
+    public func discardEvents(matching mask: AppKit.NSEvent.EventTypeMask, before lastEvent: AppKit.NSEvent?) -> Self {
+        self.value.discardEvents(matching: mask, before: lastEvent)
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
     @discardableResult
-    public func cacheImage(in rect: NSRect) -> Self {
-        self.value.cacheImage(in: rect)
+    public func postEvent(_ event: AppKit.NSEvent, atStart flag: Swift.Bool) -> Self {
+        self.value.postEvent(event, atStart: flag)
         return Modify.DynamicMemberWrap(self.value)
     }
 
-    @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
     @discardableResult
-    public func restoreCachedImage() -> Self {
-        self.value.restoreCachedImage()
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @available(macOS, introduced: 10.0, deprecated: 10.13, message: "This method shouldn’t be used as it doesn’t work in all drawing situations; instead, a subview should be used that implements the desired drawing behavior")
-    @discardableResult
-    public func discardCachedImage() -> Self {
-        self.value.discardCachedImage()
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @available(macOS, introduced: 10.0, deprecated: 10.10, message: "This method does not do anything and should not be called.")
-    @discardableResult
-    public func useOptimizedDrawing(_ flag: Bool) -> Self {
-        self.value.useOptimizedDrawing(flag)
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
-    @discardableResult
-    public func disableFlushing() -> Self {
-        self.value.disableFlushing()
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Use +[NSAnimationContext runAnimationGroup:completionHandler:] to perform atomic updates across runloop invocations.")
-    @discardableResult
-    public func enableFlushing() -> Self {
-        self.value.enableFlushing()
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Allow AppKit's automatic deferred display mechanism to take care of flushing any graphics contexts as needed.")
-    @discardableResult
-    public func flush() -> Self {
-        self.value.flush()
-        return Modify.DynamicMemberWrap(self.value)
-    }
-
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Allow AppKit's automatic deferred display mechanism to take care of flushing any graphics contexts as needed.")
-    @discardableResult
-    public func flushIfNeeded() -> Self {
-        self.value.flushIfNeeded()
+    public func sendEvent(_ event: AppKit.NSEvent) -> Self {
+        self.value.sendEvent(event)
         return Modify.DynamicMemberWrap(self.value)
     }
 }

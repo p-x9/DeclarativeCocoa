@@ -7,19 +7,19 @@ import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSButton {
     @discardableResult
-    public func setButtonType(_ type: NSButton.ButtonType) -> Self {
+    public func setButtonType(_ type: AppKit.NSButton.ButtonType) -> Self {
         self.value.setButtonType(type)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func setPeriodicDelay(_ delay: Float, interval: Float) -> Self {
+    public func setPeriodicDelay(_ delay: Swift.Float, interval: Swift.Float) -> Self {
         self.value.setPeriodicDelay(delay, interval: interval)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func getPeriodicDelay(_ delay: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>) -> Self {
+    public func getPeriodicDelay(_ delay: Swift.UnsafeMutablePointer<Swift.Float>, interval: Swift.UnsafeMutablePointer<Swift.Float>) -> Self {
         self.value.getPeriodicDelay(delay, interval: interval)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -31,15 +31,22 @@ extension Modify.DynamicMemberWrap where T: NSButton {
     }
 
     @discardableResult
-    public func highlight(_ flag: Bool) -> Self {
+    public func highlight(_ flag: Swift.Bool) -> Self {
         self.value.highlight(flag)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @available(macOS 10.13, *)
     @discardableResult
-    public func compress(withPrioritizedCompressionOptions prioritizedOptions: [NSUserInterfaceCompressionOptions]) -> Self {
+    public func compress(withPrioritizedCompressionOptions prioritizedOptions: [AppKit.NSUserInterfaceCompressionOptions]) -> Self {
         self.value.compress(withPrioritizedCompressionOptions: prioritizedOptions)
+        return Modify.DynamicMemberWrap(self.value)
+    }
+
+    @discardableResult
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.8, message: "Mnemonics are not used on macOS. Set the title property directly instead.")
+    public func setTitleWithMnemonic(_ stringWithAmpersand: Swift.String!) -> Self {
+        self.value.setTitleWithMnemonic(stringWithAmpersand)
         return Modify.DynamicMemberWrap(self.value)
     }
 }

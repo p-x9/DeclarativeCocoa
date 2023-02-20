@@ -8,7 +8,7 @@ import Cocoa
 extension Modify.DynamicMemberWrap where T: NSOutlineView {
     @discardableResult
     @_disfavoredOverload
-    public func expandItem(_ item: Any?, expandChildren: Bool) -> T {
+    public func expandItem(_ item: Any?, expandChildren: Swift.Bool) -> T {
         self.value.expandItem(item, expandChildren: expandChildren)
         return self.value
     }
@@ -22,7 +22,7 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
 
     @discardableResult
     @_disfavoredOverload
-    public func collapseItem(_ item: Any?, collapseChildren: Bool) -> T {
+    public func collapseItem(_ item: Any?, collapseChildren: Swift.Bool) -> T {
         self.value.collapseItem(item, collapseChildren: collapseChildren)
         return self.value
     }
@@ -36,7 +36,7 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
 
     @discardableResult
     @_disfavoredOverload
-    public func reloadItem(_ item: Any?, reloadChildren: Bool) -> T {
+    public func reloadItem(_ item: Any?, reloadChildren: Swift.Bool) -> T {
         self.value.reloadItem(item, reloadChildren: reloadChildren)
         return self.value
     }
@@ -50,7 +50,7 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
 
     @discardableResult
     @_disfavoredOverload
-    public func setDropItem(_ item: Any?, dropChildIndex index: Int) -> T {
+    public func setDropItem(_ item: Any?, dropChildIndex index: Swift.Int) -> T {
         self.value.setDropItem(item, dropChildIndex: index)
         return self.value
     }
@@ -58,7 +58,7 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
-    public func insertItems(at indexes: IndexSet, inParent parent: Any?, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> T {
+    public func insertItems(at indexes: Foundation.IndexSet, inParent parent: Any?, withAnimation animationOptions: AppKit.NSTableView.AnimationOptions = []) -> T {
         self.value.insertItems(at: indexes, inParent: parent, withAnimation: animationOptions)
         return self.value
     }
@@ -66,7 +66,7 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
-    public func removeItems(at indexes: IndexSet, inParent parent: Any?, withAnimation animationOptions: NSTableView.AnimationOptions = []) -> T {
+    public func removeItems(at indexes: Foundation.IndexSet, inParent parent: Any?, withAnimation animationOptions: AppKit.NSTableView.AnimationOptions = []) -> T {
         self.value.removeItems(at: indexes, inParent: parent, withAnimation: animationOptions)
         return self.value
     }
@@ -74,7 +74,7 @@ extension Modify.DynamicMemberWrap where T: NSOutlineView {
     @available(macOS 10.7, *)
     @discardableResult
     @_disfavoredOverload
-    public func moveItem(at fromIndex: Int, inParent oldParent: Any?, to toIndex: Int, inParent newParent: Any?) -> T {
+    public func moveItem(at fromIndex: Swift.Int, inParent oldParent: Any?, to toIndex: Swift.Int, inParent newParent: Any?) -> T {
         self.value.moveItem(at: fromIndex, inParent: oldParent, to: toIndex, inParent: newParent)
         return self.value
     }

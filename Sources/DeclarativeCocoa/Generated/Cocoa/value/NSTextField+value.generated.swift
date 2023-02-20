@@ -15,22 +15,30 @@ extension Modify.DynamicMemberWrap where T: NSTextField {
 
     @discardableResult
     @_disfavoredOverload
-    public func textDidBeginEditing(_ notification: Notification) -> T {
+    public func textDidBeginEditing(_ notification: Foundation.Notification) -> T {
         self.value.textDidBeginEditing(notification)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func textDidEndEditing(_ notification: Notification) -> T {
+    public func textDidEndEditing(_ notification: Foundation.Notification) -> T {
         self.value.textDidEndEditing(notification)
         return self.value
     }
 
     @discardableResult
     @_disfavoredOverload
-    public func textDidChange(_ notification: Notification) -> T {
+    public func textDidChange(_ notification: Foundation.Notification) -> T {
         self.value.textDidChange(notification)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.8, message: "APIs deprecated as of macOS 10.9 and earlier are unavailable in Swift")
+    public func setTitleWithMnemonic(_ stringWithAmpersand: Swift.String!) -> T {
+        self.value.setTitleWithMnemonic(stringWithAmpersand)
         return self.value
     }
 }

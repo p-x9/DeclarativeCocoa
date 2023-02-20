@@ -17,7 +17,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func selectItems(at indexPaths: Set<IndexPath>, scrollPosition: NSCollectionView.ScrollPosition) -> T {
+    public func selectItems(at indexPaths: Swift.Set<Foundation.IndexPath>, scrollPosition: AppKit.NSCollectionView.ScrollPosition) -> T {
         self.value.selectItems(at: indexPaths, scrollPosition: scrollPosition)
         return self.value
     }
@@ -25,7 +25,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func deselectItems(at indexPaths: Set<IndexPath>) -> T {
+    public func deselectItems(at indexPaths: Swift.Set<Foundation.IndexPath>) -> T {
         self.value.deselectItems(at: indexPaths)
         return self.value
     }
@@ -33,7 +33,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func register(_ itemClass: AnyClass?, forItemWithIdentifier identifier: NSUserInterfaceItemIdentifier) -> T {
+    public func register(_ itemClass: Swift.AnyClass?, forItemWithIdentifier identifier: AppKit.NSUserInterfaceItemIdentifier) -> T {
         self.value.register(itemClass, forItemWithIdentifier: identifier)
         return self.value
     }
@@ -41,7 +41,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func register(_ nib: NSNib?, forItemWithIdentifier identifier: NSUserInterfaceItemIdentifier) -> T {
+    public func register(_ nib: AppKit.NSNib?, forItemWithIdentifier identifier: AppKit.NSUserInterfaceItemIdentifier) -> T {
         self.value.register(nib, forItemWithIdentifier: identifier)
         return self.value
     }
@@ -49,7 +49,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func register(_ viewClass: AnyClass?, forSupplementaryViewOfKind kind: NSCollectionView.SupplementaryElementKind, withIdentifier identifier: NSUserInterfaceItemIdentifier) -> T {
+    public func register(_ viewClass: Swift.AnyClass?, forSupplementaryViewOfKind kind: AppKit.NSCollectionView.SupplementaryElementKind, withIdentifier identifier: AppKit.NSUserInterfaceItemIdentifier) -> T {
         self.value.register(viewClass, forSupplementaryViewOfKind: kind, withIdentifier: identifier)
         return self.value
     }
@@ -57,7 +57,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func register(_ nib: NSNib?, forSupplementaryViewOfKind kind: NSCollectionView.SupplementaryElementKind, withIdentifier identifier: NSUserInterfaceItemIdentifier) -> T {
+    public func register(_ nib: AppKit.NSNib?, forSupplementaryViewOfKind kind: AppKit.NSCollectionView.SupplementaryElementKind, withIdentifier identifier: AppKit.NSUserInterfaceItemIdentifier) -> T {
         self.value.register(nib, forSupplementaryViewOfKind: kind, withIdentifier: identifier)
         return self.value
     }
@@ -65,7 +65,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func insertSections(_ sections: IndexSet) -> T {
+    public func insertSections(_ sections: Foundation.IndexSet) -> T {
         self.value.insertSections(sections)
         return self.value
     }
@@ -73,7 +73,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func deleteSections(_ sections: IndexSet) -> T {
+    public func deleteSections(_ sections: Foundation.IndexSet) -> T {
         self.value.deleteSections(sections)
         return self.value
     }
@@ -81,7 +81,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func reloadSections(_ sections: IndexSet) -> T {
+    public func reloadSections(_ sections: Foundation.IndexSet) -> T {
         self.value.reloadSections(sections)
         return self.value
     }
@@ -89,7 +89,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func moveSection(_ section: Int, toSection newSection: Int) -> T {
+    public func moveSection(_ section: Swift.Int, toSection newSection: Swift.Int) -> T {
         self.value.moveSection(section, toSection: newSection)
         return self.value
     }
@@ -97,7 +97,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func insertItems(at indexPaths: Set<IndexPath>) -> T {
+    public func insertItems(at indexPaths: Swift.Set<Foundation.IndexPath>) -> T {
         self.value.insertItems(at: indexPaths)
         return self.value
     }
@@ -105,7 +105,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func deleteItems(at indexPaths: Set<IndexPath>) -> T {
+    public func deleteItems(at indexPaths: Swift.Set<Foundation.IndexPath>) -> T {
         self.value.deleteItems(at: indexPaths)
         return self.value
     }
@@ -113,7 +113,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func reloadItems(at indexPaths: Set<IndexPath>) -> T {
+    public func reloadItems(at indexPaths: Swift.Set<Foundation.IndexPath>) -> T {
         self.value.reloadItems(at: indexPaths)
         return self.value
     }
@@ -121,7 +121,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func moveItem(at indexPath: IndexPath, to newIndexPath: IndexPath) -> T {
+    public func moveItem(at indexPath: Foundation.IndexPath, to newIndexPath: Foundation.IndexPath) -> T {
         self.value.moveItem(at: indexPath, to: newIndexPath)
         return self.value
     }
@@ -129,7 +129,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func performBatchUpdates(_ updates: (() -> Void)?, completionHandler: ((Bool) -> Void)? = nil) -> T {
+    public func performBatchUpdates(_ updates: (() -> Swift.Void)?, completionHandler: ((Swift.Bool) -> Swift.Void)? = nil) -> T {
         self.value.performBatchUpdates(updates, completionHandler: completionHandler)
         return self.value
     }
@@ -137,7 +137,7 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.11, *)
     @discardableResult
     @_disfavoredOverload
-    public func scrollToItems(at indexPaths: Set<IndexPath>, scrollPosition: NSCollectionView.ScrollPosition) -> T {
+    public func scrollToItems(at indexPaths: Swift.Set<Foundation.IndexPath>, scrollPosition: AppKit.NSCollectionView.ScrollPosition) -> T {
         self.value.scrollToItems(at: indexPaths, scrollPosition: scrollPosition)
         return self.value
     }
@@ -145,8 +145,32 @@ extension Modify.DynamicMemberWrap where T: NSCollectionView {
     @available(macOS 10.6, *)
     @discardableResult
     @_disfavoredOverload
-    public func setDraggingSourceOperationMask(_ dragOperationMask: NSDragOperation, forLocal localDestination: Bool) -> T {
+    public func setDraggingSourceOperationMask(_ dragOperationMask: AppKit.NSDragOperation, forLocal localDestination: Swift.Bool) -> T {
         self.value.setDraggingSourceOperationMask(dragOperationMask, forLocal: localDestination)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    @_Concurrency.MainActor public func draggingSession(_ session: AppKit.NSDraggingSession, willBeginAt screenPoint: Foundation.NSPoint) -> T {
+        self.value.draggingSession(session, willBeginAt: screenPoint)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    @_Concurrency.MainActor public func draggingSession(_ session: AppKit.NSDraggingSession, movedTo screenPoint: Foundation.NSPoint) -> T {
+        self.value.draggingSession(session, movedTo: screenPoint)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    @_Concurrency.MainActor public func draggingSession(_ session: AppKit.NSDraggingSession, endedAt screenPoint: Foundation.NSPoint, operation: AppKit.NSDragOperation) -> T {
+        self.value.draggingSession(session, endedAt: screenPoint, operation: operation)
         return self.value
     }
 }

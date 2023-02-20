@@ -7,13 +7,13 @@ import Cocoa
 
 extension Modify.DynamicMemberWrap where T: NSToolbar {
     @discardableResult
-    public func insertItem(withItemIdentifier itemIdentifier: NSToolbarItem.Identifier, at index: Int) -> Self {
+    public func insertItem(withItemIdentifier itemIdentifier: AppKit.NSToolbarItem.Identifier, at index: Swift.Int) -> Self {
         self.value.insertItem(withItemIdentifier: itemIdentifier, at: index)
         return Modify.DynamicMemberWrap(self.value)
     }
 
     @discardableResult
-    public func removeItem(at index: Int) -> Self {
+    public func removeItem(at index: Swift.Int) -> Self {
         self.value.removeItem(at: index)
         return Modify.DynamicMemberWrap(self.value)
     }
@@ -25,7 +25,7 @@ extension Modify.DynamicMemberWrap where T: NSToolbar {
     }
 
     @discardableResult
-    public func setConfiguration(_ configDict: [String : Any]) -> Self {
+    public func setConfiguration(_ configDict: [Swift.String : Any]) -> Self {
         self.value.setConfiguration(configDict)
         return Modify.DynamicMemberWrap(self.value)
     }

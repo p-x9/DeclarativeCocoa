@@ -58,13 +58,6 @@ extension Modify.DynamicMemberWrap where T: NSControl {
 
     @discardableResult
     @_disfavoredOverload
-    public func mouseDown(with event: NSEvent) -> T {
-        self.value.mouseDown(with: event)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
     public func performClick(_ sender: Any?) -> T {
         self.value.performClick(sender)
         return self.value
@@ -73,8 +66,75 @@ extension Modify.DynamicMemberWrap where T: NSControl {
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
-    public func draw(withExpansionFrame contentFrame: NSRect, in view: NSView) -> T {
+    public func draw(withExpansionFrame contentFrame: Foundation.NSRect, in view: AppKit.NSView) -> T {
         self.value.draw(withExpansionFrame: contentFrame, in: view)
+        return self.value
+    }
+
+    @available(macOS 10.7, *)
+    @discardableResult
+    @_disfavoredOverload
+    public func invalidateIntrinsicContentSize(for cell: AppKit.NSCell) -> T {
+        self.value.invalidateIntrinsicContentSize(for: cell)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @available(macOS, unavailable, introduced: 10.0, deprecated: 10.0, message: "APIs deprecated as of macOS 10.9 and earlier are unavailable in Swift")
+    public func setFloatingPointFormat(_ autoRange: Swift.Bool, left leftDigits: Swift.Int, right rightDigits: Swift.Int) -> T {
+        self.value.setFloatingPointFormat(autoRange, left: leftDigits, right: rightDigits)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Set the needsDisplay property to YES instead")
+    public func setNeedsDisplay() -> T {
+        self.value.setNeedsDisplay()
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Override -layout instead. This method should never be called")
+    public func calcSize() -> T {
+        self.value.calcSize()
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func updateCell(_ cell: AppKit.NSCell) -> T {
+        self.value.updateCell(cell)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func updateCellInside(_ cell: AppKit.NSCell) -> T {
+        self.value.updateCellInside(cell)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func drawCellInside(_ cell: AppKit.NSCell) -> T {
+        self.value.drawCellInside(cell)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func drawCell(_ cell: AppKit.NSCell) -> T {
+        self.value.drawCell(cell)
+        return self.value
+    }
+
+    @discardableResult
+    @_disfavoredOverload
+    public func selectCell(_ cell: AppKit.NSCell) -> T {
+        self.value.selectCell(cell)
         return self.value
     }
 
@@ -88,7 +148,7 @@ extension Modify.DynamicMemberWrap where T: NSControl {
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
-    public func edit(withFrame rect: NSRect, editor textObj: NSText, delegate: Any?, event: NSEvent) -> T {
+    public func edit(withFrame rect: Foundation.NSRect, editor textObj: AppKit.NSText, delegate: Any?, event: AppKit.NSEvent) -> T {
         self.value.edit(withFrame: rect, editor: textObj, delegate: delegate, event: event)
         return self.value
     }
@@ -96,7 +156,7 @@ extension Modify.DynamicMemberWrap where T: NSControl {
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
-    public func select(withFrame rect: NSRect, editor textObj: NSText, delegate: Any?, start selStart: Int, length selLength: Int) -> T {
+    public func select(withFrame rect: Foundation.NSRect, editor textObj: AppKit.NSText, delegate: Any?, start selStart: Swift.Int, length selLength: Swift.Int) -> T {
         self.value.select(withFrame: rect, editor: textObj, delegate: delegate, start: selStart, length: selLength)
         return self.value
     }
@@ -104,59 +164,8 @@ extension Modify.DynamicMemberWrap where T: NSControl {
     @available(macOS 10.10, *)
     @discardableResult
     @_disfavoredOverload
-    public func endEditing(_ textObj: NSText) -> T {
+    public func endEditing(_ textObj: AppKit.NSText) -> T {
         self.value.endEditing(textObj)
-        return self.value
-    }
-
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Set the needsDisplay property to YES instead")
-    @discardableResult
-    @_disfavoredOverload
-    public func setNeedsDisplay() -> T {
-        self.value.setNeedsDisplay()
-        return self.value
-    }
-
-    @available(macOS, introduced: 10.0, deprecated: 10.14, message: "Override -layout instead. This method should never be called")
-    @discardableResult
-    @_disfavoredOverload
-    public func calcSize() -> T {
-        self.value.calcSize()
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func updateCell(_ cell: NSCell) -> T {
-        self.value.updateCell(cell)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func updateCellInside(_ cell: NSCell) -> T {
-        self.value.updateCellInside(cell)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func drawCellInside(_ cell: NSCell) -> T {
-        self.value.drawCellInside(cell)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func drawCell(_ cell: NSCell) -> T {
-        self.value.drawCell(cell)
-        return self.value
-    }
-
-    @discardableResult
-    @_disfavoredOverload
-    public func selectCell(_ cell: NSCell) -> T {
-        self.value.selectCell(cell)
         return self.value
     }
 }
