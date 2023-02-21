@@ -5,6 +5,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@available(iOS, introduced: 2.0, deprecated: 8.3, message: "UIActionSheet is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleActionSheet instead")
 extension Modify.DynamicMemberWrap where T: UIActionSheet {
     @discardableResult
     public func show(from view: UIKit.UIToolbar) -> Self {

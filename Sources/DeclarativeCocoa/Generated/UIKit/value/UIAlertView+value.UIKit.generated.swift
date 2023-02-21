@@ -5,6 +5,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@available(iOS, introduced: 2.0, deprecated: 9.0, message: "UIAlertView is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead")
 extension Modify.DynamicMemberWrap where T: UIAlertView {
     @discardableResult
     @_disfavoredOverload

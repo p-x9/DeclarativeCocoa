@@ -5,6 +5,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@available(iOS, introduced: 4.0, deprecated: 10.0, message: "Use UserNotifications Framework's UNNotificationRequest")
 extension Modify.DynamicMemberWrap where T: UILocalNotification {
     @available(iOS 4.0, *)
     @discardableResult

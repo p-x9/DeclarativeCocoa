@@ -5,6 +5,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@available(iOS, introduced: 3.0, deprecated: 8.0, message: "UISearchDisplayController has been replaced with UISearchController")
 extension Modify.DynamicMemberWrap where T: UISearchDisplayController {
     @discardableResult
     @_disfavoredOverload

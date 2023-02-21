@@ -5,6 +5,7 @@
 #if canImport(Cocoa)
 import Cocoa
 
+@available(macOS, introduced: 10.0, deprecated: 10.10, message: "Use NSTextField directly instead, and consider NSStackView for layout assistance")
 extension Modify.DynamicMemberWrap where T: NSForm {
     @discardableResult
     @_disfavoredOverload

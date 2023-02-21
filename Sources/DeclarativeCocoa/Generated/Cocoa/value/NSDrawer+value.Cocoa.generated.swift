@@ -5,6 +5,7 @@
 #if canImport(Cocoa)
 import Cocoa
 
+@available(macOS, introduced: 10.0, deprecated: 10.13, message: "Drawers are deprecated; consider using NSSplitViewController")
 extension Modify.DynamicMemberWrap where T: NSDrawer {
     @discardableResult
     @_disfavoredOverload

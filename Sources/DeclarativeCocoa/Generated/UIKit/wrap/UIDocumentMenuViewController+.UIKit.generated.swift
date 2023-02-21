@@ -5,6 +5,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@available(iOS, introduced: 8.0, deprecated: 11.0, message: "UIDocumentMenuViewController is deprecated. Use UIDocumentPickerViewController directly.")
 extension Modify.DynamicMemberWrap where T: UIDocumentMenuViewController {
     @discardableResult
     public func addOption(withTitle title: Swift.String, image: UIKit.UIImage?, order: UIKit.UIDocumentMenuOrder, handler: @escaping () -> Swift.Void) -> Self {

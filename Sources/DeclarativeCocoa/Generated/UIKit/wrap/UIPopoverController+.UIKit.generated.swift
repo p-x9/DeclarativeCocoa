@@ -5,6 +5,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@available(iOS, introduced: 3.2, deprecated: 9.0, message: "UIPopoverController is deprecated. Popovers are now implemented as UIViewController presentations. Use a modal presentation style of UIModalPresentationPopover and UIPopoverPresentationController.")
 extension Modify.DynamicMemberWrap where T: UIPopoverController {
     @discardableResult
     public func setContentView(_ viewController: UIKit.UIViewController, animated: Swift.Bool) -> Self {
