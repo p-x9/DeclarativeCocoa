@@ -1,9 +1,7 @@
 DocumentManager
 NSAttributedString
 NSDataAsset
-NSDiffableDataSourceSectionSnapshot
 NSFileProviderExtension
-NSLayoutAnchor
 NSLayoutConstraint
 NSLayoutManager
 NSParagraphStyle
@@ -53,7 +51,6 @@ UIAppearance
 UIApplication
 UIApplicationShortcutItem
 UIAttachmentBehavior
-UIBackgroundConfiguration
 UIBandSelectionInteraction
 UIBarAppearance
 UIBarButtonItem
@@ -72,7 +69,6 @@ UICalendarSelectionSingleDate
 UICalendarView
 UICalendarViewDecoration
 UICellAccessory
-UICellConfigurationState
 UICloudSharingController
 UICollectionLayoutList
 UICollectionView
@@ -162,7 +158,6 @@ UIImagePickerController
 UIImageSymbolConfiguration
 UIImageView
 UIImpactFeedbackGenerator
-UIIndirectScribbleInteraction
 UIInputView
 UIInputViewController
 UIInteraction
@@ -171,17 +166,13 @@ UIKey
 UIKeyCommand
 UIKeyConstants
 UIKeyboardLayoutGuide
-UIKit
-UIKitCore
 UIKitDefines
 UILabel
 UILargeContentViewer
 UILayoutGuide
 UILexicon
-UIListContentConfiguration
 UIListContentImageProperties
 UIListContentTextProperties
-UIListSeparatorConfiguration
 UILocalNotification
 UILocalizedIndexedCollation
 UILongPressGestureRecognizer
@@ -322,7 +313,6 @@ UIVibrancyEffect
 UIVideoEditorController
 UIView
 UIViewAnimating
-UIViewConfigurationState
 UIViewController
 UIViewControllerTransitionCoordinator
 UIViewControllerTransitioning

@@ -13,6 +13,8 @@ header = '''
 supported_dir_path = '../scripts/supported'
 generated_dir_path = '../Sources/DeclarativeCocoa/Generated'
 
+ios_sdk_path = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.1.sdk'
+
 tab = '    '
 
 overwrite = True
@@ -20,8 +22,15 @@ target = 'Cocoa'
 
 
 def get_swift_header(class_name: str) -> str:
+    script = f"/bin/bash -c 'echo -e \"import {target}\n:type lookup {class_name}\" | swift repl"
+
+    if target == 'UIKit':
+        script += f" -sdk {ios_sdk_path} -target arm64-apple-ios16.1'"
+    else:
+        script += "'"
+
     process = subprocess.run(
-        [f"/bin/bash -c 'echo -e \"import {target}\n:type lookup {class_name}\" | swift repl'"],
+        [script],
         shell=True,
         text=True,
         capture_output=True)
@@ -29,12 +38,12 @@ def get_swift_header(class_name: str) -> str:
 
 
 def generate(class_name: str) -> None:
-    output_path = f"{generated_dir_path}/{target}/wrap/{class_name}+.generated.swift"
+    output_path = f"{generated_dir_path}/{target}/wrap/{class_name}+.{target}.generated.swift"
 
     text = get_swift_header(class_name)
 
-    if 'objective_c_class' not in text:
-        return
+    # if 'objective_c_class' not in text:
+    #     return
 
     text = text.replace('}', '}\n')
     text = text.replace('@objc ', '')
@@ -72,6 +81,7 @@ def generate(class_name: str) -> None:
     output_lines = list(filter(lambda line: ' init' not in line, output_lines))
     output_lines = list(filter(lambda line: ' optional ' not in line, output_lines))
     output_lines = list(filter(lambda line: '@IBAction ' not in line, output_lines))
+    output_lines = list(filter(lambda line: 'func ' in line, output_lines))
     output_lines = list(filter(lambda line: line.endswith(')'), output_lines))
     output_lines = list(map(lambda line: line.replace('open ', 'public '), output_lines))
     output_lines = list(map(lambda line: line.replace(') func ', f')\n{tab}func '), output_lines))

@@ -15,7 +15,7 @@ def generate(file: str) -> None:
     class_name = class_name.split('.')[0]
     class_name = class_name.replace('+', '')
 
-    output_path = f"{generated_dir_path}/{target}/value/{class_name}+value.generated.swift"
+    output_path = f"{generated_dir_path}/{target}/value/{class_name}+value.{target}.generated.swift"
 
     f = open(file, 'r', encoding='UTF-8')
     text = f.read()
