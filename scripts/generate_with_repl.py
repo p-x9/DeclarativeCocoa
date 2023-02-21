@@ -17,7 +17,7 @@ ios_sdk_path = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.pl
 
 tab = '    '
 
-overwrite = True
+overwrite = False
 target = 'Cocoa'
 
 
@@ -38,7 +38,11 @@ def get_swift_header(class_name: str) -> str:
 
 
 def generate(class_name: str) -> None:
+    print(class_name)
     output_path = f"{generated_dir_path}/{target}/wrap/{class_name}+.{target}.generated.swift"
+
+    if not overwrite and os.path.exists(output_path):
+        return
 
     text = get_swift_header(class_name)
 
@@ -53,6 +57,20 @@ def generate(class_name: str) -> None:
     text = re.sub('//.*', '', text)
 
     lines = text.split(sep="\n")
+
+    type_available_attribute = ''
+    is_struct = True
+    for i, line in enumerate(lines):
+        if f'class {class_name}' in line or f'protocol {class_name}' in line:
+            is_struct = False
+            if not i == -1 and i > 0 and '@available' in lines[i - 1]:
+                type_available_attribute = lines[i - 1]
+                type_available_attribute = '@available' + type_available_attribute.split('@available')[-1] + '\n'
+            break
+
+    if is_struct:
+        return
+
     lines = list(filter(lambda line: line.startswith('  '), lines))
     lines = list(map(lambda line: line[len('  '):], lines))
     lines = list(filter(lambda line: not line.startswith('  '), lines))
@@ -124,7 +142,7 @@ def generate(class_name: str) -> None:
     output_lines = list(map(convert, output_lines))
 
     output = header
-    output += f'#if canImport({target})\nimport {target}\n\nextension Modify.DynamicMemberWrap where T: ' + class_name + ' {\n'
+    output += f'#if canImport({target})\nimport {target}\n\n{type_available_attribute}extension Modify.DynamicMemberWrap where T: ' + class_name + ' {\n'
     output += '\n\n'.join(output_lines)
     output += '\n}\n\n#endif\n'
 
