@@ -1,7 +1,7 @@
 # DeclarativeCocoa
 
-Declarative UIKit/Cocoa.　
-Allow defining properties in the method chain.　
+Declarative UIKit/Cocoa.  
+Allow defining properties in the method chain.  
 (This library is an extension of [Modify](https://github.com/p-x9/Modify) for UIKit/Cocoa.)
 
 ## Example
@@ -129,5 +129,5 @@ struct MyView: UIViewRepresentable {
 ```
 
 ## About CALayer
-For layers, use this [repository](https://github.com/p-x9/DeclarativeCoreAnimation).
+For layers, use this [repository](https://github.com/p-x9/DeclarativeCoreAnimation).  
 [DeclarativeCoreAnimation](https://github.com/p-x9/DeclarativeCoreAnimation)
