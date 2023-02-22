@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "declarativecoreanimation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/p-x9/DeclarativeCoreAnimation.git",
+      "state" : {
+        "revision" : "dc8eab1c79f94744ed977ff64fd2d151ff9663e3",
+        "version" : "0.0.1"
+      }
+    },
+    {
       "identity" : "modify",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/p-x9/Modify.git",

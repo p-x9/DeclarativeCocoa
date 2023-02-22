@@ -7,6 +7,7 @@
 //
 
 @_exported import Modify
+@_exported import DeclarativeCoreAnimation
 
 #if canImport(UIKit)
 @_exported import UIKit
